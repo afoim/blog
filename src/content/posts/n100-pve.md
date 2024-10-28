@@ -3,8 +3,8 @@ title: n100-pve
 published: 2024-10-28
 description: ''
 image: 'assets/images/N100-PVE_cover.webp'
-tags: []
-category: ''
+tags: [PVE]
+category: '开发'
 draft: false 
 lang: ''
 ---
