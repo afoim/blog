@@ -9,7 +9,7 @@ draft: false
 lang: ''
 ---
 
-### # 配置&需求
+# 配置&需求
 
 - N100 CPU 频率：最小 700 Mhz, 最大 3400 Mhz | TDP：6 W
 
@@ -89,7 +89,6 @@ lang: ''
   2: enp3s0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq master vmbr1 state UP group default qlen 1000
       link/ether 00:e0:4c:08:91:a6 brd ff:ff:ff:ff:ff:ff
   ...
-  
   ```
 
 - 
@@ -107,14 +106,14 @@ lang: ''
   # PVE will preserve these directives, but will NOT read its network
   # configuration from sourced files, so do not attempt to move any of
   # the PVE managed interfaces into external files!
-   
+  
   auto lo
   iface lo inet loopback
-   
+  
   iface wlp1s0 inet manual
-   
+  
   iface enp3s0 inet manual
-   
+  
   auto vmbr1
   iface vmbr1 inet static
           address 192.168.124.25/24
@@ -122,17 +121,14 @@ lang: ''
           bridge-ports enp3s0
           bridge-stp off
           bridge-fd 0
-   
+  
   iface vmbr1 inet6 auto
           dhcp 1
           accept_ra 2
           request_prefix 1
-   
+  
   source /etc/network/interfaces.d/*
-  
   ```
-  
-  
 
 - 重启网络服务：`systemctl restart networking`
 
@@ -152,7 +148,6 @@ lang: ''
          valid_lft 2763sec preferred_lft 2762sec
       inet6 fe80::2e0:4cff:fe08:91a6/64 scope link
          valid_lft forever preferred_lft forever
-  
   ```
 
 - 卸除USB网卡
@@ -326,8 +321,6 @@ lang: ''
       ]
   }
   ```
-  
-  
 
 - 重启容器，扫码登录
 
