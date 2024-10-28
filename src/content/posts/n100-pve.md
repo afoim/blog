@@ -91,8 +91,6 @@ lang: ''
   ...
   ```
 
-- 
-
 - 配置网络配置文件：`nano /etc/network/interfaces`
   
   ```
@@ -156,9 +154,9 @@ lang: ''
 
 #### 路由器设置DMZ主机为PVEIP
 
-- ![](assets/images/dbeb7980e5fc699c696ffa6f2fda4a17c05ee821.webp)
+- ![](assets/images/dbeb7980e5fc699c696ffa6f2fda4a17c05ee821.webp) 
 
-- #### 安装Lucky
+#### 安装Lucky
 
 - 执行：`curl -o /tmp/install.sh http://6.666666.host:6/files/golucky.sh && sh /tmp/install.sh http://6.666666.host:6/files 2.13.4`
 
