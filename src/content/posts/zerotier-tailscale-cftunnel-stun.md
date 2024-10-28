@@ -146,8 +146,8 @@ lang: ''
 - 等待安装完毕后输入：`tailscale login`
 
 - 打开弹出的浏览器窗口，登录你的账号即可
-
-- #### Android（安卓）
+  
+  #### Android（安卓）
 
 - 下载客户端（Google Play）：[Download · Tailscale](https://tailscale.com/download/android)
 
