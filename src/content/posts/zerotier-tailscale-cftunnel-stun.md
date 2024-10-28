@@ -172,8 +172,10 @@ lang: ''
 - 进入[Cloudflare One](https://one.dash.cloudflare.com/)（需要绑定PayPal）
 
 - 如图操作，创建一个Tunnel![](assets/images/2024-10-28-18-45-41-image.png)![](assets/images/2024-10-28-18-45-54-image.png)![](assets/images/2024-10-28-18-46-22-image.png)
-
-- 这里选择Docker方式，复制底下的命令然后SSH连接到Linux（飞牛OS）在终端输入
+  
+  #### Docker方式
+  
+  复制底下的命令然后SSH连接到Linux（飞牛OS）在终端输入
 
 - ![](assets/images/2024-10-28-18-46-49-image.png)
 
@@ -200,9 +202,23 @@ lang: ''
          valid_lft forever preferred_lft foreverti
   ```
 
-- 填写你的IP和端口![](assets/images/2024-10-28-18-53-37-image.png)
+#### 原生模式（以Debian为例）
+
+
+
+- 选择Debian，然后复制底下的命令，直接到终端执行
+  
+  ![](../../../assets/images/2024-10-28-20-00-49-image.png)
+  
+  #### 配置并访问Tunnel
+  
+  
+
+- 填写你的IP和端口，非Docker模式可以直接填写localhost![](assets/images/2024-10-28-18-53-37-image.png)
 
 - 成功访问![](assets/images/2024-10-28-18-54-42-image.png)
+
+
 
 ## 使用STUN打洞
 
