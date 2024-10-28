@@ -1,7 +1,7 @@
 ---
 title: n100-pve
 published: 2024-10-28
-description: ''
+description: '在N100小主机上安装PVE，然后在其中安装飞牛NAS和Debian，实现追番建站分离，并且易扩展，易迁移'
 image: 'assets/images/N100-PVE_cover.webp'
 tags: [PVE]
 category: '开发'
