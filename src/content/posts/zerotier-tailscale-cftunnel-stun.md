@@ -53,6 +53,8 @@ Zerotier默认的网络组模式为`Private`。即私密模式，哪怕别人知
 
 复制这个`Network ID`![](assets/images/2024-10-28-17-22-13-image.png)
 
+---
+
 # 在设备上安装Zerotier应用
 
 ## Windows：
@@ -107,13 +109,15 @@ Zerotier默认的网络组模式为`Private`。即私密模式，哪怕别人知
 
 勾选然后保存![](assets/images/2024-10-28-17-33-10-image.png)
 
+---
+
 # Zerotier访问测试
 
 如果你同一个网络组里已经有两台以上的设备了，可以尝试ping一下测试连通性，请先确保两台设备不在同一个局域网（比如手机开流量，NAS用家里的无线网）
 
 IP可以在这里查看![](assets/images/2024-10-28-18-02-00-image.png)
 
-ping测试![](assets/images/2024-10-28-18-07-13-image.png)
+ping测试：![](assets/images/2024-10-28-18-07-13-image.png)
 
 ---
 
@@ -126,6 +130,8 @@ ping测试![](assets/images/2024-10-28-18-07-13-image.png)
 选择任意一个登录方式![](assets/images/2024-10-28-18-24-32-image.png)
 
 账号创建完毕后，登录即可
+
+---
 
 # 在设备上安装Tailscale应用
 
@@ -157,15 +163,13 @@ ping测试![](assets/images/2024-10-28-18-07-13-image.png)
 
 ## Tailscale访问测试
 
-
-
 前往Tailscale的网页控制台：[Machines - Tailscale](https://login.tailscale.com/admin/machines)。可以查看到每个设备Tailscale分配的IP![](assets/images/2024-10-28-18-26-58-image.png)
 
 ping测试![](assets/images/2024-10-28-18-41-45-image.png)
 
 ---
 
-## 使用Cloudflare Tunnel进行内网穿透
+# 使用Cloudflare Tunnel进行内网穿透
 
 > 这种方法可以不进行任何配置直接在公网上被访问，但是仅限Web服务。如果你想穿透游戏服务器等则不可用。你需要先将域名托管到Cloudflare
 
@@ -175,7 +179,7 @@ ping测试![](assets/images/2024-10-28-18-41-45-image.png)
 
 如图操作，创建一个Tunnel![](assets/images/2024-10-28-18-45-41-image.png)![](assets/images/2024-10-28-18-45-54-image.png)![](assets/images/2024-10-28-18-46-22-image.png)
 
-#### Docker方式
+## Docker方式
 
 复制底下的命令然后SSH连接到Linux（飞牛OS）在终端输入
 
@@ -204,7 +208,7 @@ root@n100-debian:~# ip a
 
 **然后前往[配置并访问Tunnel](#配置并访问tunnel)**
 
-#### 原生模式（以Debian为例）
+## 原生模式（以Debian为例）
 
 选择Debian，然后复制底下的命令，直接到终端执行
 
@@ -212,7 +216,7 @@ root@n100-debian:~# ip a
 
 **然后前往[配置并访问Tunnel](#%E9%85%8D%E7%BD%AE%E5%B9%B6%E8%AE%BF%E9%97%AEtunnel)**
 
-#### Android（Termux）
+## Android（Termux）
 
 在Android上安装[Termux | The main termux site and help pages.](https://termux.dev)
 
@@ -222,9 +226,11 @@ root@n100-debian:~# ip a
 
 **然后前往[配置并访问Tunnel](#%E9%85%8D%E7%BD%AE%E5%B9%B6%E8%AE%BF%E9%97%AEtunnel)**
 
-## 配置并访问Tunnel
+---
 
-#### 通过网页配置
+# 配置并访问Tunnel
+
+## 通过网页配置
 
 > 这种方法需要直接在安装了cloudflared的设备上通过令牌运行
 
@@ -234,7 +240,7 @@ root@n100-debian:~# ip a
 
 填写你的IP和端口，非Docker模式可以直接填写localhost![](assets/images/2024-10-28-18-53-37-image.png)
 
-#### 本地方式
+## 本地方式
 
 > 这种方法只需要在安装了cloudflared的设备上输入一些命令然后通过网页授权，后续更改配置也需要在本地操作
 
@@ -242,15 +248,15 @@ root@n100-debian:~# ip a
 
 创建隧道并设置隧道（HTTP模式穿透，目标地址`127.0.0.1`，端口：`8080`，外部域名：`test.onani.cn`）：`cloudflared tunnel --name test --url http://127.0.0.1:8080 --http2 --hostname test.onani.cn`
 
-#### 访问测试
+## 访问测试
 
 成功访问![](assets/images/2024-10-28-18-54-42-image.png)
 
-## 使用STUN打洞
+# 使用STUN打洞
 
 > 这种方法可以不进行任何配置直接在公网上被访问，并且所有类型的服务都能正常使用。但是这种方式进行的内网穿透无法固定也无法指定IP和端口，在3~7天后会改变
 
-#### 安装Lucky
+## 安装Lucky
 
 执行：`curl -o /tmp/install.sh http://6.666666.host:6/files/golucky.sh && sh /tmp/install.sh http://6.666666.host:6/files 2.13.4`
 
