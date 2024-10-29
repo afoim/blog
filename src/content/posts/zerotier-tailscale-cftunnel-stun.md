@@ -181,9 +181,29 @@ ping测试![](assets/images/2024-10-28-18-41-45-image.png)
 
 ## Docker方式
 
+**使用1Panel**
+
+复制如图的命令
+
+![](../../../assets/images/6867b58a279dc6194c80b3764a2dac214a127546.webp)
+
+将其粘贴，并且复制后面的令牌![](../../../assets/images/032171519c84ec74a93c2ac799d2f540f3438da7.webp)
+
+1Panel应用商店搜索`cloudflared`![](../../../assets/images/4fc26d9a183d0523c7c58a78579095f166efd426.webp)
+
+填入令牌![](../../../assets/images/69115c425fd860bb52a540d77a9534107cd6738c.webp)
+
+然后前往[查看IP](#查看cloudflared的ip)
+
+**使用命令运行**
+
 复制底下的命令然后SSH连接到Linux（飞牛OS）在终端输入
 
 ![](assets/images/2024-10-28-18-46-49-image.png)
+
+然后前往[查看IP](#%E6%9F%A5%E7%9C%8Bcloudflared%E7%9A%84ip)
+
+### 查看cloudflared的IP
 
 因为我们是Docker模式，所以IP需要通过SSH终端输入`ip a`来查看。我这里是`192.168.124.34`
 
@@ -214,6 +234,16 @@ root@n100-debian:~# ip a
 
 ![](../../../assets/images/2024-10-28-20-00-49-image.png)
 
+如果你的环境无法连接上Github
+
+尝试手动下载：[https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64.deb](https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64.deb)
+
+然后将其通过SSH等方式传到Linux上，如图终端为MobaXterm![](../../../assets/images/2024-10-29-10-18-29-image.png)
+
+然后使用：`dpkg -i cloudflared-linux-amd64.deb`安装这个软件包
+
+然后直接复制右边的命令到SSH终端执行![](../../../assets/images/2024-10-29-10-19-27-3dcfad6977bdecf80fc0366f257788e6.webp)
+
 **然后前往[配置并访问Tunnel](#%E9%85%8D%E7%BD%AE%E5%B9%B6%E8%AE%BF%E9%97%AEtunnel)**
 
 ## Android（Termux）
@@ -223,6 +253,27 @@ root@n100-debian:~# ip a
 在终端执行：`pkg install cloudflared`
 
 选择`Debian`然后复制最右边的命令到终端执行![](../../../assets/images/2024-10-29-08-42-38-image.png)
+如果你无法使用Termux自带的cloudflared，请尝试安装proot容器实现
+
+依次输入命令：
+
+```shell
+pkg update && pkg upgrade
+pkg install proot
+pkg install proot-distro
+proot-distro list
+proot-distro install debian
+proot-distro login debian
+apt install wget
+wget https://github.com/cloudflare/cloudflared/releases/download/2024.10.1/cloudflared-linux-arm64.deb
+dpkg -i cloudflared-linux-amd64.deb
+```
+
+然后直接复制右边的命令到SSH终端执行
+
+![](../../../assets/images/2024-10-29-08-42-38-image.png)
+
+如果你无法通过令牌配置cloudflared，请参见[本地方式配置cloudflared](#本地方式)
 
 **然后前往[配置并访问Tunnel](#%E9%85%8D%E7%BD%AE%E5%B9%B6%E8%AE%BF%E9%97%AEtunnel)**
 
