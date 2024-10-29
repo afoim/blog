@@ -21,13 +21,13 @@ lang: ''
 
 关闭路由器的IPv4，IPv6防火墙 **（可选）**![](assets/images/2024-10-28-17-09-19-image.png)
 
-## 使用Zerotier/Tailscale进行内网穿透
+# *使用Zerotier/Tailscale进行内网穿透*
 
 > 他们俩的原理都是尝试对端建立P2P连接，需要对端安装一个软件并且长期运行
 
-## 使用Zerotier进行内网穿透的详细教程
+# 使用Zerotier进行内网穿透的详细教程
 
-### 创建Zerotier账号
+## 创建Zerotier账号
 
 前往：[ZeroTier | Global Networking Solution for IoT, SD-WAN, and VPN](https://www.zerotier.com/)。如果你进不去，请尝试挂梯子。如果看不懂英文可以开启浏览器的翻译功能![](assets/images/2024-10-28-17-12-51-image.png)
 
@@ -39,7 +39,7 @@ lang: ''
 
 账号创建完毕后，登录即可![](assets/images/2024-10-28-17-17-47-image.png)
 
-### 创建一个新的Zerotier网络组
+## 创建一个新的Zerotier网络组
 
 当你账号登录成功后，会自动跳转到这个页面，点击`Create A Network`。如果没有，请访问[ZeroTier Central](https://my.zerotier.com/)
 
@@ -53,9 +53,9 @@ Zerotier默认的网络组模式为`Private`。即私密模式，哪怕别人知
 
 复制这个`Network ID`![](assets/images/2024-10-28-17-22-13-image.png)
 
-### 在设备上安装Zerotier应用
+# 在设备上安装Zerotier应用
 
-#### Windows：
+## Windows：
 
 前往[Download - ZeroTier](https://www.zerotier.com/download/)，下载exe安装文件![](assets/images/2024-10-28-17-25-52-image.png)
 
@@ -69,7 +69,7 @@ Zerotier默认的网络组模式为`Private`。即私密模式，哪怕别人知
 
 **然后参考：[Zerotier授权设备](#zerotier授权设备)**
 
-#### Linux（飞牛OS）：
+## Linux（飞牛OS）：
 
 通过SSH连接上你的Linux设备
 
@@ -83,7 +83,7 @@ Zerotier默认的网络组模式为`Private`。即私密模式，哪怕别人知
 
 **然后参考：[Zerotier授权设备](#zerotier%E6%8E%88%E6%9D%83%E8%AE%BE%E5%A4%87)**
 
-#### Android（安卓）
+## Android（安卓）
 
 下载客户端
 
@@ -99,7 +99,7 @@ Zerotier默认的网络组模式为`Private`。即私密模式，哪怕别人知
 
 ---
 
-#### Zerotier授权设备
+# Zerotier授权设备
 
 前往Zerotier的网页控制台：[ZeroTier Central]([https://my.zerotier.com/](https://my.zerotier.com/))
 
@@ -107,7 +107,7 @@ Zerotier默认的网络组模式为`Private`。即私密模式，哪怕别人知
 
 勾选然后保存![](assets/images/2024-10-28-17-33-10-image.png)
 
-#### Zerotier访问测试
+# Zerotier访问测试
 
 如果你同一个网络组里已经有两台以上的设备了，可以尝试ping一下测试连通性，请先确保两台设备不在同一个局域网（比如手机开流量，NAS用家里的无线网）
 
@@ -117,9 +117,9 @@ ping测试![](assets/images/2024-10-28-18-07-13-image.png)
 
 ---
 
-### 使用Tailscale进行内网穿透的详细教程
+# 使用Tailscale进行内网穿透的详细教程
 
-### 创建Tailscale账号
+## 创建Tailscale账号
 
 前往：[Tailscale](https://login.tailscale.com/start)。如果你进不去，请尝试挂梯子。如果看不懂英文可以开启浏览器的翻译功能
 
@@ -127,15 +127,15 @@ ping测试![](assets/images/2024-10-28-18-07-13-image.png)
 
 账号创建完毕后，登录即可
 
-### 在设备上安装Tailscale应用
+# 在设备上安装Tailscale应用
 
-#### Windows：
+## Windows：
 
 前往[Download · Tailscale](https://tailscale.com/download)，下载exe安装文件
 
 官方教程：![](assets/images/2024-10-28-18-31-48-image.png)
 
-#### Linux（飞牛OS）：
+## Linux（飞牛OS）：
 
 通过SSH连接上你的Linux设备
 
@@ -147,7 +147,7 @@ ping测试![](assets/images/2024-10-28-18-07-13-image.png)
 
 打开弹出的浏览器窗口，登录你的账号即可
 
-#### Android（安卓）
+## Android（安卓）
 
 下载客户端（Google Play）：[Download · Tailscale](https://tailscale.com/download/android)
 
@@ -155,7 +155,9 @@ ping测试![](assets/images/2024-10-28-18-07-13-image.png)
 
 ---
 
-#### Tailscale访问测试
+## Tailscale访问测试
+
+
 
 前往Tailscale的网页控制台：[Machines - Tailscale](https://login.tailscale.com/admin/machines)。可以查看到每个设备Tailscale分配的IP![](assets/images/2024-10-28-18-26-58-image.png)
 
