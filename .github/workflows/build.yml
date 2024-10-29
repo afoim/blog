@@ -31,7 +31,7 @@ jobs:
         run: |
           git config --global user.name 'github-actions'
           git config --global user.email 'github-actions@users.noreply.github.com'
-          # 清空工作目录（如果需要）
+          # 清空工作目录
           git rm -rf .
           # 将 dist 目录中的内容复制到根目录
           cp -r dist/* ./
