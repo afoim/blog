@@ -1,0 +1,36 @@
+name: 透过Github Action构建Fuwari Blog的静态文件
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: 设置Node.js20
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+
+      - name: 安装PNPM
+        run: npm install -g pnpm
+
+      - name: 安装依赖并且构建
+        run: |
+          pnpm install
+          pnpm build
+
+      - name: 发布到Pages分支
+        run: |
+          git config --global user.name 'github-actions'
+          git config --global user.email 'github-actions@users.noreply.github.com'
+          git add .
+          git commit -m 'Deploy to GitHub Pages'
+          git push origin HEAD:pages
