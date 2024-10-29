@@ -3,7 +3,7 @@ title: 究极喂饭教程，手把手教你内网穿透
 published: 2024-10-28
 description: '使用Zerotier，Tailscale，Cloudflare Tunnel可以实现多种内网穿透，其中有适用于个人访问的，也有适用于公众访问的'
 image: 'assets/images/2024-10-28-17-00-25-image.png'
-tags: [Zerotier, Tailscale, Cloudflare Tunnel]
+tags: [Zerotier, Tailscale, Cloudflare Tunnel, STUN]
 category: '实用工具'
 draft: false 
 lang: ''
@@ -17,9 +17,9 @@ lang: ''
 
 # 前期准备
 
-- 路由器开启UPnP![](assets/images/2024-10-28-17-08-00-image.png)  
+路由器开启UPnP![](assets/images/2024-10-28-17-08-00-image.png)  
 
-- 关闭路由器的IPv4，IPv6防火墙 **（可选）**![](assets/images/2024-10-28-17-09-19-image.png)
+关闭路由器的IPv4，IPv6防火墙 **（可选）**![](assets/images/2024-10-28-17-09-19-image.png)
 
 ## 使用Zerotier/Tailscale进行内网穿透
 
@@ -29,91 +29,91 @@ lang: ''
 
 ### 创建Zerotier账号
 
-- 前往：[ZeroTier | Global Networking Solution for IoT, SD-WAN, and VPN](https://www.zerotier.com/)。如果你进不去，请尝试挂梯子。如果看不懂英文可以开启浏览器的翻译功能![](assets/images/2024-10-28-17-12-51-image.png)
+前往：[ZeroTier | Global Networking Solution for IoT, SD-WAN, and VPN](https://www.zerotier.com/)。如果你进不去，请尝试挂梯子。如果看不懂英文可以开启浏览器的翻译功能![](assets/images/2024-10-28-17-12-51-image.png)
 
-- 选择 `Sign up`![](assets/images/2024-10-28-17-13-06-image.png)
+选择 `Sign up`![](assets/images/2024-10-28-17-13-06-image.png)
 
-- 如果你到了这个界面，请仍然选择`Sign up`![](assets/images/2024-10-28-17-15-08-image.png)
+如果你到了这个界面，请仍然选择`Sign up`![](assets/images/2024-10-28-17-15-08-image.png)
 
-- ![](assets/images/2024-10-28-17-16-52-image.png)
+![](assets/images/2024-10-28-17-16-52-image.png)
 
-- 账号创建完毕后，登录即可![](assets/images/2024-10-28-17-17-47-image.png)
+账号创建完毕后，登录即可![](assets/images/2024-10-28-17-17-47-image.png)
 
 ### 创建一个新的Zerotier网络组
 
-- 当你账号登录成功后，会自动跳转到这个页面，点击`Create A Network`。如果没有，请访问[ZeroTier Central](https://my.zerotier.com/)
+当你账号登录成功后，会自动跳转到这个页面，点击`Create A Network`。如果没有，请访问[ZeroTier Central](https://my.zerotier.com/)
 
-- ![](assets/images/2024-10-28-17-20-24-image.png)
+![](assets/images/2024-10-28-17-20-24-image.png)
 
-- 下面的列表会增加一个新的网络组，点击它![](assets/images/2024-10-28-17-21-31-image.png)
+下面的列表会增加一个新的网络组，点击它![](assets/images/2024-10-28-17-21-31-image.png)
 
-- Zerotier默认的网络组模式为`Private`。即私密模式，哪怕别人知道了你的`Network ID`尝试加入你的网络组也需要你进行验证
+Zerotier默认的网络组模式为`Private`。即私密模式，哪怕别人知道了你的`Network ID`尝试加入你的网络组也需要你进行验证
 
-- ![](assets/images/2024-10-28-17-22-38-image.png)
+![](assets/images/2024-10-28-17-22-38-image.png)
 
-- 复制这个`Network ID`![](assets/images/2024-10-28-17-22-13-image.png)
+复制这个`Network ID`![](assets/images/2024-10-28-17-22-13-image.png)
 
 ### 在设备上安装Zerotier应用
 
 #### Windows：
 
-- 前往[Download - ZeroTier](https://www.zerotier.com/download/)，下载exe安装文件![](assets/images/2024-10-28-17-25-52-image.png)
+前往[Download - ZeroTier](https://www.zerotier.com/download/)，下载exe安装文件![](assets/images/2024-10-28-17-25-52-image.png)
 
-- 打开Zerotier![](assets/images/2024-10-28-17-27-20-image.png)
+打开Zerotier![](assets/images/2024-10-28-17-27-20-image.png)
 
-- 查看右下角托盘，按照图片操作加入网络组![](assets/images/2024-10-28-17-28-20-image.png)![](assets/images/2024-10-28-17-29-12-image.png)![](assets/images/2024-10-28-17-30-26-image.png)
+查看右下角托盘，按照图片操作加入网络组![](assets/images/2024-10-28-17-28-20-image.png)![](assets/images/2024-10-28-17-29-12-image.png)![](assets/images/2024-10-28-17-30-26-image.png)
 
-- 这里可以查询到你的设备ID和你在这个网络组的IP
+这里可以查询到你的设备ID和你在这个网络组的IP
 
-- ![](assets/images/2024-10-28-18-03-19-image.png)
+![](assets/images/2024-10-28-18-03-19-image.png)
 
-- **然后参考：[Zerotier授权设备](#zerotier授权设备)**
+**然后参考：[Zerotier授权设备](#zerotier授权设备)**
 
 #### Linux（飞牛OS）：
 
-- 通过SSH连接上你的Linux设备
+通过SSH连接上你的Linux设备
 
-- 查看安装命令：[Download - ZeroTier](https://www.zerotier.com/download/)![](assets/images/2024-10-28-17-38-19-image.png)
+查看安装命令：[Download - ZeroTier](https://www.zerotier.com/download/)![](assets/images/2024-10-28-17-38-19-image.png)
 
-- 终端执行： `curl -s https://install.zerotier.com | sudo bash`
+终端执行： `curl -s https://install.zerotier.com | sudo bash`
 
-- 看到这一行即安装完毕，后面那一串即你的设备ID：![](assets/images/2024-10-28-17-39-23-image.png)
+看到这一行即安装完毕，后面那一串即你的设备ID：![](assets/images/2024-10-28-17-39-23-image.png)
 
-- 加入网络：`sudo zerotier-cli join 你的Network ID`![](assets/images/2024-10-28-17-42-01-image.png)
+加入网络：`sudo zerotier-cli join 你的Network ID`![](assets/images/2024-10-28-17-42-01-image.png)
 
-- **然后参考：[Zerotier授权设备](#zerotier%E6%8E%88%E6%9D%83%E8%AE%BE%E5%A4%87)**
-  
-  #### Android（安卓）
+**然后参考：[Zerotier授权设备](#zerotier%E6%8E%88%E6%9D%83%E8%AE%BE%E5%A4%87)**
 
-- 下载客户端
-  
-  1. Zerotier One：[ZeroTier One APK Download for Android - Latest Version](https://apkpure.net/zerotier-one/com.zerotier.one)
-  
-  2. ZerotierFix：[Releases · kaaass/ZerotierFix](https://github.com/kaaass/ZerotierFix/releases)
+#### Android（安卓）
 
-- 如图操作
-  
-  ![](assets/images/2024-10-28-17-59-06-image.png)![](assets/images/2024-10-28-17-59-46-image.png)
+下载客户端
 
-- **然后参考：[Zerotier授权设备](#zerotier%E6%8E%88%E6%9D%83%E8%AE%BE%E5%A4%87)**
-  
-  ---
-  
-  #### Zerotier授权设备
+1. Zerotier One：[ZeroTier One APK Download for Android - Latest Version](https://apkpure.net/zerotier-one/com.zerotier.one)
 
-- 前往Zerotier的网页控制台：[ZeroTier Central]([https://my.zerotier.com/](https://my.zerotier.com/))
+2. ZerotierFix：[Releases · kaaass/ZerotierFix](https://github.com/kaaass/ZerotierFix/releases)
 
-- 授权刚才加入的设备![](assets/images/2024-10-28-17-31-51-image.png)
+如图操作
 
-- 勾选然后保存![](assets/images/2024-10-28-17-33-10-image.png)
-  
-  #### Zerotier访问测试
+![](assets/images/2024-10-28-17-59-06-image.png)![](assets/images/2024-10-28-17-59-46-image.png)
 
-- 如果你同一个网络组里已经有两台以上的设备了，可以尝试ping一下测试连通性，请先确保两台设备不在同一个局域网（比如手机开流量，NAS用家里的无线网）
+**然后参考：[Zerotier授权设备](#zerotier%E6%8E%88%E6%9D%83%E8%AE%BE%E5%A4%87)**
 
-- IP可以在这里查看![](assets/images/2024-10-28-18-02-00-image.png)
+---
 
-- ping测试![](assets/images/2024-10-28-18-07-13-image.png)
+#### Zerotier授权设备
+
+前往Zerotier的网页控制台：[ZeroTier Central]([https://my.zerotier.com/](https://my.zerotier.com/))
+
+授权刚才加入的设备![](assets/images/2024-10-28-17-31-51-image.png)
+
+勾选然后保存![](assets/images/2024-10-28-17-33-10-image.png)
+
+#### Zerotier访问测试
+
+如果你同一个网络组里已经有两台以上的设备了，可以尝试ping一下测试连通性，请先确保两台设备不在同一个局域网（比如手机开流量，NAS用家里的无线网）
+
+IP可以在这里查看![](assets/images/2024-10-28-18-02-00-image.png)
+
+ping测试![](assets/images/2024-10-28-18-07-13-image.png)
 
 ---
 
@@ -121,45 +121,45 @@ lang: ''
 
 ### 创建Tailscale账号
 
-- 前往：[Tailscale](https://login.tailscale.com/start)。如果你进不去，请尝试挂梯子。如果看不懂英文可以开启浏览器的翻译功能
+前往：[Tailscale](https://login.tailscale.com/start)。如果你进不去，请尝试挂梯子。如果看不懂英文可以开启浏览器的翻译功能
 
-- 选择任意一个登录方式![](assets/images/2024-10-28-18-24-32-image.png)
+选择任意一个登录方式![](assets/images/2024-10-28-18-24-32-image.png)
 
-- 账号创建完毕后，登录即可
+账号创建完毕后，登录即可
 
 ### 在设备上安装Tailscale应用
 
 #### Windows：
 
-- 前往[Download · Tailscale](https://tailscale.com/download)，下载exe安装文件
+前往[Download · Tailscale](https://tailscale.com/download)，下载exe安装文件
 
-- 官方教程：![](assets/images/2024-10-28-18-31-48-image.png)
+官方教程：![](assets/images/2024-10-28-18-31-48-image.png)
 
 #### Linux（飞牛OS）：
 
-- 通过SSH连接上你的Linux设备
+通过SSH连接上你的Linux设备
 
-- 查看安装命令：[Download · Tailscale](https://tailscale.com/download/linux)![](assets/images/2024-10-28-18-32-58-image.png)
+查看安装命令：[Download · Tailscale](https://tailscale.com/download/linux)![](assets/images/2024-10-28-18-32-58-image.png)
 
-- 终端执行： `curl -fsSL https://tailscale.com/install.sh | sh`
+终端执行： `curl -fsSL https://tailscale.com/install.sh | sh`
 
-- 等待安装完毕后输入：`tailscale login`
+等待安装完毕后输入：`tailscale login`
 
-- 打开弹出的浏览器窗口，登录你的账号即可
-  
-  #### Android（安卓）
+打开弹出的浏览器窗口，登录你的账号即可
 
-- 下载客户端（Google Play）：[Download · Tailscale](https://tailscale.com/download/android)
+#### Android（安卓）
 
-- 登录你的账号即可
-  
-  ---
-  
-  #### Tailscale访问测试
+下载客户端（Google Play）：[Download · Tailscale](https://tailscale.com/download/android)
 
-- 前往Tailscale的网页控制台：[Machines - Tailscale](https://login.tailscale.com/admin/machines)。可以查看到每个设备Tailscale分配的IP![](assets/images/2024-10-28-18-26-58-image.png)
+登录你的账号即可
 
-- ping测试![](assets/images/2024-10-28-18-41-45-image.png)
+---
+
+#### Tailscale访问测试
+
+前往Tailscale的网页控制台：[Machines - Tailscale](https://login.tailscale.com/admin/machines)。可以查看到每个设备Tailscale分配的IP![](assets/images/2024-10-28-18-26-58-image.png)
+
+ping测试![](assets/images/2024-10-28-18-41-45-image.png)
 
 ---
 
@@ -167,65 +167,89 @@ lang: ''
 
 > 这种方法可以不进行任何配置直接在公网上被访问，但是仅限Web服务。如果你想穿透游戏服务器等则不可用。你需要先将域名托管到Cloudflare
 
-- 创建Cloudflare账号[主页 | Cloudflare](https://dash.cloudflare.com/)
+创建Cloudflare账号[主页 | Cloudflare](https://dash.cloudflare.com/)
 
-- 进入[Cloudflare One](https://one.dash.cloudflare.com/)（需要绑定PayPal）
+进入[Cloudflare One](https://one.dash.cloudflare.com/)（需要绑定PayPal）
 
-- 如图操作，创建一个Tunnel![](assets/images/2024-10-28-18-45-41-image.png)![](assets/images/2024-10-28-18-45-54-image.png)![](assets/images/2024-10-28-18-46-22-image.png)
-  
-  #### Docker方式
-  
-  复制底下的命令然后SSH连接到Linux（飞牛OS）在终端输入
+如图操作，创建一个Tunnel![](assets/images/2024-10-28-18-45-41-image.png)![](assets/images/2024-10-28-18-45-54-image.png)![](assets/images/2024-10-28-18-46-22-image.png)
 
-- ![](assets/images/2024-10-28-18-46-49-image.png)
+#### Docker方式
 
-- 如图进入，创建一个HTTP隧道![](assets/images/2024-10-28-18-49-21-image.png)![](assets/images/2024-10-28-18-49-44-image.png)
+复制底下的命令然后SSH连接到Linux（飞牛OS）在终端输入
 
-- 因为我们是Docker模式，所以IP需要通过SSH终端输入`ip a`来查看。我这里是`192.168.124.34`
+![](assets/images/2024-10-28-18-46-49-image.png)
 
-- ```
-  root@n100-debian:~# ip a
-  1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
-      link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
-      inet 127.0.0.1/8 scope host lo
-         valid_lft forever preferred_lft forever
-      inet6 ::1/128 scope host noprefixroute
-         valid_lft forever preferred_lft forever
-  2: ens18: tiROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
-      link/ether bc:24:11:33:e1:7d brd ff:ff:ff:ff:ff:ff
-      altname enp0s18
-      inet 192.168.124.34/24 brd 192.168.124.255 scope global dynamic ens18
-         valid_lft 46579sec preferred_lft 46579sec
-      inet6 2409:8a30:320:a170:be24:11ff:fe33:e17d/64 scope global dynamic mngtmpaddr
-         valid_lft 1902sec preferred_lft 1898sec
-      inet6 fe80::be24:11ff:fe33:e17d/64 scope link
-         valid_lft forever preferred_lft foreverti
-  ```
+因为我们是Docker模式，所以IP需要通过SSH终端输入`ip a`来查看。我这里是`192.168.124.34`
+
+```
+root@n100-debian:~# ip a
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host noprefixroute
+       valid_lft forever preferred_lft forever
+2: ens18: tiROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+    link/ether bc:24:11:33:e1:7d brd ff:ff:ff:ff:ff:ff
+    altname enp0s18
+    inet 192.168.124.34/24 brd 192.168.124.255 scope global dynamic ens18
+       valid_lft 46579sec preferred_lft 46579sec
+    inet6 2409:8a30:320:a170:be24:11ff:fe33:e17d/64 scope global dynamic mngtmpaddr
+       valid_lft 1902sec preferred_lft 1898sec
+    inet6 fe80::be24:11ff:fe33:e17d/64 scope link
+       valid_lft forever preferred_lft foreverti
+```
+
+**然后前往[配置并访问Tunnel](#配置并访问tunnel)**
 
 #### 原生模式（以Debian为例）
 
+选择Debian，然后复制底下的命令，直接到终端执行
 
+![](../../../assets/images/2024-10-28-20-00-49-image.png)
 
-- 选择Debian，然后复制底下的命令，直接到终端执行
-  
-  ![](../../../assets/images/2024-10-28-20-00-49-image.png)
-  
-  #### 配置并访问Tunnel
-  
-  
+**然后前往[配置并访问Tunnel](#%E9%85%8D%E7%BD%AE%E5%B9%B6%E8%AE%BF%E9%97%AEtunnel)**
 
-- 填写你的IP和端口，非Docker模式可以直接填写localhost![](assets/images/2024-10-28-18-53-37-image.png)
+#### Android（Termux）
 
-- 成功访问![](assets/images/2024-10-28-18-54-42-image.png)
+在Android上安装[Termux | The main termux site and help pages.](https://termux.dev)
 
+在终端执行：`pkg install cloudflared`
 
+选择`Debian`然后复制最右边的命令到终端执行![](../../../assets/images/2024-10-29-08-42-38-image.png)
+
+**然后前往[配置并访问Tunnel](#%E9%85%8D%E7%BD%AE%E5%B9%B6%E8%AE%BF%E9%97%AEtunnel)**
+
+## 配置并访问Tunnel
+
+#### 通过网页配置
+
+> 这种方法需要直接在安装了cloudflared的设备上通过令牌运行
+
+如图进入，创建一个HTTP隧道
+
+![](assets/images/2024-10-28-18-49-21-image.png)![](assets/images/2024-10-28-18-49-44-image.png)
+
+填写你的IP和端口，非Docker模式可以直接填写localhost![](assets/images/2024-10-28-18-53-37-image.png)
+
+#### 本地方式
+
+> 这种方法只需要在安装了cloudflared的设备上输入一些命令然后通过网页授权，后续更改配置也需要在本地操作
+
+登录并授权：`cloudflared tunnel login`
+
+创建隧道并设置隧道（HTTP模式穿透，目标地址`127.0.0.1`，端口：`8080`，外部域名：`test.onani.cn`）：`cloudflared tunnel --name test --url http://127.0.0.1:8080 --http2 --hostname test.onani.cn`
+
+#### 访问测试
+
+成功访问![](assets/images/2024-10-28-18-54-42-image.png)
 
 ## 使用STUN打洞
 
 > 这种方法可以不进行任何配置直接在公网上被访问，并且所有类型的服务都能正常使用。但是这种方式进行的内网穿透无法固定也无法指定IP和端口，在3~7天后会改变
 
-安装Lucky
+#### 安装Lucky
 
-- 执行：`curl -o /tmp/install.sh http://6.666666.host:6/files/golucky.sh && sh /tmp/install.sh http://6.666666.host:6/files 2.13.4`
+执行：`curl -o /tmp/install.sh http://6.666666.host:6/files/golucky.sh && sh /tmp/install.sh http://6.666666.host:6/files 2.13.4`
 
-- 通过`host:16601` 进入Lucky后台，设置STUN穿透。如果DMZ主机不设为Lucky主机可能会失败。打码的地方即公网访问的IP和端口![](assets/images/2024-10-28-18-56-16-image.png)
+通过`host:16601` 进入Lucky后台，设置STUN穿透。如果DMZ主机不设为Lucky主机可能会失败。打码的地方即公网访问的IP和端口![](assets/images/2024-10-28-18-56-16-image.png)
