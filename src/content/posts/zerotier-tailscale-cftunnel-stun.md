@@ -185,13 +185,13 @@ ping测试![](assets/images/2024-10-28-18-41-45-image.png)
 
 复制如图的命令
 
-![](../../../assets/images/6867b58a279dc6194c80b3764a2dac214a127546.webp)
+![](assets/images/48e9c43eb5c0fb49cc5517687698e3d9d1e60220.webp)
 
-将其粘贴，并且复制后面的令牌![](../../../assets/images/032171519c84ec74a93c2ac799d2f540f3438da7.webp)
+将其粘贴，并且复制后面的令牌![](assets/images/a2e18519d3782d765d7293c7a3d21031c787d575.webp)
 
-1Panel应用商店搜索`cloudflared`![](../../../assets/images/4fc26d9a183d0523c7c58a78579095f166efd426.webp)
+1Panel应用商店搜索`cloudflared`![](assets/images/cf2eba61f0aaa7605240187e1c46f80a3954edfa.webp)
 
-填入令牌![](../../../assets/images/69115c425fd860bb52a540d77a9534107cd6738c.webp)
+填入令牌![](assets/images/6f661ffa778b2be2e108912d3d44d8b3301df6d6.webp)
 
 然后前往[查看IP](#查看cloudflared的ip)
 
