@@ -25,6 +25,6 @@ lang: ''
 
 输入`./alist server`会自动在左边创建data目录
 
-替换内容（你本地部署一个AList，也会有一个`data`文件夹，如果你不是跨版本可以直接覆盖`data`文件夹，如果你跨版本需要手动配置`config.json`并且替换`data.db`）确认测试环境无异常后直接部署代码即可
+替换内容（你本地部署一个AList，也会有一个`data`文件夹，如果你不是跨版本可以直接覆盖`data`文件夹，如果你跨版本需要手动配置`config.json`并且替换`data.db`）确认测试环境无异常后直接部署代码即可。最好添加一个预留实例，避免冷启动
 
 来到 配置 -> 触发器 复制公网HTTPS地址。这就是你的AList后端地址，如果你有备案域名，可绑定自定义域名来实现访问。如果你没有，可以将其作为后端API使用，在Cloudflare Pages部署AList_Web项目即可，教程：[教你把AList的前端部署到CF Pages！让你的AList秒加载！](/posts/alist-web-for-cf-page/)
