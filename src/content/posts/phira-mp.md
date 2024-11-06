@@ -13,7 +13,7 @@ lang: ''
 
 ::github{repo="afoim/phira-mp-autobuild"}
 
-这是里有一些由Github Action自动构建的服务端文件，涵盖以下系统和架构![](assets/images/2024-11-06-08-28-34-image.png)
+这里有一些由Github Action自动构建的服务端文件，涵盖以下系统和架构![](assets/images/2024-11-06-08-28-34-image.png)
 
 也可以前往[Multiplayer Server | Dmocken的Phira下载站](https://phira.dmocken.top/Multiplayer%20Server)自行寻找
 
