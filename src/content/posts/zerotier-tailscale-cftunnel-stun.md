@@ -232,17 +232,17 @@ root@n100-debian:~# ip a
 
 选择Debian，然后复制底下的命令，直接到终端执行
 
-![](../../../assets/images/2024-10-28-20-00-49-image.png)
+![](assets/images/2024-10-28-20-00-49-image.png)
 
 如果你的环境无法连接上Github
 
 尝试手动下载：[https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64.deb](https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64.deb)
 
-然后将其通过SSH等方式传到Linux上，如图终端为MobaXterm![](../../../assets/images/2024-10-29-10-18-29-image.png)
+然后将其通过SSH等方式传到Linux上，如图终端为MobaXterm![](assets/images/2024-10-29-10-18-29-image.png)
 
 然后使用：`dpkg -i cloudflared-linux-amd64.deb`安装这个软件包
 
-然后直接复制右边的命令到SSH终端执行![](../../../assets/images/2024-10-29-10-19-27-3dcfad6977bdecf80fc0366f257788e6.webp)
+然后直接复制右边的命令到SSH终端执行![](assets/images/2024-10-29-10-19-27-3dcfad6977bdecf80fc0366f257788e6.webp)
 
 **然后前往[配置并访问Tunnel](#%E9%85%8D%E7%BD%AE%E5%B9%B6%E8%AE%BF%E9%97%AEtunnel)**
 
@@ -252,7 +252,7 @@ root@n100-debian:~# ip a
 
 在终端执行：`pkg install cloudflared`
 
-选择`Debian`然后复制最右边的命令到终端执行![](../../../assets/images/2024-10-29-08-42-38-image.png)
+选择`Debian`然后复制最右边的命令到终端执行![](assets/images/2024-10-29-08-42-38-image.png)
 如果你无法使用Termux自带的cloudflared，请尝试安装proot容器实现
 
 依次输入命令：
@@ -271,7 +271,7 @@ dpkg -i cloudflared-linux-amd64.deb
 
 然后直接复制右边的命令到SSH终端执行
 
-![](../../../assets/images/2024-10-29-08-42-38-image.png)
+![](assets/images/2024-10-29-08-42-38-image.png)
 
 如果你无法通过令牌配置cloudflared，请参见[本地方式配置cloudflared](#本地方式)
 
