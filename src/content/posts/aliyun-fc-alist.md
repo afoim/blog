@@ -2,7 +2,7 @@
 title: 利用阿里云云函数 FC 搭建AList后端，每月仅需5毛！
 published: 2024-11-02
 description: '阿里云云函数 FC是一个弹性的计算平台，可托管多种服务。搭配AList的前后端分离部署，实现比VPS更低的价格，得到更好的体验'
-image: 'assets/images/47518d4403328a0fcb716f0e06fc7f608e6c65b7.png'
+image: 'assets/images/47518d4403328a0fcb716f0e06fc7f608e6c65b7.webp'
 tags: [阿里云云函数 FC]
 category: '开发'
 draft: false 
@@ -13,15 +13,15 @@ lang: ''
 
 前往：[函数计算 FC](https://fcnext.console.aliyun.com/overview)
 
-选择创建函数![2024-11-02-02-42-18-image.png](assets/images/47c33b21f3cfb9cf6f05c8f63bfb9c7d2e7ef3d7.png)
+选择创建函数![2024-11-02-02-42-18-image.webp](assets/images/47c33b21f3cfb9cf6f05c8f63bfb9c7d2e7ef3d7.webp)
 
-创建一个Web函数，如图填写信息。将你的文件夹上传。然后创建![2024-11-02-02-44-52-image.png](assets/images/f82baf09877ded25583bb46427e6664455d18f73.png)
+创建一个Web函数，如图填写信息。将你的文件夹上传。然后创建![2024-11-02-02-44-52-image.webp](assets/images/f82baf09877ded25583bb46427e6664455d18f73.webp)
 
-进入已经创建完毕的函数控制面板![2024-11-02-02-45-23-image.png](assets/images/4a0be482e97f7761fc37c49c0d7b55e1b6ed5777.png)
+进入已经创建完毕的函数控制面板![2024-11-02-02-45-23-image.webp](assets/images/4a0be482e97f7761fc37c49c0d7b55e1b6ed5777.webp)
 
 依次进入 代码 -> Terminal -> New Terminal
 
-![2024-11-02-02-47-41-image.png](assets/images/62195f4becb769407e608b330568172fc60a96d1.png)
+![2024-11-02-02-47-41-image.webp](assets/images/62195f4becb769407e608b330568172fc60a96d1.webp)
 
 输入`./alist server`会自动在左边创建data目录
 

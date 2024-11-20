@@ -11,11 +11,11 @@ lang: ''
 
 #### 未优选
 
-![QmZoinxZgAzu7Skh7BqsxmDQGU1sXtLLskJcyQuRAQNKww.png](assets/images/098f9ee71ae62603022e542878673e19bdcaf196.png)
+![QmZoinxZgAzu7Skh7BqsxmDQGU1sXtLLskJcyQuRAQNKww.webp](assets/images/098f9ee71ae62603022e542878673e19bdcaf196.webp)
 
 #### 已优选
 
-![QmaNVwAwSRvqdL5SrvWVCGCQqmacP3d62yoLxofGscNoKq.png](assets/images/e98ce10d846475aaec5cf73546d9b5caffefc4c0.png)
+![QmaNVwAwSRvqdL5SrvWVCGCQqmacP3d62yoLxofGscNoKq.webp](assets/images/e98ce10d846475aaec5cf73546d9b5caffefc4c0.webp)
 
 ---
 
@@ -31,16 +31,16 @@ lang: ''
 ---
 
 1. 首先新建一个DNS解析，指向你的**源站**，**开启cf代理**
-   ![QmfBKgDe77SpkUpjGdmsxqwU2UabvrDAw4c3bgFiWkZCna.png](assets/images/c94c34ee262fb51fb5697226ae0df2d804bf76fe.png)
+   ![QmfBKgDe77SpkUpjGdmsxqwU2UabvrDAw4c3bgFiWkZCna.webp](assets/images/c94c34ee262fb51fb5697226ae0df2d804bf76fe.webp)
 
 2. 前往 SSL/TLS -> 自定义主机名。设置回退源为你刚才的DNS解析的域名（xlog.acofork.cn），添加自定义主机名为你最终想让用户访问的域名（onani.cn）并且按照指示在主力域名（onani.cn）添加TXT所有权验证和TXT证书验证，直到证书状态和主机名状态都变为有效
-   ![QmRYrwjeDMDQCj8G9RYkpjC3X4vpwE77wpNpbqKURwBber.png](assets/images/f6170f009c43f7c6bee4c2d29e2db7498fa1d0dc.png)
+   ![QmRYrwjeDMDQCj8G9RYkpjC3X4vpwE77wpNpbqKURwBber.webp](assets/images/f6170f009c43f7c6bee4c2d29e2db7498fa1d0dc.webp)
 
 3. 继续在你的辅助域名添加一条解析。CNAME到优选节点：cloudflare.182682.xyz，**不开启cf代理**
-   ![QmNwkMqDEkCGMu5jsgE6fj6qpupiqMrqqQtWeAmAJNJbC4.png](assets/images/4f9f727b0490e0b33d360a2363c1026003060b29.png)
+   ![QmNwkMqDEkCGMu5jsgE6fj6qpupiqMrqqQtWeAmAJNJbC4.webp](assets/images/4f9f727b0490e0b33d360a2363c1026003060b29.webp)
 
 4. 最后在你的主力域名添加解析。域名为之前在辅助域名的自定义主机名（onani.cn），目标为刚才的cdn.acofork.cn，**不开启cf代理**
-   ![QmeK3AZghae4J4LcJdbPMxBcmoNEeF3hXNBmtJaDki8HYt.png](assets/images/6f51cb2a42140a9bf364f88a5715291be616a254.png)
+   ![QmeK3AZghae4J4LcJdbPMxBcmoNEeF3hXNBmtJaDki8HYt.webp](assets/images/6f51cb2a42140a9bf364f88a5715291be616a254.webp)
 
 5. 优选完毕，尝试访问
    

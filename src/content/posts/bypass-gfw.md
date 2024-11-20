@@ -25,36 +25,36 @@ lang: ''
 
 - 首先尝试访问 `www.baidu.com` 这是一个没有被GFW封锁的域名
   
-  1. 我们先ping一下![](assets/images/2024-10-21-20-16-48-image.png)
+  1. 我们先ping一下![](assets/images/2024-10-21-20-16-48-image.webp)
   
   2. 得到ip： `2408:873d:22:18ac:0:ff:b021:1393` 
   
-  3. 通过Hosts强制绑定![](assets/images/2024-10-21-20-18-10-image.png)
+  3. 通过Hosts强制绑定![](assets/images/2024-10-21-20-18-10-image.webp)
   
-  4. 通过WireShark进行抓包，可以看到，客户端发送的 `Client Hello` 可以清晰地看到 `Server Name` 字段，并且也能正常收到 `Server Hello` 然后双方便开始通信![](assets/images/2024-10-21-20-24-03-image.png)
+  4. 通过WireShark进行抓包，可以看到，客户端发送的 `Client Hello` 可以清晰地看到 `Server Name` 字段，并且也能正常收到 `Server Hello` 然后双方便开始通信![](assets/images/2024-10-21-20-24-03-image.webp)
   
-  5. 查看浏览器，网站正常访问![](assets/images/2024-10-21-20-35-29-image.png)
+  5. 查看浏览器，网站正常访问![](assets/images/2024-10-21-20-35-29-image.webp)
 
 - 让我们试试访问 `discord.com`
   
-  1. 我们先ping一下，可以发现，域名和解析到的IP均不通![](assets/images/2024-10-21-20-27-57-image.png)
+  1. 我们先ping一下，可以发现，域名和解析到的IP均不通![](assets/images/2024-10-21-20-27-57-image.webp)
   
-  2. 此时我们尝试使用 `itdog.cn` 进行v4 ping，并且依次对解析出的域名进行ping![](assets/images/2024-10-21-20-28-51-image.png)
+  2. 此时我们尝试使用 `itdog.cn` 进行v4 ping，并且依次对解析出的域名进行ping![](assets/images/2024-10-21-20-28-51-image.webp)
   
-  3. 可见，第一个IP通![](assets/images/2024-10-21-20-29-40-image.png)
+  3. 可见，第一个IP通![](assets/images/2024-10-21-20-29-40-image.webp)
   
-  4. 强制绑定Hosts，尝试抓包![](assets/images/2024-10-21-20-35-58-image.png)![](assets/images/2024-10-21-20-31-49-image.png)
+  4. 强制绑定Hosts，尝试抓包![](assets/images/2024-10-21-20-35-58-image.webp)![](assets/images/2024-10-21-20-31-49-image.webp)
   
-  5. 可见，在通过强制Hosts绑定后，在客户端发送 `Client Hello` 后被GFW检测到`Server Name` 字段，然后GFW向客户端发送一个 `RST` 报文，即要求重置客户端连接。在客户端侧，则会收到 `ERR_CONNECTION_RESET` 即：连接已重置。用户无法访问网页。![](assets/images/2024-10-21-20-33-23-image.png)
+  5. 可见，在通过强制Hosts绑定后，在客户端发送 `Client Hello` 后被GFW检测到`Server Name` 字段，然后GFW向客户端发送一个 `RST` 报文，即要求重置客户端连接。在客户端侧，则会收到 `ERR_CONNECTION_RESET` 即：连接已重置。用户无法访问网页。![](assets/images/2024-10-21-20-33-23-image.webp)
 
 ### 继续，尝试发送空 `Server Name` 报文
 
-![](assets/images/2024-10-21-20-41-37-image.png)
+![](assets/images/2024-10-21-20-41-37-image.webp)
 
-![](assets/images/2024-10-21-20-41-54-image.png)
+![](assets/images/2024-10-21-20-41-54-image.webp)
 
 成功访问。在WireShark中并未发现 `Server Name` 字段
 
 ### 杀手锏，tcpioneer
 
-它通过魔改TCP数据包使得GFW无法检测，并且WireShark也无法抓取到`Client Hello`报文，但是仍然能建立连接，即服务端发送`Server Hello`![](assets/images/2024-10-21-20-46-44-image.png)
+它通过魔改TCP数据包使得GFW无法检测，并且WireShark也无法抓取到`Client Hello`报文，但是仍然能建立连接，即服务端发送`Server Hello`![](assets/images/2024-10-21-20-46-44-image.webp)

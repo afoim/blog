@@ -104,7 +104,7 @@ lang: ''
        },
        banner: {
          enable: true,
-         src: 'assets/images/222.jpg',   // Relative to the /src directory. Relative to the /public directory if it starts with '/'
+         src: 'assets/images/222.webp',   // Relative to the /src directory. Relative to the /public directory if it starts with '/'
          position: 'center',      // Equivalent to object-position, only supports 'top', 'center', 'bottom'. 'center' by default
          credit: {
            enable: false,         // Display the credit text of the banner image
@@ -140,7 +140,7 @@ lang: ''
      }
      
      export const profileConfig: ProfileConfig = {
-       avatar: 'assets/images/111.jpg',  // Relative to the /src directory. Relative to the /public directory if it starts with '/'
+       avatar: 'assets/images/111.webp',  // Relative to the /src directory. Relative to the /public directory if it starts with '/'
        name: '二叉树树',
        bio: 'Protect What You Love./爱你所爱！',
        links: [
@@ -226,7 +226,7 @@ lang: ''
    
    - ![](assets/images/2024-10-14-12-54-21-image.webp)
    
-   - 这样，当置入图片时，会往 `assets/images` 文件夹复制一份，然后通过`![1](assets/images/1.jpg)`写入MarkDown文件。这样网站就能成功读取到图片啦。而你只需要Ctrl+CV，其他操作MarkText都会自动处理
+   - 这样，当置入图片时，会往 `assets/images` 文件夹复制一份，然后通过`![1](assets/images/1.webp)`写入MarkDown文件。这样网站就能成功读取到图片啦。而你只需要Ctrl+CV，其他操作MarkText都会自动处理
 
 8. 至此，你已经会用MarkText编写MarkDown语法的博文了
 

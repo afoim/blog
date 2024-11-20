@@ -26,7 +26,7 @@ lang: ''
    ::github{repo="alist-org/alist-web"}
 
 2. 更改项目根目录的`env.production`文件为你的后端服务器地址  
-   ![QmduQJq3TydzvLzBn47zLxp2MR1iD2sxm67EzFUFuEBvQa.png](assets/images/6f2871ca5d35e1e974d89611835f3a2c7fd205e7.png)
+   ![QmduQJq3TydzvLzBn47zLxp2MR1iD2sxm67EzFUFuEBvQa.webp](assets/images/6f2871ca5d35e1e974d89611835f3a2c7fd205e7.webp)
 
 3. 将仓库克隆到本地，需要安装[Git](https://git-scm.com/)：
 
@@ -39,7 +39,7 @@ git clone git@github.com:你的用户名/你Fork的仓库
 ```
 
 5. 下载汉化包：[AcoFork 的网盘](https://alist.onani.cn/guest/alist_Zh-CN)或[Crowdin - 需要登录](https://crowdin.com/project/alist/zh-CN)  
-   ![QmXVpMc7BqbXv9EaAbeptsrnhYLinvQQsu1btBE3VvDixa.png](assets/images/68d31e9797edfc3c1d8a72386ebf3a643d117ce6.png)
+   ![QmXVpMc7BqbXv9EaAbeptsrnhYLinvQQsu1btBE3VvDixa.webp](assets/images/68d31e9797edfc3c1d8a72386ebf3a643d117ce6.webp)
 6. 解压，将`alist (zh-CN)\src\lang`里面的`Zh-CN`文件夹复制到仓库下`src/lang`下
 7. 编辑根目录的`.gitignore`，添加一行`!/src/lang/zh-CN/`确保文件不被忽略
 8. 下载[Nodejs](https://nodejs.org/zh-cn)。在根目录打开终端，生成中文需要的文件：
@@ -64,22 +64,22 @@ git push -f   //强制将更改提交到远程仓库
 ```
 
 10. 进入[Cloudflare 仪表盘](https://dash.cloudflare.com/)，进入 Workers 和 Pages 页面  
-    ![QmW5UaUap8T2R37u5dzmKGLmUgk4qKnSMFwHBVHqvVbkVA.png](assets/images/49ccd51771082fdc94eecb270caf987d257cd987.png)
+    ![QmW5UaUap8T2R37u5dzmKGLmUgk4qKnSMFwHBVHqvVbkVA.webp](assets/images/49ccd51771082fdc94eecb270caf987d257cd987.webp)
 11. 创建一个 Pages，选择连接 Git 存储库  
-    ![QmZXerKv9PVxxscAe4w4LEfAaKfiScPQEKh1UroXnCeAUr.png](assets/images/9c4b9ff38d3c8810007ffe33c1a0f98cdd84b92e.png)
+    ![QmZXerKv9PVxxscAe4w4LEfAaKfiScPQEKh1UroXnCeAUr.webp](assets/images/9c4b9ff38d3c8810007ffe33c1a0f98cdd84b92e.webp)
 12. 选择你的存储库，开始设置  
-    ![QmNdSGQrJtoqDnBx8pgDrtcfmUUfVBS9xdrN4xLgyPjyXE.png](assets/images/fb97b5148c3811590609a0b85c6c1ee3c451853d.png)
+    ![QmNdSGQrJtoqDnBx8pgDrtcfmUUfVBS9xdrN4xLgyPjyXE.webp](assets/images/fb97b5148c3811590609a0b85c6c1ee3c451853d.webp)
 13. 构建命令输入：`pnpm install && pnpm build`，构建输出目录选择`/dist`  
-    ![QmbhPdbE8f1zLKvWA6aEGJtZhmecRMVZiQbx6Zx1Lecp7J.png](assets/images/c4300a94ccb16fe1383c721cbc83d1a71420e340.png)
+    ![QmbhPdbE8f1zLKvWA6aEGJtZhmecRMVZiQbx6Zx1Lecp7J.webp](assets/images/c4300a94ccb16fe1383c721cbc83d1a71420e340.webp)
 14. 等待 Cloudflare 构建结束，为 Pages 绑定自定义域  
-    ![QmTMphu61uUF9XefBAVDVf19Jm1vLVUhhXQ9PXABy7hUpK.png](assets/images/d27136b31d759898fe06041f12e7a07f07bd06b0.png)
+    ![QmTMphu61uUF9XefBAVDVf19Jm1vLVUhhXQ9PXABy7hUpK.webp](assets/images/d27136b31d759898fe06041f12e7a07f07bd06b0.webp)
 15. 访问自定义域，查看 AList 是否正常  
-    ![QmT8GLcaxtabhifKNL8kczEtozmNvdyhzJ823RfBrcFdpm.png](assets/images/345df496620a9d3faf0eceeb773813bc9ac98375.png)
+    ![QmT8GLcaxtabhifKNL8kczEtozmNvdyhzJ823RfBrcFdpm.webp](assets/images/345df496620a9d3faf0eceeb773813bc9ac98375.webp)
 
 ### 定制 AList[#](https://afo.im/shen-me-Cloudflare-dai-li-AList-tai-man--jiao-ni-bu-shu-qian-duan-dao-Pages-ju-jue-hui-yuan-#user-content-%E5%AE%9A%E5%88%B6-alist)
 
 > 我们都知道 AList 支持自定义头部和内容，但是因为 Cloudflare Pages 是一个静态页面，所以我们采用硬编码方式，直接将需要自定义的内容写入仓库根目录的`index.html`  
-> ![Qmd47pgFsyh28NjhkLiCPPbf7iasXMWvAvZDupH8QspG64.png](assets/images/c3ff113558b368da9a7aeb70f70b978f49d0eb7a.png)
+> ![Qmd47pgFsyh28NjhkLiCPPbf7iasXMWvAvZDupH8QspG64.webp](assets/images/c3ff113558b368da9a7aeb70f70b978f49d0eb7a.webp)
 
 1. 编辑根目录的`index.html`
 2. 将更改提交到暂存区并提交到远程仓库，在根目录打开终端
@@ -91,4 +91,4 @@ git push -f   //强制将更改提交到远程仓库
 ```
 
 3. Cloudflare Pages 会自动重新构建，等待新网页构建完成即可  
-   ![QmNZemsDHz5QLxW3V2eANghmVkfBccEpe5vMAWUCLik4o6.png](assets/images/863e5bb3ef65ec2a0af03303dd3afe13fb8dd8d4.png)
+   ![QmNZemsDHz5QLxW3V2eANghmVkfBccEpe5vMAWUCLik4o6.webp](assets/images/863e5bb3ef65ec2a0af03303dd3afe13fb8dd8d4.webp)

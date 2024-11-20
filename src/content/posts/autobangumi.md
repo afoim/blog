@@ -62,10 +62,10 @@ AutoBangumi:
 
 5. 点左边的设置图标 -> 下载设置，填入下载器信息，然后点击右下角的应用，直到右上角亮绿灯
 
-![QmbVcrgZ2C2FTt6QdfKsUkVQz9SCiQiyq1WCbphDiGW2mM.png](assets/images/94f407121de7816ee2dff78f948dcc2ded27b28f.png)
+![QmbVcrgZ2C2FTt6QdfKsUkVQz9SCiQiyq1WCbphDiGW2mM.webp](assets/images/94f407121de7816ee2dff78f948dcc2ded27b28f.webp)
 
 6. 前往蜜柑计划，注册账号，并订阅你想要的番剧（复制）
-   ![QmXq7DcBkA4EecJikQE4snvPkNU2NQLy1EXUpAructteah.png](assets/images/0e22eab8db6ed2441f3d3be0b10d51944867df0a.png)
+   ![QmXq7DcBkA4EecJikQE4snvPkNU2NQLy1EXUpAructteah.webp](assets/images/0e22eab8db6ed2441f3d3be0b10d51944867df0a.webp)
 
 7. 回到 AutoBangumi，点击右上角的 +，添加 RSS（粘贴）
 
@@ -100,7 +100,7 @@ AutoBangumi:
 2. Win 可以通过右键菜单自动获取路径版.bat 通过右键一级目录选择自动剧集命名 。若使用.py 脚本则只能通过`python3 EpisodeReName.py "D:/qbdownloads/bangumi"`
 
 **小贴士：** 可以使用[RaiDrive](https://onani.cn/RaiDrive)或[SSHFS](/SSHFS)将远程的Linux文件映射到Windows上，管理番剧更方便
-![QmY7KM2MjudNksqvSkkFmwFgjjdD7ZQKLDaVPXR3jnXoxw.png](assets/images/5cf6dfe73164f6a869a59817df53f939e936ab00.png)
+![QmY7KM2MjudNksqvSkkFmwFgjjdD7ZQKLDaVPXR3jnXoxw.webp](assets/images/5cf6dfe73164f6a869a59817df53f939e936ab00.webp)
 
 ### 安装 Plex（或者安装飞牛云NAS）
 
@@ -116,6 +116,6 @@ AutoBangumi:
 
 图为飞牛影视
 
-![Qmf8Q1D9fUoFbu9MQsQHvaz13p3YV2XguR3RqUAse2KBEa.png](assets/images/acbde8bfd7395a8b5c744b9f1c550f3caac6c342.png)
+![Qmf8Q1D9fUoFbu9MQsQHvaz13p3YV2XguR3RqUAse2KBEa.webp](assets/images/acbde8bfd7395a8b5c744b9f1c550f3caac6c342.webp)
 
 爽看
