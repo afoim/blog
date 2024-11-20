@@ -1,80 +1,37 @@
 ---
 title: 使用NoneBot2搭建你的QQBot！
-published: 2024-10-08
-description: '使用Lagrange连接NoneBot2，打造自己的聊天机器人'
+published: 2024-11-20
+description: '使用NapCat连接NoneBot2，打造自己的聊天机器人'
 image: './assets/images/QmcMSSKysZmgUCUk9W7hQUvZCtVSFH6hGKHctg99yo1yDE.webp'
-tags: [QQBot, Lagrange]
+tags: [QQBot]
 category: '开发'
 draft: false 
 lang: 'zh_CN'
 ---
 
-本文为：https://xfeed.app/notes/71448-13 的重置版
+# 安装 NapCat(Win)
 
----
+> 用于登录 QQ 实现收发消息
 
-### **安装 Lagrange.OneBot**
+1. 进入[Release NapCat V4.1.12 · NapNeko/NapCatQQ · GitHub](https://github.com/NapNeko/NapCatQQ/releases/latest)，下载`NapCat.Shell.zip`
 
-用于登录 QQ 实现收发消息
+2. 将其解压到一个单独的文件夹，然后打开命令行，运行`launcher.bat <BOT QQ号>`
 
-1. 进入[Lagrange 的 GithubRelease](https://github.com/LagrangeDev/Lagrange.Core/releases/tag/nightly)，根据你的系统下载文件
+3. 运行后通过手机扫码登录
 
-2. 解压运行那唯一一个文件
+4. 它会打印本地控制台的地址信息，如：`[NapCat] [WebUi] WebUi Local Panel Url: http://127.0.0.1:6099/webui?token=4xldg5fqb1`
 
-3. 它会跟你说没有配置文件，不用管，一路回车（你要会改就改）
+5. 直接进入，如图配置即可（端口号可以自己修改，但是要和下部分NoneBot2监听的端口一致。这里是9090）![](assets/images/2024-11-20-19-21-21-2024-11-20-19-15-39-image.webp)
+   
+# 安装 NoneBot2
 
-```json
-{
-    "Logging": {
-        "LogLevel": {
-            "Default": "Information",
-            "Microsoft": "Warning",
-            "Microsoft.Hosting.Lifetime": "Information"
-        }
-    },
-    "SignServerUrl": "https://sign.lagrangecore.org/api/sign/25765",
-    "MusicSignServerUrl": "",
-    "Account": {
-        "Uin": 0,
-        "Password": "",
-        "Protocol": "Linux",
-        "AutoReconnect": true,
-        "GetOptimumServer": true
-    },
-    "Message": {
-        "IgnoreSelf": true,
-        "StringPost": false
-    },
-    "QrCode": {
-        "ConsoleCompatibilityMode": false
-    },
-    "Implementations": [
-        {
-            "Type": "ReverseWebSocket",
-            "Host": "127.0.0.1",   //地址，确保跟后文的NoneBot2保持一致
-            "Port": 8080,   //端口，确保跟后文的NoneBot2保持一致
-            "Suffix": "/onebot/v11/ws",   //路径，默认不用动
-            "ReconnectInterval": 5000,
-            "HeartBeatInterval": 5000,
-            "AccessToken": ""
-        }
-    ]
-}
-```
+用于实现逻辑，控制 NapCat 收发消息
 
-3. 等待它蹦出二维码，扫它
-
-4. 不用管了，放置它
-
-### **安装 NoneBot2**
-
-用于实现逻辑，控制 Lagrange 收发消息
-
-1. 首先，你得装[Python](https://www.python.org/downloads/)
+1. 首先，你得装[Python](https://www.python.org/downloads/)。Windows可以使用 https://scoop.sh/
 
 2. pypi 清华源：`pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple`
 
-3. 装 pipx：`pip install pipx`
+3. 装 pipx：`pip install pipx`。你也可以使用`scoop install pipx`
 
 4. 设置 pipx 全局变量：`pipx ensurepath`
 
