@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://acofork.us.kg/sitemap-index.xml

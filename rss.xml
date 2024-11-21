@@ -1,0 +1,1909 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>二叉树树的博客</title><description>爱你所爱！</description><link>https://acofork.us.kg/</link><language>zh_CN</language><item><title>自建正向代理服务器</title><link>https://acofork.us.kg/posts/connect-global-internet/</link><guid isPermaLink="true">https://acofork.us.kg/posts/connect-global-internet/</guid><description>不要再买机场了！自建它不香吗？!</description><pubDate>Thu, 21 Nov 2024 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;将Cloudflare作为代理使用（Vless）&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;进入 https://github.com/yonggekkk/Cloudflare_vless_trojan/blob/main/Vless_workers_pages/_worker.js 这是Workers代码&lt;/li&gt;
+&lt;li&gt;进入 https://it-tools.tech/uuid-generator 随机获取一个uuid&lt;/li&gt;
+&lt;li&gt;在代码第七行写入你的uuid&lt;/li&gt;
+&lt;li&gt;绑定自定义域名。通过https://你的自定义域名/uuid查看仪表盘&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1&gt;将你自己的国外VPS作为代理使用&lt;/h1&gt;
+&lt;h2&gt;新协议：Hysteria2&lt;/h2&gt;
+&lt;p&gt;::github{repo=&quot;seagullz4/hysteria2&quot;}&lt;/p&gt;
+&lt;p&gt;VPS安装脚本：&lt;code&gt;curl -sSL https://github.com/seagullz4/hysteria2/raw/main/install.sh -o install.sh &amp;amp;&amp;amp; chmod +x install.sh &amp;amp;&amp;amp; bash install.sh&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;详细安装：自签名，不使用acme，不使用端口跳跃&lt;/p&gt;
+&lt;p&gt;客户端（Hiddify）：&lt;/p&gt;
+&lt;p&gt;::github{repo=&quot;hiddify/hiddify-app&quot;}&lt;/p&gt;
+&lt;p&gt;其他客户端在第一个Github Repo获取&lt;/p&gt;
+&lt;h2&gt;旧协议：V2Ray&lt;/h2&gt;
+&lt;p&gt;::github{repo=&quot;233boy/v2ray&quot;}&lt;/p&gt;
+&lt;p&gt;VPS安装脚本：&lt;code&gt;bash &amp;lt;(curl -s -L https://git.io/v2ray.sh)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;详细安装：脚本执行完毕后输入&lt;code&gt;v2ray&lt;/code&gt;更改配置为Shadowsocks&lt;/p&gt;
+&lt;p&gt;Windows客户端： &lt;a href=&quot;https://github.com/2dust/v2rayN/releases&quot;&gt;Releases · 2dust/v2rayN · GitHub&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Android客户端： &lt;a href=&quot;https://github.com/2dust/v2rayNG/releases&quot;&gt;Releases · 2dust/v2rayNG · GitHub&lt;/a&gt;&lt;/p&gt;
+</content:encoded></item><item><title>使用NoneBot2搭建你的QQBot！</title><link>https://acofork.us.kg/posts/qqbot/</link><guid isPermaLink="true">https://acofork.us.kg/posts/qqbot/</guid><description>使用NapCat连接NoneBot2，打造自己的聊天机器人</description><pubDate>Wed, 20 Nov 2024 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;安装 NapCat(Win)&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;用于登录 QQ 实现收发消息&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;进入&lt;a href=&quot;https://github.com/NapNeko/NapCatQQ/releases/latest&quot;&gt;Release NapCat V4.1.12 · NapNeko/NapCatQQ · GitHub&lt;/a&gt;，下载&lt;code&gt;NapCat.Shell.zip&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;将其解压到一个单独的文件夹，然后打开命令行，运行&lt;code&gt;launcher.bat &amp;lt;BOT QQ号&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;运行后通过手机扫码登录&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;它会打印本地控制台的地址信息，如：&lt;code&gt;[NapCat] [WebUi] WebUi Local Panel Url: http://127.0.0.1:6099/webui?token=4xldg5fqb1&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;直接进入，如图配置即可（端口号可以自己修改，但是要和下部分NoneBot2监听的端口一致。这里是9090）&lt;img src=&quot;assets/images/2024-11-20-19-21-21-2024-11-20-19-15-39-image.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1&gt;安装 NoneBot2&lt;/h1&gt;
+&lt;p&gt;用于实现逻辑，控制 NapCat 收发消息&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;首先，你得装&lt;a href=&quot;https://www.python.org/downloads/&quot;&gt;Python&lt;/a&gt;。Windows可以使用 https://scoop.sh/&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;pypi 清华源：&lt;code&gt;pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;装 pipx：&lt;code&gt;pip install pipx&lt;/code&gt;。你也可以使用&lt;code&gt;scoop install pipx&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;设置 pipx 全局变量：&lt;code&gt;pipx ensurepath&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;装 nb-cli：&lt;code&gt;pipx install nb-cli&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;如果找不到 nb 命令：&lt;/strong&gt; 对于 root 用户，你可以编辑 &lt;code&gt;/root/.bashrc&lt;/code&gt; 或 &lt;code&gt;/root/.profile&lt;/code&gt;（如果你使用的是 Bash）： &lt;code&gt;nano /root/.bashrc&lt;/code&gt; 添加以下行： &lt;code&gt;export PATH=&quot;$HOME/.local/bin:$PATH&quot;&lt;/code&gt; 保存并重新加载配置： &lt;code&gt;source /root/.bashrc&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;装 nb bootstrap：&lt;code&gt;nb self install nb-cli-plugin-bootstrap&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;新建项目，选一个你喜欢的文件夹，然后：&lt;code&gt;nb bs&lt;/code&gt; （看不懂的就一路回车）&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;示例：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;C:\afbot&amp;gt;nb bs
+加载适配器列表中……
+请输入项目名称
+[?] 请输入 &amp;gt; onanibot
+[?] 请选择你想要使用的适配器 OneBot V11 (OneBot V11 协议)
+请输入 Bot 超级用户，超级用户拥有对 Bot 的最高权限（如对接 QQ 填 QQ 号即可）（留空回车结束输入）
+[?] 第 1 项 &amp;gt;
+请输入 Bot 昵称，消息以 Bot 昵称开头可以代替艾特（留空回车结束输入）
+[?] 第 1 项 &amp;gt;
+请输入 Bot 命令起始字符，消息以起始符开头将被识别为命令，
+如果有一个指令为 查询，当该配置项中有 &quot;/&quot; 时使用 &quot;/查询&quot; 才能够触发，
+留空将使用默认值 [&apos;&apos;, &apos;/&apos;, &apos;#&apos;]（留空回车结束输入）
+[?] 第 1 项 &amp;gt;
+请输入 Bot 命令分隔符，一般用于二级指令，
+留空将使用默认值 [&apos;.&apos;, &apos; &apos;]（留空回车结束输入）
+[?] 第 1 项 &amp;gt;
+请输入 NoneBot2 监听地址，如果要对公网开放，改为 0.0.0.0 即可
+[?] 请输入 &amp;gt; 127.0.0.1
+请输入 NoneBot2 监听端口，范围 1 ~ 65535，请保证该端口号与连接端配置相同，或与端口映射配置相关
+[?] 请输入 &amp;gt; 8080
+[?] 是否在项目目录中释出快捷启动脚本？ Yes
+[?] 是否将 localstore 插件的存储路径重定向到项目路径下以便于后续迁移 Bot？ Yes
+[?] 是否使用超级用户 Ping 指令回复插件？ Yes
+[?] 是否安装 logpile 插件提供日志记录到文件功能？ Yes
+[?] 是否在启动脚本中使用 webui 插件启动项目以使用网页管理 NoneBot？（该插件仍在开发中，不推荐用于生产环境） No
+成功新建项目 onanibot
+[?] 是否新建虚拟环境？ Yes
+正在 C:\afbot\onanibot\.venv 中创建虚拟环境
+创建虚拟环境成功
+[?] 是否需要修改或清除 pip 的 PyPI 镜像源配置？ No
+[?] 是否立即安装项目依赖？ Yes
+正在安装项目依赖
+依赖安装成功
+[?] 请选择需要启用的内置插件
+项目配置完毕，开始使用吧！
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;项目创建完毕后启动：&lt;code&gt;nb run&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;出现：&lt;code&gt;[INFO] nonebot | OneBot V11 | Bot XXXXXXXXXX connected&lt;/code&gt; 你就成功连接上 Lagrange 了&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;测试，发个&lt;code&gt;/ping&lt;/code&gt;，看是否出现Pong~&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;如果你要调试 NoneBot2，请先使用&lt;code&gt;nb&lt;/code&gt; 进入虚拟环境。然后使用&lt;code&gt;pip install &amp;lt;包名&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+</content:encoded></item><item><title>Phira多人联机服务器搭建/使用教程</title><link>https://acofork.us.kg/posts/phira-mp/</link><guid isPermaLink="true">https://acofork.us.kg/posts/phira-mp/</guid><description>懒人可以直接下载预构建的可执行文件，但如果想获得日志需要自备Rust环境</description><pubDate>Wed, 06 Nov 2024 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;直接下载服务端文件并运行&lt;/h1&gt;
+&lt;p&gt;::github{repo=&quot;afoim/phira-mp-autobuild&quot;}&lt;/p&gt;
+&lt;p&gt;这里有一些由Github Action自动构建的服务端文件，涵盖以下系统和架构&lt;img src=&quot;assets/images/2024-11-06-08-28-34-image.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;也可以前往&lt;a href=&quot;https://phira.dmocken.top/Multiplayer%20Server&quot;&gt;Multiplayer Server | Dmocken的Phira下载站&lt;/a&gt;自行寻找&lt;/p&gt;
+&lt;p&gt;寻找适用于你的系统的文件，下载下来并执行即可。默认服务端将会在你的主机12346端口上开放，如果需要自定义端口，请使用&lt;code&gt;--port&lt;/code&gt;参数指定端口。然后即可使用Phira来填写IP/域名:端口来连接&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;&lt;strong&gt;因为phira-mp使用Rust自带的Log模块，所以如果你需要日志，请自行安装Rust。&lt;/strong&gt; 关于Rust的各平台详细安装教程请前往&lt;a href=&quot;#%E8%87%AA%E8%A1%8C%E6%9E%84%E5%BB%BA%E9%AB%98%E7%BA%A7&quot;&gt;自行构建（高级）&lt;/a&gt;继续阅读。确保你已经安装Rust环境后可以使用&lt;code&gt;RUST_LOG=info phira-mp的服务端&lt;/code&gt;来获得日志&lt;/p&gt;
+&lt;p&gt;如果这些文件不适用于你正在使用的系统请前往&lt;a href=&quot;#%E8%87%AA%E8%A1%8C%E6%9E%84%E5%BB%BA%E9%AB%98%E7%BA%A7&quot;&gt;自行构建（高级）&lt;/a&gt;继续阅读&lt;/p&gt;
+&lt;h1&gt;自行构建（高级）&lt;/h1&gt;
+&lt;p&gt;由于phira-mp使用Rust编写，若想要自行构建需要在你的操作系统上安装Rust环境&lt;/p&gt;
+&lt;h2&gt;对于Windows&lt;/h2&gt;
+&lt;p&gt;前往&lt;a href=&quot;https://www.rust-lang.org/zh-CN/learn/get-started&quot;&gt;Rust 下载页&lt;/a&gt;，下载 Rust  &lt;img src=&quot;assets/images/2024-11-06-09-57-44-6b333b87e835dfa299b0c3c95e5ea4e0.webp&quot; alt=&quot;&quot; /&gt;
+打开后会弹出一个 CMD 窗口，输入 1（Quick Install）回车，等待 Visual Studio 安装（如果此步 Visual Studio 下载很慢也可以&lt;a href=&quot;https://visualstudio.microsoft.com/zh-hans/downloads/&quot;&gt;手动下载&lt;/a&gt;）&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;assets/images/2024-11-06-09-57-49-61b4d36dc8cd1ce47da66be5e2a920cd.webp&quot; alt=&quot;&quot; /&gt;在 Visual Studio 中，勾选&lt;strong&gt;使用 C++ 的桌面开发&lt;/strong&gt;，然后安装&lt;br /&gt;
+&lt;img src=&quot;assets/images/2024-11-06-09-58-05-390c775c83dc245b0690fda699bfee5f.webp&quot; alt=&quot;&quot; /&gt;然后请跳过 Linux 教程直接阅读&lt;a&gt;构建 phira-mp&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;对于Linux&lt;/h2&gt;
+&lt;p&gt;执行：&lt;code&gt;curl --proto &apos;=https&apos; --tlsv1.2 -sSf https://sh.rustup.rs | sh&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;选择 1 回车&lt;/p&gt;
+&lt;p&gt;执行：&lt;code&gt;source $HOME/.cargo/env&lt;/code&gt;&lt;/p&gt;
+&lt;h1&gt;使用Rust构建phira-mp&lt;/h1&gt;
+&lt;p&gt;克隆仓库：&lt;code&gt;git clone https://github.com/TeamFlos/phira-mp.git&lt;/code&gt;（不支持IPv6）或&lt;code&gt;git clone https://github.com/afoim/phira-mp-autobuild.git&lt;/code&gt;（支持IPv6）&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;cd phira-mp&lt;/code&gt;或&lt;code&gt;cd phira-mp-autobuild&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;更新依赖：&lt;code&gt;cargo update&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;构建：&lt;code&gt;cargo build --release -p phira-mp-server&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;运行程序并将 log 打印到终端，会显示你监听的端口：&lt;code&gt;RUST_LOG=info target/release/phira-mp-server&lt;/code&gt;&lt;br /&gt;
+（如果你需要指定端口号：&lt;code&gt;RUST_LOG=info target/release/phira-mp-server --port 8080&lt;/code&gt;）&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;assets/images/2024-11-06-10-14-36-0dce4358b21773ae1261e7fc39339c32.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+</content:encoded></item><item><title>利用阿里云云函数 FC 搭建AList后端，每月仅需5毛！</title><link>https://acofork.us.kg/posts/aliyun-fc-alist/</link><guid isPermaLink="true">https://acofork.us.kg/posts/aliyun-fc-alist/</guid><description>阿里云云函数 FC是一个弹性的计算平台，可托管多种服务。搭配AList的前后端分离部署，实现比VPS更低的价格，得到更好的体验</description><pubDate>Sat, 02 Nov 2024 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;先下载AList最新版的Linux-amd64可执行文件，其放到一个空文件夹：&lt;a href=&quot;https://github.com/AlistGo/alist/releases/latest&quot;&gt;Release Latest · AlistGo/alist · GitHub&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;前往：&lt;a href=&quot;https://fcnext.console.aliyun.com/overview&quot;&gt;函数计算 FC&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;选择创建函数&lt;img src=&quot;assets/images/47c33b21f3cfb9cf6f05c8f63bfb9c7d2e7ef3d7.webp&quot; alt=&quot;2024-11-02-02-42-18-image.webp&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;创建一个Web函数，如图填写信息。将你的文件夹上传。然后创建&lt;img src=&quot;assets/images/f82baf09877ded25583bb46427e6664455d18f73.webp&quot; alt=&quot;2024-11-02-02-44-52-image.webp&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;进入已经创建完毕的函数控制面板&lt;img src=&quot;assets/images/4a0be482e97f7761fc37c49c0d7b55e1b6ed5777.webp&quot; alt=&quot;2024-11-02-02-45-23-image.webp&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;依次进入 代码 -&amp;gt; Terminal -&amp;gt; New Terminal&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;assets/images/62195f4becb769407e608b330568172fc60a96d1.webp&quot; alt=&quot;2024-11-02-02-47-41-image.webp&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;输入&lt;code&gt;./alist server&lt;/code&gt;会自动在左边创建data目录&lt;/p&gt;
+&lt;p&gt;替换内容（你本地部署一个AList，也会有一个&lt;code&gt;data&lt;/code&gt;文件夹，如果你不是跨版本可以直接覆盖&lt;code&gt;data&lt;/code&gt;文件夹，如果你跨版本需要手动配置&lt;code&gt;config.json&lt;/code&gt;并且替换&lt;code&gt;data.db&lt;/code&gt;）确认测试环境无异常后直接部署代码即可。最好添加一个预留实例，避免冷启动&lt;/p&gt;
+&lt;p&gt;来到 配置 -&amp;gt; 触发器 复制公网HTTPS地址。这就是你的AList后端地址，如果你有备案域名，可绑定自定义域名来实现访问。如果你没有，可以将其作为后端API使用，在Cloudflare Pages部署AList_Web项目即可，教程：&lt;a href=&quot;/posts/alist-web-for-cf-page/&quot;&gt;教你把AList的前端部署到CF Pages！让你的AList秒加载！&lt;/a&gt;&lt;/p&gt;
+</content:encoded></item><item><title>干翻GFW的SNI阻断，还我们一个不受限制的互联网！</title><link>https://acofork.us.kg/posts/accesser/</link><guid isPermaLink="true">https://acofork.us.kg/posts/accesser/</guid><description>使用Accesser代理HTTP连接，通过不发送ServerName来绕过GFW的SNI阻断</description><pubDate>Mon, 28 Oct 2024 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;Accesser是什么？&lt;/h1&gt;
+&lt;p&gt;::github{repo=&quot;URenko/Accesser&quot;}&lt;/p&gt;
+&lt;p&gt;Accesser是一个HTTP代理。它通过中间人的身份处理终端的HTTP出口流量，以绕过SNI阻断。我们正常访问网站时，客户端会发送Client Hello，而这个报文是明文，并且通常会携带ServerName，这个时候GFW就能通过检测ServerName来进行阻断，代替网站向客户端发送一个RST报文重置连接，做到网站被“墙”的效果&lt;/p&gt;
+&lt;p&gt;而通过Accesser代理后，它会抹掉ServerName然后发送Client Hello。这个时候，如果服务端支持域前置，则会返回客户端一个默认的SSL证书（公钥），然后客户端就能使用这个公钥再次发送一个加密的Client Hello，此时携带上ServerName就不会被GFW阻断了。但是，如果客户端在第一次我们拿公钥的时候拒绝了空ServerName的Client Hello，那这个办法就失效了，不过大部分网站是支持这样做的&lt;/p&gt;
+&lt;h3&gt;Windows&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;前往开头的的Github仓库&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;下载最新的Release。一般有一个&lt;code&gt;accesser.exe&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;直接打开这个软件，看到这个画面即可&lt;img src=&quot;assets/images/2024-10-28-16-36-54-image.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;它的原理是自动设置系统代理，如果你使用了一些别的代理软件，会被覆盖&lt;img src=&quot;assets/images/2024-10-28-16-38-06-image.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Linux（以Debian12为例）&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;安装Python：&lt;code&gt;apt install python3&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;（可选）创建虚拟环境：&lt;code&gt;python -m venv venv&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;（可选）进入虚拟环境：&lt;code&gt;source venv/bin/activate&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;安装Accesser：&lt;code&gt;python3 -m pip install -U accesser&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;运行：&lt;code&gt;accesser&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;它会提示你需要信任 &lt;code&gt;root.crt&lt;/code&gt; 。关闭Accesser&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;我的证书文件在 &lt;code&gt;/root/Accesser/venv/lib/python3.11/site-packages/accesser/CERT/root.crt&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;cd到你的证书目录：&lt;code&gt;cd /root/Accesser/venv/lib/python3.11/site-packages/accesser/CERT&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;信任证书：&lt;code&gt;sudo cp root.crt /usr/local/share/ca-certificates/&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;更新证书存储：&lt;code&gt;sudo update-ca-certificates&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;设置全局代理：&lt;code&gt;sudo nano /etc/environment&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;pre&gt;&lt;code&gt;http_proxy=&quot;http://127.0.0.1:7654&quot;
+https_proxy=&quot;http://127.0.0.1:7654&quot;
+no_proxy=&quot;localhost,127.0.0.1&quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;重启即可&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;测试连通性：&lt;code&gt;curl -x https://discord.com&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</content:encoded></item><item><title>N100 - PVE（fnOS+Debian）基建记录</title><link>https://acofork.us.kg/posts/n100-pve/</link><guid isPermaLink="true">https://acofork.us.kg/posts/n100-pve/</guid><description>在N100小主机上安装PVE，然后在其中安装飞牛NAS和Debian，实现追番建站分离，并且易扩展，易迁移</description><pubDate>Mon, 28 Oct 2024 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;配置&amp;amp;需求&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;N100 CPU 频率：最小 700 Mhz, 最大 3400 Mhz | TDP：6 W&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;8G RAM&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;128G M.2 NVme SSD&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;512G SATA HDD&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Realtek R8168 有线网卡&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;USB有线网卡&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;U盘（作PVE引导盘）&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1&gt;目标&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;所有系统通过PVE管理&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;PVE下安装fnOS，作NAS并配置自动追番（直通：&lt;code&gt;N100核显&lt;/code&gt; &lt;code&gt;512G SATA HDD&lt;/code&gt; ）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;PVE下安装Debian，搭建QQBot、博客、AList&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr /&gt;
+&lt;h1&gt;1. PVE&lt;/h1&gt;
+&lt;h2&gt;安装&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;下载Ventoy最新版可执行文件：&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.ventoy.net/cn/download.html&quot;&gt;https://www.ventoy.net/cn/download.html&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;使用GPT分区表，NTFS格式将Ventoy写入U盘&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;下载PVE最新版ISO（使用USTC镜像源）：&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://mirrors.ustc.edu.cn/help/proxmox.html&quot;&gt;https://mirrors.ustc.edu.cn/help/proxmox.html&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;将PVE的ISO文件放入U盘根目录&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;插入USB网卡，U盘连接到到N100，开机从U盘启动，进入PVE安装界面，安装PVE。网络配置选择USB网卡&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;重启，进入PVE，通过IP+8006端口进入WebUI，登录进去&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;配置&lt;/h2&gt;
+&lt;h3&gt;安装PVE快捷管理脚本&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;安装PVE快捷管理脚本：&lt;a href=&quot;https://alist.onani.cn/pve_source.tar.gz&quot;&gt;pve_source.tar.gz | AcoFork-AList&lt;/a&gt; 或 &lt;a href=&quot;https://wwp.lanzoul.com/ivHta1ngmo6d&quot;&gt;&lt;strong&gt;https://wwp.lanzoul.com/ivHta1ngmo6d&lt;/strong&gt;&lt;/a&gt; （密码:i1ws）（来自：在下莫老师）&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;解压：&lt;code&gt;tar zxvf pve_source.tar.gz&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;运行：&lt;code&gt;./pve_source&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;同意许可协议&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;依次执行白框操作&lt;img src=&quot;assets/images/ea205e1a00e7029dfa4bd7850c5a6a68d6d4c0d9.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;扩容local：&lt;code&gt;lvextend -rl +100%FREE /dev/pve/root&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;配置Realtek R8168网卡&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;由于Debian系默认安装R8169驱动，我们需要手动安装R8168驱动，否则无法使用N100小主机自带的有线网口上网&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;下载驱动：&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.realtek.com/Download/List?cate_id=584&quot;&gt;https://www.realtek.com/Download/List?cate_id=584&lt;/a&gt;&lt;img src=&quot;assets/images/0d8457c7fb0d497e12e2c8b544f07c3c37cf96cd.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;解压，安装：&lt;code&gt;sh autorun.sh&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;查看是否有新的网络接口：&lt;code&gt;ip a&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;pre&gt;&lt;code&gt;root@n100-pve:~# ip a
+...
+2: enp3s0: &amp;lt;BROADCAST,MULTICAST,UP,LOWER_UP&amp;gt; mtu 1500 qdisc mq master vmbr1 state UP group default qlen 1000
+    link/ether 00:e0:4c:08:91:a6 brd ff:ff:ff:ff:ff:ff
+...
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;配置网络配置文件：&lt;code&gt;nano /etc/network/interfaces&lt;/code&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# network interface settings; autogenerated
+# Please do NOT modify this file directly, unless you know what
+# you&apos;re doing.
+#
+# If you want to manage parts of the network configuration manually,
+# please utilize the &apos;source&apos; or &apos;source-directory&apos; directives to do
+# so.
+# PVE will preserve these directives, but will NOT read its network
+# configuration from sourced files, so do not attempt to move any of
+# the PVE managed interfaces into external files!
+
+auto lo
+iface lo inet loopback
+
+iface wlp1s0 inet manual
+
+iface enp3s0 inet manual
+
+auto vmbr1
+iface vmbr1 inet static
+        address 192.168.124.25/24
+        gateway 192.168.124.1
+        bridge-ports enp3s0
+        bridge-stp off
+        bridge-fd 0
+
+iface vmbr1 inet6 auto
+        dhcp 1
+        accept_ra 2
+        request_prefix 1
+
+source /etc/network/interfaces.d/*
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;重启网络服务：&lt;code&gt;systemctl restart networking&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;查看ip：&lt;code&gt;ip a&lt;/code&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;root@n100-pve:~# ip a
+...
+2: enp3s0: &amp;lt;BROADCAST,MULTICAST,UP,LOWER_UP&amp;gt; mtu 1500 qdisc mq master vmbr1 state UP group default qlen 1000
+    link/ether 00:e0:4c:08:91:a6 brd ff:ff:ff:ff:ff:ff
+...
+4: vmbr1: &amp;lt;BROADCAST,MULTICAST,UP,LOWER_UP&amp;gt; mtu 1500 qdisc noqueue state UP group default qlen 1000
+    link/ether 00:e0:4c:08:91:a6 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.124.25/24 scope global vmbr1
+       valid_lft forever preferred_lft forever
+    inet6 2409:8a30:320:7fc0:2e0:4cff:fe08:91a6/64 scope global dynamic mngtmpaddr
+       valid_lft 2763sec preferred_lft 2762sec
+    inet6 fe80::2e0:4cff:fe08:91a6/64 scope link
+       valid_lft forever preferred_lft forever
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;卸除USB网卡&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;配置STUN穿透&lt;/h3&gt;
+&lt;h4&gt;路由器设置DMZ主机为PVEIP&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;img src=&quot;assets/images/dbeb7980e5fc699c696ffa6f2fda4a17c05ee821.webp&quot; alt=&quot;&quot; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;安装Lucky&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;执行：&lt;code&gt;curl -o /tmp/install.sh http://6.666666.host:6/files/golucky.sh &amp;amp;&amp;amp; sh /tmp/install.sh http://6.666666.host:6/files 2.13.4&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;通过&lt;code&gt;host:16601&lt;/code&gt; 进入Lucky后台，设置STUN穿透&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;img src=&quot;assets/images/2175839424184aee880b91382bd1fbf3c578d258.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1&gt;2. fnOS&lt;/h1&gt;
+&lt;h2&gt;安装&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;前往官网下载最新版ISO：&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.fnnas.com/&quot;&gt;https://www.fnnas.com/&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;上传至PVE：&lt;img src=&quot;assets/images/073808516d357e099a866c30b4a77954c5b9b458.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;创建fnOS虚拟机，CPU类型选择host，步骤略&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;直通核显和硬盘：&lt;img src=&quot;assets/images/08e4f7a3b87ae86334011e1d4c3a384a36ad9866.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;如果你不知道你的核显和SATA控制器的PCI ID：&lt;code&gt;lspci&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;可见核显为&lt;code&gt;00:02.0&lt;/code&gt;，SATA控制器为&lt;code&gt;00:17.0&lt;/code&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;root@n100-pve:~# lspci
+00:00.0 Host bridge: Intel Corporation Device 461c
+00:02.0 VGA compatible controller: Intel Corporation Alder Lake-N [UHD Graphics]
+00:0a.0 Signal processing controller: Intel Corporation Platform Monitoring Technology (rev 01)
+00:14.0 USB controller: Intel Corporation Alder Lake-N PCH USB 3.2 xHCI Host Controller
+00:14.2 RAM memory: Intel Corporation Alder Lake-N PCH Shared SRAM
+00:16.0 Communication controller: Intel Corporation Alder Lake-N PCH HECI Controller
+00:17.0 SATA controller: Intel Corporation Alder Lake-N SATA AHCI Controller
+00:1a.0 SD Host controller: Intel Corporation Device 54c4
+00:1c.0 PCI bridge: Intel Corporation Device 54be
+00:1d.0 PCI bridge: Intel Corporation Alder Lake-N PCI Express Root Port
+00:1d.1 PCI bridge: Intel Corporation Alder Lake-N PCI Express Root Port
+00:1e.0 Communication controller: Intel Corporation Alder Lake-N Serial IO UART Host Controller
+00:1e.3 Serial bus controller: Intel Corporation Device 54ab
+00:1f.0 ISA bridge: Intel Corporation Alder Lake-N PCH eSPI Controller
+00:1f.3 Audio device: Intel Corporation Alder Lake-N PCH High Definition Audio Controller
+00:1f.4 SMBus: Intel Corporation Alder Lake-N SMBus
+00:1f.5 Serial bus controller: Intel Corporation Alder Lake-N SPI (flash) Controller
+01:00.0 Network controller: Intel Corporation Wireless 3160 (rev 83)
+02:00.0 Non-Volatile memory controller: Realtek Semiconductor Co., Ltd. RTS5765DL NVMe SSD Controller (DRAM-less) (rev 01)
+03:00.0 Ethernet controller: Realtek Semiconductor Co., Ltd. RTL8111/8168/8411 PCI Express Gigabit Ethernet Controller (rev 2b)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;启动虚拟机，安装fnOS&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;配置&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;前往飞牛设置，创建储存空间，Linear模式，选择刚才直通的硬盘&lt;img src=&quot;assets/images/581cf01462df545a8662acbb5e20e1676bd17744.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;前往飞牛应用中心安装qBittorrent、影视，并且在设置给予目录读取权限&lt;img src=&quot;assets/images/92a2e0bf25d630db4858775fdbb6c907f419c25d.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;配置qBittorrent的用户名和密码&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;打开飞牛Docker，初始化&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;拉取并运行AutoBangumi Docker镜像：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;docker run -d \
+--name=AutoBangumi \
+-v /vol1/1000/AutoBangumi/config:/app/config \
+-v /vol1/1000/AutoBangumi/data:/app/data \
+-p 7892:7892 \
+-e TZ=Asia/Shanghai \
+-e PUID=$(id -u) \
+-e PGID=$(id -g) \
+-e UMASK=022 \
+--network=bridge \
+--dns=8.8.8.8 \
+--restart unless-stopped \
+ghcr.onani.cn/estrellaxd/auto_bangumi:latest
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;进入&lt;code&gt;host:7892&lt;/code&gt; 让AutoBangumi连接qBittorrent并配置下载地址&lt;img src=&quot;assets/images/82c4a003d2399f82a7ccf5849cd1d5858d5f1f61.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;添加RSS。可前往&lt;a href=&quot;https://mikanime.tv/&quot;&gt;蜜柑计划 - Mikan Project&lt;/a&gt;获得各个字幕组的RSS&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;assets/images/f36daae968d8043bbcd1e4a2bbb9b9cd2d707cee.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;注意：使用&lt;a href=&quot;https://mikanime.tv/&quot;&gt;蜜柑计划 - Mikan Project&lt;/a&gt;时，请订阅单个字幕组的RSS，不要使用个人的RSS，会导致&lt;strong&gt;只能获取到你所有追番的最新一集而不是单个番的全部剧集&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;打开飞牛影视，初始化并设置媒体库&lt;img src=&quot;assets/images/269b78c3b7dffe7f8cdb861098f44147552b5eb4.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;注意：如果要刮削旧集旧番，请规范重命名，可以使用自动化工具：&lt;a href=&quot;https://alist.onani.cn/Episode-ReName.zip&quot;&gt;Episode-ReName.zip | AcoFork-AList&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;一级目录：即qb下载目录，无需重命名&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;二级目录：番剧名称&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;三级目录：季，如&lt;code&gt;Season 1&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;四级目录：集和字幕，如&lt;code&gt;S01E01.mp4&lt;/code&gt; &lt;code&gt;S01E01.chs.ass&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1&gt;3. Debian&lt;/h1&gt;
+&lt;h2&gt;安装&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;下载Debian12 ISO（USTC镜像源）（建议选择DVD镜像，包更全，安装更快）&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://mirrors.ustc.edu.cn/help/debian-cd.html&quot;&gt;https://mirrors.ustc.edu.cn/help/debian-cd.html&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;上传至PVE，创建Debian虚拟机，CPU类型选择host，步骤略&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;安装1Panel：&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;https://1panel.cn/docs/installation/online_installation/&quot;&gt;https://1panel.cn/docs/installation/online_installation/&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;在1Panel中安装&lt;code&gt;Openresty&lt;/code&gt; &lt;code&gt;MySQL&lt;/code&gt; &lt;code&gt;Halo&lt;/code&gt; &lt;code&gt;AList&lt;/code&gt; &lt;code&gt;Cloudflared&lt;/code&gt; 配置步骤略&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;搭建QQBot&lt;/h3&gt;
+&lt;h4&gt;安装OneBotv11协议实现：Lagrange.OneBot&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Docker Run：&lt;code&gt;docker run -td -p 8081:8081 -v /root/qqbot/lo:/app/data -e UID=$UID -e GID=$(id -g) ghcr.onani.cn/lagrangedev/lagrange.onebot:edge&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;修改配置文件：&lt;code&gt;appsettings.json&lt;/code&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;{
+    &quot;Logging&quot;: {
+        &quot;LogLevel&quot;: {
+            &quot;Default&quot;: &quot;Information&quot;,
+            &quot;Microsoft&quot;: &quot;Warning&quot;,
+            &quot;Microsoft.Hosting.Lifetime&quot;: &quot;Information&quot;
+        }
+    },
+    &quot;SignServerUrl&quot;: &quot;&quot;,
+    &quot;SignProxyUrl&quot;: &quot;&quot;,
+    &quot;MusicSignServerUrl&quot;: &quot;&quot;,
+    &quot;Account&quot;: {
+        &quot;Uin&quot;: 0,
+        &quot;Password&quot;: &quot;&quot;,
+        &quot;Protocol&quot;: &quot;Linux&quot;,
+        &quot;AutoReconnect&quot;: true,
+        &quot;GetOptimumServer&quot;: true
+    },
+    &quot;Message&quot;: {
+        &quot;IgnoreSelf&quot;: true,
+        &quot;StringPost&quot;: false
+    },
+    &quot;QrCode&quot;: {
+        &quot;ConsoleCompatibilityMode&quot;: false
+    },
+    &quot;Implementations&quot;: [
+        {
+            &quot;Type&quot;: &quot;ReverseWebSocket&quot;,
+            &quot;Host&quot;: &quot;192.168.124.34&quot;,
+            &quot;Port&quot;: 9090,
+            &quot;Suffix&quot;: &quot;/onebot/v11/ws&quot;,
+            &quot;ReconnectInterval&quot;: 5000,
+            &quot;HeartBeatInterval&quot;: 5000,
+            &quot;AccessToken&quot;: &quot;&quot;
+        }
+    ]
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;重启容器，扫码登录&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;安装NoneBot2&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;安装pip：&lt;code&gt;apt install python3-pip&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;配置pip USTC源：&lt;code&gt;pip config set global.index-url https://mirrors.ustc.edu.cn/pypi/simple&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;安装pipx：&lt;code&gt;apt install pipx&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;安装nb-cli：&lt;code&gt;pipx install nb-cli&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;设置pipx变量：&lt;code&gt;pipx ensurepath&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;安装nb bootstrap：&lt;code&gt;nb self install nb-cli-plugin-bootstrap&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;创建新NoneBot2项目：&lt;code&gt;nb bs&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;pre&gt;&lt;code&gt;root@n100-debian:~# nb bs
+加载适配器列表中……
+请输入项目名称
+[?] 请输入 &amp;gt; onani
+[?] 请选择你想要使用的适配器 OneBot V11 (OneBot V11 协议)
+请输入 Bot 超级用户，超级用户拥有对 Bot 的最高权限（如对接 QQ 填 QQ 号即可）（留空回车结束输入）
+[?] 第 1 项 &amp;gt; 666
+[?] 第 2 项 &amp;gt;
+请输入 Bot 昵称，消息以 Bot 昵称开头可以代替艾特（留空回车结束输入）
+[?] 第 1 项 &amp;gt;
+请输入 Bot 命令起始字符，消息以起始符开头将被识别为命令，
+如果有一个指令为 查询，当该配置项中有 &quot;/&quot; 时使用 &quot;/查询&quot; 才能够触发，
+留空将使用默认值 [&apos;&apos;, &apos;/&apos;, &apos;#&apos;]（留空回车结束输入）
+[?] 第 1 项 &amp;gt;
+请输入 Bot 命令分隔符，一般用于二级指令，
+留空将使用默认值 [&apos;.&apos;, &apos; &apos;]（留空回车结束输入）
+[?] 第 1 项 &amp;gt;
+请输入 NoneBot2 监听地址，如果要对公网开放，改为 0.0.0.0 即可
+[?] 请输入 &amp;gt; 0.0.0.0
+请输入 NoneBot2 监听端口，范围 1 ~ 65535，请保证该端口号与连接端配置相同，或与端口映射配置相关
+[?] 请输入 &amp;gt; 9090
+[?] 是否在项目目录中释出快捷启动脚本？ Yes
+[?] 是否将 localstore 插件的存储路径重定向到项目路径下以便于后续迁移 Bot？ Yes
+[?] 是否使用超级用户 Ping 指令回复插件？ Yes
+[?] 是否安装 logpile 插件提供日志记录到文件功能？ Yes
+[?] 是否在启动脚本中使用 webui 插件启动项目以使用网页管理 NoneBot？（该插件仍在开发中，不推荐用于生产环境） No
+成功新建项目 onani
+[?] 是否新建虚拟环境？ Yes
+正在 /root/onani/.venv 中创建虚拟环境
+创建虚拟环境成功
+[?] 是否需要修改或清除 pip 的 PyPI 镜像源配置？ No
+[?] 是否立即安装项目依赖？ Yes
+正在安装项目依赖
+依赖安装成功
+[?] 请选择需要启用的内置插件
+项目配置完毕，开始使用吧！
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1&gt;成果展示&lt;/h1&gt;
+&lt;p&gt;&lt;img src=&quot;assets/images/4b4680cc548e0c59ec18cef537c9b1f5412fbbcd.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://blog.onani.cn&quot;&gt;https://blog.onani.cn&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://alist.onani.cn&quot;&gt;https://alist.onani.cn&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;assets/images/7c24ff7d54b2e0ccaecce4b2ef79155c54124fa4.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+</content:encoded></item><item><title>究极喂饭教程，手把手教你内网穿透</title><link>https://acofork.us.kg/posts/zerotier-tailscale-cftunnel-stun/</link><guid isPermaLink="true">https://acofork.us.kg/posts/zerotier-tailscale-cftunnel-stun/</guid><description>使用Zerotier，Tailscale，Cloudflare Tunnel可以实现多种内网穿透，其中有适用于个人访问的，也有适用于公众访问的</description><pubDate>Mon, 28 Oct 2024 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;啥是内网穿透？&lt;/h1&gt;
+&lt;p&gt;当我们在家中有个NAS，想要在学校/公司的网络来访问，就需要用到内网穿透，实现外网访问内网服务。原理一般是P2P打洞和服务器中转流量&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h1&gt;前期准备&lt;/h1&gt;
+&lt;p&gt;路由器开启UPnP&lt;img src=&quot;assets/images/2024-10-28-17-08-00-image.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;关闭路由器的IPv4，IPv6防火墙 &lt;strong&gt;（可选）&lt;/strong&gt;&lt;img src=&quot;assets/images/2024-10-28-17-09-19-image.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h1&gt;&lt;em&gt;使用Zerotier/Tailscale进行内网穿透&lt;/em&gt;&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;他们俩的原理都是尝试对端建立P2P连接，需要对端安装一个软件并且长期运行&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1&gt;使用Zerotier进行内网穿透的详细教程&lt;/h1&gt;
+&lt;h2&gt;创建Zerotier账号&lt;/h2&gt;
+&lt;p&gt;前往：&lt;a href=&quot;https://www.zerotier.com/&quot;&gt;ZeroTier | Global Networking Solution for IoT, SD-WAN, and VPN&lt;/a&gt;。如果你进不去，请尝试挂梯子。如果看不懂英文可以开启浏览器的翻译功能&lt;img src=&quot;assets/images/2024-10-28-17-12-51-image.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;选择 &lt;code&gt;Sign up&lt;/code&gt;&lt;img src=&quot;assets/images/2024-10-28-17-13-06-image.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;如果你到了这个界面，请仍然选择&lt;code&gt;Sign up&lt;/code&gt;&lt;img src=&quot;assets/images/2024-10-28-17-15-08-image.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;assets/images/2024-10-28-17-16-52-image.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;账号创建完毕后，登录即可&lt;img src=&quot;assets/images/2024-10-28-17-17-47-image.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;创建一个新的Zerotier网络组&lt;/h2&gt;
+&lt;p&gt;当你账号登录成功后，会自动跳转到这个页面，点击&lt;code&gt;Create A Network&lt;/code&gt;。如果没有，请访问&lt;a href=&quot;https://my.zerotier.com/&quot;&gt;ZeroTier Central&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;assets/images/2024-10-28-17-20-24-image.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;下面的列表会增加一个新的网络组，点击它&lt;img src=&quot;assets/images/2024-10-28-17-21-31-image.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Zerotier默认的网络组模式为&lt;code&gt;Private&lt;/code&gt;。即私密模式，哪怕别人知道了你的&lt;code&gt;Network ID&lt;/code&gt;尝试加入你的网络组也需要你进行验证&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;assets/images/2024-10-28-17-22-38-image.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;复制这个&lt;code&gt;Network ID&lt;/code&gt;&lt;img src=&quot;assets/images/2024-10-28-17-22-13-image.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h1&gt;在设备上安装Zerotier应用&lt;/h1&gt;
+&lt;h2&gt;Windows：&lt;/h2&gt;
+&lt;p&gt;前往&lt;a href=&quot;https://www.zerotier.com/download/&quot;&gt;Download - ZeroTier&lt;/a&gt;，下载exe安装文件&lt;img src=&quot;assets/images/2024-10-28-17-25-52-image.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;打开Zerotier&lt;img src=&quot;assets/images/2024-10-28-17-27-20-image.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;查看右下角托盘，按照图片操作加入网络组&lt;img src=&quot;assets/images/2024-10-28-17-28-20-image.webp&quot; alt=&quot;&quot; /&gt;&lt;img src=&quot;assets/images/2024-10-28-17-29-12-image.webp&quot; alt=&quot;&quot; /&gt;&lt;img src=&quot;assets/images/2024-10-28-17-30-26-image.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;这里可以查询到你的设备ID和你在这个网络组的IP&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;assets/images/2024-10-28-18-03-19-image.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;然后参考：&lt;a href=&quot;#zerotier%E6%8E%88%E6%9D%83%E8%AE%BE%E5%A4%87&quot;&gt;Zerotier授权设备&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;h2&gt;Linux（飞牛OS）：&lt;/h2&gt;
+&lt;p&gt;通过SSH连接上你的Linux设备&lt;/p&gt;
+&lt;p&gt;查看安装命令：&lt;a href=&quot;https://www.zerotier.com/download/&quot;&gt;Download - ZeroTier&lt;/a&gt;&lt;img src=&quot;assets/images/2024-10-28-17-38-19-image.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;终端执行： &lt;code&gt;curl -s https://install.zerotier.com | sudo bash&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;看到这一行即安装完毕，后面那一串即你的设备ID：&lt;img src=&quot;assets/images/2024-10-28-17-39-23-image.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;加入网络：&lt;code&gt;sudo zerotier-cli join 你的Network ID&lt;/code&gt;&lt;img src=&quot;assets/images/2024-10-28-17-42-01-image.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;然后参考：&lt;a href=&quot;#zerotier%E6%8E%88%E6%9D%83%E8%AE%BE%E5%A4%87&quot;&gt;Zerotier授权设备&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;h2&gt;Android（安卓）&lt;/h2&gt;
+&lt;p&gt;下载客户端&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Zerotier One：&lt;a href=&quot;https://apkpure.net/zerotier-one/com.zerotier.one&quot;&gt;ZeroTier One APK Download for Android - Latest Version&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;ZerotierFix：&lt;a href=&quot;https://github.com/kaaass/ZerotierFix/releases&quot;&gt;Releases · kaaass/ZerotierFix&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;如图操作&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;assets/images/2024-10-28-17-59-06-image.webp&quot; alt=&quot;&quot; /&gt;&lt;img src=&quot;assets/images/2024-10-28-17-59-46-image.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;然后参考：&lt;a href=&quot;#zerotier%E6%8E%88%E6%9D%83%E8%AE%BE%E5%A4%87&quot;&gt;Zerotier授权设备&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h1&gt;Zerotier授权设备&lt;/h1&gt;
+&lt;p&gt;前往Zerotier的网页控制台：&lt;a href=&quot;%5Bhttps://my.zerotier.com/%5D(https://my.zerotier.com/)&quot;&gt;ZeroTier Central&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;授权刚才加入的设备&lt;img src=&quot;assets/images/2024-10-28-17-31-51-image.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;勾选然后保存&lt;img src=&quot;assets/images/2024-10-28-17-33-10-image.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h1&gt;Zerotier访问测试&lt;/h1&gt;
+&lt;p&gt;如果你同一个网络组里已经有两台以上的设备了，可以尝试ping一下测试连通性，请先确保两台设备不在同一个局域网（比如手机开流量，NAS用家里的无线网）&lt;/p&gt;
+&lt;p&gt;IP可以在这里查看&lt;img src=&quot;assets/images/2024-10-28-18-02-00-image.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;ping测试：&lt;img src=&quot;assets/images/2024-10-28-18-07-13-image.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h1&gt;使用Tailscale进行内网穿透的详细教程&lt;/h1&gt;
+&lt;h2&gt;创建Tailscale账号&lt;/h2&gt;
+&lt;p&gt;前往：&lt;a href=&quot;https://login.tailscale.com/start&quot;&gt;Tailscale&lt;/a&gt;。如果你进不去，请尝试挂梯子。如果看不懂英文可以开启浏览器的翻译功能&lt;/p&gt;
+&lt;p&gt;选择任意一个登录方式&lt;img src=&quot;assets/images/2024-10-28-18-24-32-image.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;账号创建完毕后，登录即可&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h1&gt;在设备上安装Tailscale应用&lt;/h1&gt;
+&lt;h2&gt;Windows：&lt;/h2&gt;
+&lt;p&gt;前往&lt;a href=&quot;https://tailscale.com/download&quot;&gt;Download · Tailscale&lt;/a&gt;，下载exe安装文件&lt;/p&gt;
+&lt;p&gt;官方教程：&lt;img src=&quot;assets/images/2024-10-28-18-31-48-image.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;Linux（飞牛OS）：&lt;/h2&gt;
+&lt;p&gt;通过SSH连接上你的Linux设备&lt;/p&gt;
+&lt;p&gt;查看安装命令：&lt;a href=&quot;https://tailscale.com/download/linux&quot;&gt;Download · Tailscale&lt;/a&gt;&lt;img src=&quot;assets/images/2024-10-28-18-32-58-image.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;终端执行： &lt;code&gt;curl -fsSL https://tailscale.com/install.sh | sh&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;等待安装完毕后输入：&lt;code&gt;tailscale login&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;打开弹出的浏览器窗口，登录你的账号即可&lt;/p&gt;
+&lt;h2&gt;Android（安卓）&lt;/h2&gt;
+&lt;p&gt;下载客户端（Google Play）：&lt;a href=&quot;https://tailscale.com/download/android&quot;&gt;Download · Tailscale&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;登录你的账号即可&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h2&gt;Tailscale访问测试&lt;/h2&gt;
+&lt;p&gt;前往Tailscale的网页控制台：&lt;a href=&quot;https://login.tailscale.com/admin/machines&quot;&gt;Machines - Tailscale&lt;/a&gt;。可以查看到每个设备Tailscale分配的IP&lt;img src=&quot;assets/images/2024-10-28-18-26-58-image.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;ping测试&lt;img src=&quot;assets/images/2024-10-28-18-41-45-image.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h1&gt;使用Cloudflare Tunnel进行内网穿透&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;这种方法可以不进行任何配置直接在公网上被访问，但是仅限Web服务。如果你想穿透游戏服务器等则不可用。你需要先将域名托管到Cloudflare&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;创建Cloudflare账号&lt;a href=&quot;https://dash.cloudflare.com/&quot;&gt;主页 | Cloudflare&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;进入&lt;a href=&quot;https://one.dash.cloudflare.com/&quot;&gt;Cloudflare One&lt;/a&gt;（需要绑定PayPal）&lt;/p&gt;
+&lt;p&gt;如图操作，创建一个Tunnel&lt;img src=&quot;assets/images/2024-10-28-18-45-41-image.webp&quot; alt=&quot;&quot; /&gt;&lt;img src=&quot;assets/images/2024-10-28-18-45-54-image.webp&quot; alt=&quot;&quot; /&gt;&lt;img src=&quot;assets/images/2024-10-28-18-46-22-image.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;Docker方式&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;使用1Panel&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;复制如图的命令&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;assets/images/48e9c43eb5c0fb49cc5517687698e3d9d1e60220.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;将其粘贴，并且复制后面的令牌&lt;img src=&quot;assets/images/a2e18519d3782d765d7293c7a3d21031c787d575.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;1Panel应用商店搜索&lt;code&gt;cloudflared&lt;/code&gt;&lt;img src=&quot;assets/images/cf2eba61f0aaa7605240187e1c46f80a3954edfa.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;填入令牌&lt;img src=&quot;assets/images/6f661ffa778b2be2e108912d3d44d8b3301df6d6.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;然后前往&lt;a href=&quot;#%E6%9F%A5%E7%9C%8Bcloudflared%E7%9A%84ip&quot;&gt;查看IP&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;使用命令运行&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;复制底下的命令然后SSH连接到Linux（飞牛OS）在终端输入&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;assets/images/2024-10-28-18-46-49-image.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;然后前往&lt;a href=&quot;#%E6%9F%A5%E7%9C%8Bcloudflared%E7%9A%84ip&quot;&gt;查看IP&lt;/a&gt;&lt;/p&gt;
+&lt;h3&gt;查看cloudflared的IP&lt;/h3&gt;
+&lt;p&gt;因为我们是Docker模式，所以IP需要通过SSH终端输入&lt;code&gt;ip a&lt;/code&gt;来查看。我这里是&lt;code&gt;192.168.124.34&lt;/code&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;root@n100-debian:~# ip a
+1: lo: &amp;lt;LOOPBACK,UP,LOWER_UP&amp;gt; mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host noprefixroute
+       valid_lft forever preferred_lft forever
+2: ens18: tiROADCAST,MULTICAST,UP,LOWER_UP&amp;gt; mtu 1500 qdisc fq_codel state UP group default qlen 1000
+    link/ether bc:24:11:33:e1:7d brd ff:ff:ff:ff:ff:ff
+    altname enp0s18
+    inet 192.168.124.34/24 brd 192.168.124.255 scope global dynamic ens18
+       valid_lft 46579sec preferred_lft 46579sec
+    inet6 2409:8a30:320:a170:be24:11ff:fe33:e17d/64 scope global dynamic mngtmpaddr
+       valid_lft 1902sec preferred_lft 1898sec
+    inet6 fe80::be24:11ff:fe33:e17d/64 scope link
+       valid_lft forever preferred_lft foreverti
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;然后前往&lt;a href=&quot;#%E9%85%8D%E7%BD%AE%E5%B9%B6%E8%AE%BF%E9%97%AEtunnel&quot;&gt;配置并访问Tunnel&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;h2&gt;原生模式（以Debian为例）&lt;/h2&gt;
+&lt;p&gt;选择Debian，然后复制底下的命令，直接到终端执行&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;assets/images/2024-10-28-20-00-49-image.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;如果你的环境无法连接上Github&lt;/p&gt;
+&lt;p&gt;尝试手动下载：&lt;a href=&quot;https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64.deb&quot;&gt;https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64.deb&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;然后将其通过SSH等方式传到Linux上，如图终端为MobaXterm&lt;img src=&quot;assets/images/2024-10-29-10-18-29-image.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;然后使用：&lt;code&gt;dpkg -i cloudflared-linux-amd64.deb&lt;/code&gt;安装这个软件包&lt;/p&gt;
+&lt;p&gt;然后直接复制右边的命令到SSH终端执行&lt;img src=&quot;assets/images/2024-10-29-10-19-27-3dcfad6977bdecf80fc0366f257788e6.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;然后前往&lt;a href=&quot;#%E9%85%8D%E7%BD%AE%E5%B9%B6%E8%AE%BF%E9%97%AEtunnel&quot;&gt;配置并访问Tunnel&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;h2&gt;Android（Termux）&lt;/h2&gt;
+&lt;p&gt;在Android上安装&lt;a href=&quot;https://termux.dev&quot;&gt;Termux | The main termux site and help pages.&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;在终端执行：&lt;code&gt;pkg install cloudflared&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;选择&lt;code&gt;Debian&lt;/code&gt;然后复制最右边的命令到终端执行&lt;img src=&quot;assets/images/2024-10-29-08-42-38-image.webp&quot; alt=&quot;&quot; /&gt;
+如果你无法使用Termux自带的cloudflared，请尝试安装proot容器实现&lt;/p&gt;
+&lt;p&gt;依次输入命令：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;pkg update &amp;amp;&amp;amp; pkg upgrade
+pkg install proot
+pkg install proot-distro
+proot-distro list
+proot-distro install debian
+proot-distro login debian
+apt install wget
+wget https://github.com/cloudflare/cloudflared/releases/download/2024.10.1/cloudflared-linux-arm64.deb
+dpkg -i cloudflared-linux-amd64.deb
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;然后直接复制右边的命令到SSH终端执行&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;assets/images/2024-10-29-08-42-38-image.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;如果你无法通过令牌配置cloudflared，请参见&lt;a href=&quot;#%E6%9C%AC%E5%9C%B0%E6%96%B9%E5%BC%8F&quot;&gt;本地方式配置cloudflared&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;然后前往&lt;a href=&quot;#%E9%85%8D%E7%BD%AE%E5%B9%B6%E8%AE%BF%E9%97%AEtunnel&quot;&gt;配置并访问Tunnel&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h1&gt;配置并访问Tunnel&lt;/h1&gt;
+&lt;h2&gt;通过网页配置&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;这种方法需要直接在安装了cloudflared的设备上通过令牌运行&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;如图进入，创建一个HTTP隧道&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;assets/images/2024-10-28-18-49-21-image.webp&quot; alt=&quot;&quot; /&gt;&lt;img src=&quot;assets/images/2024-10-28-18-49-44-image.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;填写你的IP和端口，非Docker模式可以直接填写localhost&lt;img src=&quot;assets/images/2024-10-28-18-53-37-image.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;本地方式&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;这种方法只需要在安装了cloudflared的设备上输入一些命令然后通过网页授权，后续更改配置也需要在本地操作&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;登录并授权：&lt;code&gt;cloudflared tunnel login&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;创建隧道并设置隧道（HTTP模式穿透，目标地址&lt;code&gt;127.0.0.1&lt;/code&gt;，端口：&lt;code&gt;8080&lt;/code&gt;，外部域名：&lt;code&gt;test.onani.cn&lt;/code&gt;）：&lt;code&gt;cloudflared tunnel --name test --url http://127.0.0.1:8080 --http2 --hostname test.onani.cn&lt;/code&gt;&lt;/p&gt;
+&lt;h2&gt;访问测试&lt;/h2&gt;
+&lt;p&gt;成功访问&lt;img src=&quot;assets/images/2024-10-28-18-54-42-image.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h1&gt;使用STUN打洞&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;这种方法可以不进行任何配置直接在公网上被访问，并且所有类型的服务都能正常使用。但是这种方式进行的内网穿透无法固定也无法指定IP和端口，在3~7天后会改变&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;安装Lucky&lt;/h2&gt;
+&lt;p&gt;执行：&lt;code&gt;curl -o /tmp/install.sh http://6.666666.host:6/files/golucky.sh &amp;amp;&amp;amp; sh /tmp/install.sh http://6.666666.host:6/files 2.13.4&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;通过&lt;code&gt;host:16601&lt;/code&gt; 进入Lucky后台，设置STUN穿透。如果DMZ主机不设为Lucky主机可能会失败。打码的地方即公网访问的IP和端口&lt;img src=&quot;assets/images/2024-10-28-18-56-16-image.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+</content:encoded></item><item><title>让我们来探讨一下如何绕过GFW</title><link>https://acofork.us.kg/posts/bypass-gfw/</link><guid isPermaLink="true">https://acofork.us.kg/posts/bypass-gfw/</guid><description>GFW俗称中国网络国家防火墙，它运用多种技术阻断境内对境外某些网站的访问，比如谷歌、Discord。但对于某些阻断方式，通过一些手段，我们可以绕过GFW来进行访问</description><pubDate>Mon, 21 Oct 2024 00:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;首先，我们要知道GFW是如何封锁我们的流量的&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;IP黑洞：目前无解，但仅对部分服务黑洞，如谷歌系（谷歌、推特、YouTube等）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;DNS污染：为域名返回一个假的IP。使用hosts文件强制指定域名对应ip或者使用加密的DNS（DoH、DNS 签名等）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;HTTP劫持：因为流量不是加密的，GFW作为天然的中间人可以直接进行篡改（如：重定向到404页面、劫持到反诈页面等）。可以使用HTTPS连接规避，但你可能会遇到SNI阻断&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;SNI阻断：在客户端与服务器建立加密连接前，客户端会发送 &lt;code&gt;Client Hello&lt;/code&gt; 报文，而这个报文是明文，并且一般都会携带 &lt;code&gt;server_name&lt;/code&gt; ，GFW可以知道你要访问哪个网站，对不在白名单（如：discord.com）的域名进行阻断。因为 &lt;code&gt;server_name&lt;/code&gt; 实际上是一个扩展，并不强制，你可以不发送它来规避SNI阻断&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;那么，让我们分析一下GFW对于不同网站的封锁情况&lt;/h3&gt;
+&lt;p&gt;我们使用WireShark进行抓包&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;首先尝试访问 &lt;code&gt;www.baidu.com&lt;/code&gt; 这是一个没有被GFW封锁的域名&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;我们先ping一下&lt;img src=&quot;assets/images/2024-10-21-20-16-48-image.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;得到ip： &lt;code&gt;2408:873d:22:18ac:0:ff:b021:1393&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;通过Hosts强制绑定&lt;img src=&quot;assets/images/2024-10-21-20-18-10-image.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;通过WireShark进行抓包，可以看到，客户端发送的 &lt;code&gt;Client Hello&lt;/code&gt; 可以清晰地看到 &lt;code&gt;Server Name&lt;/code&gt; 字段，并且也能正常收到 &lt;code&gt;Server Hello&lt;/code&gt; 然后双方便开始通信&lt;img src=&quot;assets/images/2024-10-21-20-24-03-image.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;查看浏览器，网站正常访问&lt;img src=&quot;assets/images/2024-10-21-20-35-29-image.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;让我们试试访问 &lt;code&gt;discord.com&lt;/code&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;我们先ping一下，可以发现，域名和解析到的IP均不通&lt;img src=&quot;assets/images/2024-10-21-20-27-57-image.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;此时我们尝试使用 &lt;code&gt;itdog.cn&lt;/code&gt; 进行v4 ping，并且依次对解析出的域名进行ping&lt;img src=&quot;assets/images/2024-10-21-20-28-51-image.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;可见，第一个IP通&lt;img src=&quot;assets/images/2024-10-21-20-29-40-image.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;强制绑定Hosts，尝试抓包&lt;img src=&quot;assets/images/2024-10-21-20-35-58-image.webp&quot; alt=&quot;&quot; /&gt;&lt;img src=&quot;assets/images/2024-10-21-20-31-49-image.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;可见，在通过强制Hosts绑定后，在客户端发送 &lt;code&gt;Client Hello&lt;/code&gt; 后被GFW检测到&lt;code&gt;Server Name&lt;/code&gt; 字段，然后GFW向客户端发送一个 &lt;code&gt;RST&lt;/code&gt; 报文，即要求重置客户端连接。在客户端侧，则会收到 &lt;code&gt;ERR_CONNECTION_RESET&lt;/code&gt; 即：连接已重置。用户无法访问网页。&lt;img src=&quot;assets/images/2024-10-21-20-33-23-image.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;继续，尝试发送空 &lt;code&gt;Server Name&lt;/code&gt; 报文&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;assets/images/2024-10-21-20-41-37-image.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;assets/images/2024-10-21-20-41-54-image.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;成功访问。在WireShark中并未发现 &lt;code&gt;Server Name&lt;/code&gt; 字段&lt;/p&gt;
+&lt;h3&gt;杀手锏，tcpioneer&lt;/h3&gt;
+&lt;p&gt;它通过魔改TCP数据包使得GFW无法检测，并且WireShark也无法抓取到&lt;code&gt;Client Hello&lt;/code&gt;报文，但是仍然能建立连接，即服务端发送&lt;code&gt;Server Hello&lt;/code&gt;&lt;img src=&quot;assets/images/2024-10-21-20-46-44-image.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+</content:encoded></item><item><title>使用基于IPFS的Fleek部署静态网站、托管图床、部署服务</title><link>https://acofork.us.kg/posts/ipfs-fleek-pages/</link><guid isPermaLink="true">https://acofork.us.kg/posts/ipfs-fleek-pages/</guid><description>IPFS是一个多节点的文件托管系统，你可以在上面共享文件、发布网站、而Fleek自动化了这个过程，并且可以链接你的Git存储库</description><pubDate>Thu, 17 Oct 2024 00:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;什么是IPFS？&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;IPFS，是点到点的超媒体协议，它让网络更快、更安全、更开放。说简单一点，它就是一个去中心化互联网。说技术一点，它是一个基于分布式哈希表DHT进行内容寻址的，基于git模型版本管理的，基于默克尔对象关联的，基于点对点技术的，基于全球化命名空间IPNS的，基于各种技术的，一种分布式文件系统。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;用人话说，你可以把它看成一个共享网盘，你可以尝试下载&lt;a href=&quot;https://github.com/ipfs/ipfs-desktop&quot;&gt;IPFS - Desktop（适用于有图形界面的系统）&lt;/a&gt;或&lt;a href=&quot;https://github.com/ipfs/kubo&quot;&gt;kubo - ipfs（适用于CLI）&lt;/a&gt;。然后启动IPFS，你的设备将成为IPFS网络中的一个节点，如图&lt;img src=&quot;assets/images/2024-10-17-10-47-08-image.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;使用IPFS能做什么？&lt;/h3&gt;
+&lt;p&gt;当你连接到IPFS网络后，IPFS会自动将你的设备作为一个本地IPFS节点并且寻找其他IPFS节点，你将能够帮助其他用户建立连接、提供文件。同时你也可以将你的文件上传到你的IPFS节点，等待分发，让网络上的其他用户可以访问你的文件。在IPFS网络中，访问文件通过IPFS网关，如：&lt;code&gt;https://ipfs.io/ipfs/&lt;/code&gt; + &lt;code&gt;CID（文件哈希）&lt;/code&gt; 实现访问。比如： https://ipfs.crossbell.io/ipfs/bafybeifbn36zmdb37ov6id3toy6bve47264hjk2yob6rm4bhw7ooawncf4&lt;/p&gt;
+&lt;p&gt;（这里使用 &lt;code&gt;ipfs.crossbell.io&lt;/code&gt; 这个CrossBell托管的IPFS网关来规避GFW封禁）&lt;/p&gt;
+&lt;h3&gt;这项技术真的有这么理想吗？&lt;/h3&gt;
+&lt;p&gt;这项技术确实很理想，但是实际应用下来会遇到以下问题&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;通过本地IPFS节点上传的文件迟迟无法通过IPFS网关+CID实现访问&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;发现的节点太少&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;可能会大量占用你的带宽&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;这些问题大部分原因都是因为这个网络太过于庞大，而单个IPFS节点的权重很低，尽管IPFS的分发一般在几小时内可以完成。但对于个人来说，我们应当寻找一些服务商帮我们完成这些需求，它们往往在IPFS网络中的权重更大，进行文件更新的效率也很高，同时也提供一些扩展服务，比如自动化Git部署。而这篇文章使用的则是&lt;strong&gt;Fleek&lt;/strong&gt;&lt;/p&gt;
+&lt;h3&gt;关于Fleek&lt;/h3&gt;
+&lt;p&gt;你可以简单理解为它权重很大，有很多的IPFS节点，经由Fleek上传到IPFS网络上的文件可以在几秒内完成广播，并且支持连接Git存储库部署项目和绑定你的域名&lt;/p&gt;
+&lt;h3&gt;Fleek是否值得信赖？&lt;/h3&gt;
+&lt;p&gt;本人仅接触此服务2天。观察到Fleek在成功部署网站后提供了三类访问方式&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;xxx-xxx.fleek.app&lt;/code&gt;：这个域名使用了Cloudflare CDN，实测解析IP的数量为2，不建议使用&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;img src=&quot;assets/images/2024-10-17-11-01-49-image.webp&quot; alt=&quot;&quot; /&gt;：这种方法是原生的IPFS访问方式。通过IPFS网关+CID来访问。但由于CID为哈希值，当你的网站改动后你的CID会发生变化&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;绑定自定义域名来访问，这将会使用亚马逊的CDN并且自动映射CID，实测解析IP数量超过30，并且速度很快&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[!WARNING]
+注意，任何使用HTTP协议的类ipfs技术都需要一个中心化服务器代理访问IPFS网络。只有当访问者连接上IPFS网络后才会使用去中心化的连接方式）&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;img src=&quot;assets/images/2024-10-17-11-07-40-image.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;尽管显示了IPFS的文件浏览界面，但实际上这个页面是由HTTP请求到亚马逊 CDN反代IPFS网络实现的，实际上仍为中心化网络&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;img src=&quot;assets/images/2024-10-17-11-08-44-image.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;当你的设备已经连上IPFS网络后，所有流量将使用P2P（去中心化），所以你看到的访问地址实际上是本机地址&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;梳理一下思路，我们可以用Fleek做到什么&lt;/h3&gt;
+&lt;p&gt;让Fleek连接你的Git存储库，通过构建命令构建静态网站，并发布到IPFS，同时兼容HTTP访问&lt;/p&gt;
+&lt;h4&gt;正式开始&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;前往fleek.xyz，通过MetaMask登录&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;连接你的Git存储库，输入构建命令等相关信息&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;部署网站&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;绑定域名&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;最终访问&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;效果图：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;assets/images/2024-10-17-11-31-33-image.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h4&gt;拓展一下，我们还可以通过IPFS技术做什么？&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;创建一个巨大的图床，已经投入使用，参见： https://pic.onani.cn （原理：请求 https://ipfs-pic.onani.cn ，获取图片列表，随机选择使用JS展示）&lt;img src=&quot;assets/images/2024-10-17-11-34-44-image.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;无需再自托管任何图片，已经投入使用，本博客所有图片都使用IPFS存储&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;理论上，你可以将任何占用存储的服务上传到IPFS，实现存算分离&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+</content:encoded></item><item><title>傻瓜式AI翻唱软件Replay！选歌！选模型！然后CREATE SONG！</title><link>https://acofork.us.kg/posts/replay/</link><guid isPermaLink="true">https://acofork.us.kg/posts/replay/</guid><description>Replay是一个自动化的AI翻唱软件，用户仅需要提供想要翻唱的歌和RVC模型，Replay会自动进行人声分离，并生成AI翻唱音频，对于新手来说十分友好</description><pubDate>Tue, 15 Oct 2024 00:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;AI翻唱！仅需两步！&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;前往&lt;a href=&quot;https://www.tryreplay.io/&quot;&gt;Replay | Free AI Voice Cloning and Stemming using RVC Models (tryreplay.io)&lt;/a&gt;下载Replay&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;打开Replay，首先根据引导下载数据包（约11G）。然后根据图片操作，选择歌曲和模型，最后点击 &lt;code&gt;CREATE SONG&lt;/code&gt; 即可！&lt;img src=&quot;assets/images/59f2cc973405b81324f0472f5309ff6efa682ace.webp&quot; alt=&quot;&quot; /&gt;&lt;img src=&quot;assets/images/2024-10-15-16-40-07-image.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+</content:encoded></item><item><title>教你把AList的前端部署到CF Pages！让你的AList秒加载！</title><link>https://acofork.us.kg/posts/alist-web-for-cf-page/</link><guid isPermaLink="true">https://acofork.us.kg/posts/alist-web-for-cf-page/</guid><description>将AList Web部署到CF Pages可以显著提升访问者的浏览体验，因为静态资源都在CF的边缘节点，而后端使用API交互，而不是由源服务器路由所有流量，既能减轻源服务器的负载，又能使用CF Pages的不回源优势，一箭双雕</description><pubDate>Tue, 15 Oct 2024 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;前情提要&lt;a href=&quot;https://afo.im/shen-me-Cloudflare-dai-li-AList-tai-man--jiao-ni-bu-shu-qian-duan-dao-Pages-ju-jue-hui-yuan-#user-content-%E5%89%8D%E6%83%85%E6%8F%90%E8%A6%81&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;本教程&lt;strong&gt;不是 AList 的无服务器部署&lt;/strong&gt;，仅将前端页面部署到 Cloudflare Pages，这样用户就能很快从 cf 的边缘节点拉取前端文件，而不用 cf 回源，提高浏览体验，后端仍然需要一台开放到公网的服务器部署 AList（无公网服务器可使用 Cloudflare Tunnels）&lt;/p&gt;
+&lt;h3&gt;首先，保证你的后端服务器支持v4v6双栈访问&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;使用Cloudflare Tunnel，套cf&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;分别设置A和AAAA解析，麻烦，如果你的IP很快，那其实可以不用前后端分离，暴露源站的前后端分离也不能避免被DDoS，因为你的源站会在HTTP报文中暴露&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;然后，开始正式将AList前端部署到Cloudflare Pages&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Fork仓库：&lt;/p&gt;
+&lt;p&gt;::github{repo=&quot;alist-org/alist-web&quot;}&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;更改项目根目录的&lt;code&gt;env.production&lt;/code&gt;文件为你的后端服务器地址&lt;br /&gt;
+&lt;img src=&quot;assets/images/6f2871ca5d35e1e974d89611835f3a2c7fd205e7.webp&quot; alt=&quot;QmduQJq3TydzvLzBn47zLxp2MR1iD2sxm67EzFUFuEBvQa.webp&quot; /&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;将仓库克隆到本地，需要安装&lt;a href=&quot;https://git-scm.com/&quot;&gt;Git&lt;/a&gt;：&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;使用SSH（需要持有你的Github SSH私钥）：
+git clone git@github.com:你的用户名/你Fork的仓库
+
+使用HTTPS（Not Use Magic有概率SSL握手失败）：
+git clone git@github.com:你的用户名/你Fork的仓库
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol&gt;
+&lt;li&gt;下载汉化包：&lt;a href=&quot;https://alist.onani.cn/guest/alist_Zh-CN&quot;&gt;AcoFork 的网盘&lt;/a&gt;或&lt;a href=&quot;https://crowdin.com/project/alist/zh-CN&quot;&gt;Crowdin - 需要登录&lt;/a&gt;&lt;br /&gt;
+&lt;img src=&quot;assets/images/68d31e9797edfc3c1d8a72386ebf3a643d117ce6.webp&quot; alt=&quot;QmXVpMc7BqbXv9EaAbeptsrnhYLinvQQsu1btBE3VvDixa.webp&quot; /&gt;&lt;/li&gt;
+&lt;li&gt;解压，将&lt;code&gt;alist (zh-CN)\src\lang&lt;/code&gt;里面的&lt;code&gt;Zh-CN&lt;/code&gt;文件夹复制到仓库下&lt;code&gt;src/lang&lt;/code&gt;下&lt;/li&gt;
+&lt;li&gt;编辑根目录的&lt;code&gt;.gitignore&lt;/code&gt;，添加一行&lt;code&gt;!/src/lang/zh-CN/&lt;/code&gt;确保文件不被忽略&lt;/li&gt;
+&lt;li&gt;下载&lt;a href=&quot;https://nodejs.org/zh-cn&quot;&gt;Nodejs&lt;/a&gt;。在根目录打开终端，生成中文需要的文件：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;安装cnpm：
+npm install -g cnpm --registry=https://registry.npmmirror.com
+
+安装依赖：
+cnpm install --legacy-peer-deps
+
+生成中文需要的文件：
+node .\scripts\i18n.mjs
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol&gt;
+&lt;li&gt;将更改提交到暂存区并提交到远程仓库，在根目录打开终端&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;git add .   //将更改提交到暂存区
+git commit -m 添加中文   //发布提交
+git push -f   //强制将更改提交到远程仓库
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol&gt;
+&lt;li&gt;进入&lt;a href=&quot;https://dash.cloudflare.com/&quot;&gt;Cloudflare 仪表盘&lt;/a&gt;，进入 Workers 和 Pages 页面&lt;br /&gt;
+&lt;img src=&quot;assets/images/49ccd51771082fdc94eecb270caf987d257cd987.webp&quot; alt=&quot;QmW5UaUap8T2R37u5dzmKGLmUgk4qKnSMFwHBVHqvVbkVA.webp&quot; /&gt;&lt;/li&gt;
+&lt;li&gt;创建一个 Pages，选择连接 Git 存储库&lt;br /&gt;
+&lt;img src=&quot;assets/images/9c4b9ff38d3c8810007ffe33c1a0f98cdd84b92e.webp&quot; alt=&quot;QmZXerKv9PVxxscAe4w4LEfAaKfiScPQEKh1UroXnCeAUr.webp&quot; /&gt;&lt;/li&gt;
+&lt;li&gt;选择你的存储库，开始设置&lt;br /&gt;
+&lt;img src=&quot;assets/images/fb97b5148c3811590609a0b85c6c1ee3c451853d.webp&quot; alt=&quot;QmNdSGQrJtoqDnBx8pgDrtcfmUUfVBS9xdrN4xLgyPjyXE.webp&quot; /&gt;&lt;/li&gt;
+&lt;li&gt;构建命令输入：&lt;code&gt;pnpm install &amp;amp;&amp;amp; pnpm build&lt;/code&gt;，构建输出目录选择&lt;code&gt;/dist&lt;/code&gt;&lt;br /&gt;
+&lt;img src=&quot;assets/images/c4300a94ccb16fe1383c721cbc83d1a71420e340.webp&quot; alt=&quot;QmbhPdbE8f1zLKvWA6aEGJtZhmecRMVZiQbx6Zx1Lecp7J.webp&quot; /&gt;&lt;/li&gt;
+&lt;li&gt;等待 Cloudflare 构建结束，为 Pages 绑定自定义域&lt;br /&gt;
+&lt;img src=&quot;assets/images/d27136b31d759898fe06041f12e7a07f07bd06b0.webp&quot; alt=&quot;QmTMphu61uUF9XefBAVDVf19Jm1vLVUhhXQ9PXABy7hUpK.webp&quot; /&gt;&lt;/li&gt;
+&lt;li&gt;访问自定义域，查看 AList 是否正常&lt;br /&gt;
+&lt;img src=&quot;assets/images/345df496620a9d3faf0eceeb773813bc9ac98375.webp&quot; alt=&quot;QmT8GLcaxtabhifKNL8kczEtozmNvdyhzJ823RfBrcFdpm.webp&quot; /&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;定制 AList&lt;a href=&quot;https://afo.im/shen-me-Cloudflare-dai-li-AList-tai-man--jiao-ni-bu-shu-qian-duan-dao-Pages-ju-jue-hui-yuan-#user-content-%E5%AE%9A%E5%88%B6-alist&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;我们都知道 AList 支持自定义头部和内容，但是因为 Cloudflare Pages 是一个静态页面，所以我们采用硬编码方式，直接将需要自定义的内容写入仓库根目录的&lt;code&gt;index.html&lt;/code&gt;&lt;br /&gt;
+&lt;img src=&quot;assets/images/c3ff113558b368da9a7aeb70f70b978f49d0eb7a.webp&quot; alt=&quot;Qmd47pgFsyh28NjhkLiCPPbf7iasXMWvAvZDupH8QspG64.webp&quot; /&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;编辑根目录的&lt;code&gt;index.html&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;将更改提交到暂存区并提交到远程仓库，在根目录打开终端&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;git add .   //将更改提交到暂存区
+git commit -m 你的提交摘要   //发布提交
+git push -f   //强制将更改提交到远程仓库
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol&gt;
+&lt;li&gt;Cloudflare Pages 会自动重新构建，等待新网页构建完成即可&lt;br /&gt;
+&lt;img src=&quot;assets/images/863e5bb3ef65ec2a0af03303dd3afe13fb8dd8d4.webp&quot; alt=&quot;QmNZemsDHz5QLxW3V2eANghmVkfBccEpe5vMAWUCLik4o6.webp&quot; /&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</content:encoded></item><item><title>Fuwari静态博客+Cloudflare Pages，只需一个域名，带你搭建博主同款博客！</title><link>https://acofork.us.kg/posts/fuwari-cf-page/</link><guid isPermaLink="true">https://acofork.us.kg/posts/fuwari-cf-page/</guid><description>Fuwari是一个静态博客框架，Cloudflare Pages是一个托管静态网站的服务，将他俩结合即可得到一个快速安全无需托管的高效博客</description><pubDate>Mon, 14 Oct 2024 00:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;你需要准备的东西&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;一个牛逼的脑子，支持并行运算至少两个单位以上的事件。遇到问题先思考，想不通就搜索，搜索不到就去和AI调情，不要上来就问问问&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https://git-scm.com/downloads&quot;&gt;Git - Downloads (git-scm.com)&lt;/a&gt;：最牛逼的版本控制器，这里用于对Github进行操作，当然，你也可以尝试使用&lt;a href=&quot;https://github.com/apps/desktop&quot;&gt;GitHub Desktop | Simple collaboration from your desktop&lt;/a&gt;但就我而言，这玩意更难用&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https://nodejs.org/en&quot;&gt;Node.js — Run JavaScript Everywhere (nodejs.org)&lt;/a&gt;：Fuwari基于Node.js，你需要安装这个来搭建博客&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;一个&lt;a href=&quot;https://github.com&quot;&gt;Github&lt;/a&gt;账号：用于创建一个代码仓库存放Fuwari文件&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;一个&lt;a href=&quot;https://cloudflare.com&quot;&gt;Cloudflare&lt;/a&gt;账号：用于创建一个Pages并且绑定域名支持访问&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.marktext.cc&quot;&gt;MarkText&lt;/a&gt;：这是一个可视化MarkDown编辑器，因为Fuwari的每一篇文章/页面都是MarkDown，所以需要一个好用的编辑器&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;你得会用MarkDown语法来编写文章，如果你不会可以参见：&lt;a href=&quot;https://markdown.com.cn/basic-syntax/&quot;&gt;Markdown 基本语法 | Markdown 官方教程&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;流程图&lt;/h3&gt;
+&lt;p&gt;本地部署Fuwari，编写文章 -&amp;gt; 推送更改到远程Github仓库 -&amp;gt; Cloudflare Pages检测到仓库更新自动构建新的网站静态文件 -&amp;gt; 网站成功更改&lt;/p&gt;
+&lt;h3&gt;让我们开搞吧！&lt;/h3&gt;
+&lt;h4&gt;首先，我们来本地部署Fuwari&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Fork仓库：&lt;/p&gt;
+&lt;p&gt;::github{repo=&quot;saicaca/fuwari&quot;}&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;避免有小废物不会Fork仓库，这里附上图片教程&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;img src=&quot;assets/images/2024-10-14-12-15-44-image.webp&quot; alt=&quot;&quot; /&gt;&lt;img src=&quot;assets/images/2024-10-14-12-17-03-image.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;然后将仓库克隆到本地：&lt;code&gt;git clone &amp;lt;你的仓库URL&amp;gt;&lt;/code&gt;（推荐使用SSH，可以不用魔法来推送更改）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;首先，全局安装pnpm：&lt;code&gt;npm install -g pnpm&lt;/code&gt;（如果npm国内拉取过慢，请尝试cnpm：&lt;a href=&quot;https://npmmirror.com/&quot;&gt;npmmirror 镜像站&lt;/a&gt;）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;然后在项目根目录安装依赖：&lt;code&gt;pnpm install&lt;/code&gt;  和 &lt;code&gt;pnpm add sharp&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;至此，你成功在本地部署了Fuwari&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[!TIP]&lt;/p&gt;
+&lt;p&gt;你也可以使用创建一个新的空仓库然后手动上传文件，并且可以将仓库可见性设为：Private&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4&gt;改写Fuwari的基本信息并且清理多余文件&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;刚创建的Fuwari可能带有一些示例的博主名，ICON，URL，介绍和示例文章，为了让用户知道这是你的博客，我们需要一一改写&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;在根目录下的 &lt;code&gt;src&lt;/code&gt; 文件夹中，你可以找到 &lt;code&gt;config.ts&lt;/code&gt; 我们来开始改写&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;title：你的博客主标题&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;subtitle：你的博客副标题。可选，在首页会显示为“主标题 - 副标题”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;lang：博客显示语言。注释已经列出了一些常用的值，如：en, zh_CN, zh_TW, ja, ko&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;themeColor：hue值则是你的博客主题色，可以在你的博客右上角的画板图标确定喜欢的颜色再填写&lt;img src=&quot;assets/images/2024-10-15-09-16-30-image.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;banner：src：即banner图片，支持http/https URL&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;favicon：src：即网站图标，支持http/https URL&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;links：即友情链接，这些链接在导航栏上&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;avatar：即你的头像&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;name：即你的名字&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;bio：即个性签名，会显示在头像和名字下面&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;NavBarConfig&lt;/code&gt; 为导航栏设置的超链接。&lt;code&gt;ProfileConfig&lt;/code&gt; 为你的用户的超链接，分别如图&lt;img src=&quot;assets/images/2024-10-15-17-49-30-image.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;icon：你需要前往&lt;a href=&quot;https://fontawesome.com/search&quot;&gt;Font Awesome&lt;/a&gt;去搜索你想要的图标，比如QQ，则填写 &lt;code&gt;fa6-brands:qq&lt;/code&gt; ，如图。Fuwari支持这几种类型：&lt;code&gt;fa6-brands&lt;/code&gt;, &lt;code&gt;fa6-regular&lt;/code&gt;, &lt;code&gt;fa6-solid&lt;/code&gt;, &lt;code&gt;material-symbols&lt;/code&gt;&lt;img src=&quot;assets/images/2024-10-15-17-47-10-image.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;这里我附上我的 &lt;code&gt;config.ts&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;pre&gt;&lt;code&gt;import type {
+  LicenseConfig,
+  NavBarConfig,
+  ProfileConfig,
+  SiteConfig,
+} from &apos;./types/config&apos;
+import { LinkPreset } from &apos;./types/config&apos;
+
+export const siteConfig: SiteConfig = {
+  title: &apos;二叉树树的博客&apos;,
+  subtitle: &apos;爱你所爱！&apos;,
+  lang: &apos;zh_CN&apos;,         // &apos;en&apos;, &apos;zh_CN&apos;, &apos;zh_TW&apos;, &apos;ja&apos;, &apos;ko&apos;
+  themeColor: {
+    hue: 355,         // Default hue for the theme color, from 0 to 360. e.g. red: 0, teal: 200, cyan: 250, pink: 345
+    fixed: false,     // Hide the theme color picker for visitors
+  },
+  banner: {
+    enable: true,
+    src: &apos;assets/images/222.webp&apos;,   // Relative to the /src directory. Relative to the /public directory if it starts with &apos;/&apos;
+    position: &apos;center&apos;,      // Equivalent to object-position, only supports &apos;top&apos;, &apos;center&apos;, &apos;bottom&apos;. &apos;center&apos; by default
+    credit: {
+      enable: false,         // Display the credit text of the banner image
+      text: &apos;&apos;,              // Credit text to be displayed
+      url: &apos;&apos;                // (Optional) URL link to the original artwork or artist&apos;s page
+    }
+  },
+  favicon: [    // Leave this array empty to use the default favicon
+     {
+       src: &apos;https://q2.qlogo.cn/headimg_dl?dst_uin=2973517380&amp;amp;spec=5&apos;,    // Path of the favicon, relative to the /public directory
+       //theme: &apos;light&apos;,              // (Optional) Either &apos;light&apos; or &apos;dark&apos;, set only if you have different favicons for light and dark mode
+       sizes: &apos;128x128&apos;,              // (Optional) Size of the favicon, set only if you have favicons of different sizes
+     }
+  ]
+}
+
+export const navBarConfig: NavBarConfig = {
+  links: [
+    LinkPreset.Home,
+    LinkPreset.Archive,
+    LinkPreset.About,
+    {
+      name: &apos;随机图&apos;,
+      url: &apos;https://pic.onani.cn&apos;,     // Internal links should not include the base path, as it is automatically added
+      external: true,                               // Show an external link icon and will open in a new tab
+    },
+    {
+      name: &apos;GitHub&apos;,
+      url: &apos;https://github.com/saicaca/fuwari&apos;,     // Internal links should not include the base path, as it is automatically added
+      external: true,                               // Show an external link icon and will open in a new tab
+    },
+  ],
+}
+
+export const profileConfig: ProfileConfig = {
+  avatar: &apos;assets/images/111.webp&apos;,  // Relative to the /src directory. Relative to the /public directory if it starts with &apos;/&apos;
+  name: &apos;二叉树树&apos;,
+  bio: &apos;Protect What You Love./爱你所爱！&apos;,
+  links: [
+    // {
+      // name: &apos;Twitter&apos;,
+      // icon: &apos;fa6-brands:twitter&apos;,       // Visit https://icones.js.org/ for icon codes
+                                        // You will need to install the corresponding icon set if it&apos;s not already included
+                                        // `pnpm add @iconify-json/&amp;lt;icon-set-name&amp;gt;`
+      // url: &apos;https://twitter.com&apos;,
+    // },
+    // {
+      // name: &apos;Steam&apos;,
+      // icon: &apos;fa6-brands:steam&apos;,
+      // url: &apos;https://store.steampowered.com&apos;,
+    // },
+    {
+      name: &apos;GitHub&apos;,
+      icon: &apos;fa6-brands:github&apos;,
+      url: &apos;https://github.com/afoim&apos;,
+    },
+    {
+      name: &apos;QQ&apos;,
+      icon: &apos;fa6-brands:qq&apos;,
+      url: &apos;https://qm.qq.com/q/Uy9kmDXHYO&apos;,
+    },
+    {
+      name: &apos;QQ&apos;,
+      icon: &apos;fa6-solid:envelope&apos;,
+      url: &apos;mailto:acofork@foxmail.com&apos;,
+    },
+  ],
+}
+
+export const licenseConfig: LicenseConfig = {
+  enable: true,
+  name: &apos;CC BY-NC-SA 4.0&apos;,
+  url: &apos;https://creativecommons.org/licenses/by-nc-sa/4.0/&apos;,
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;清理多余文件。在根目录下的 &lt;code&gt;src/content/posts&lt;/code&gt; 文件夹中会有一些示例文章，这些文章介绍了一些MarkDown语法和技巧，可以让你更快上手Fuwari和fuwari，我们可以将其保存到别处&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;至此，你已经可以开始撰写文章了&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4&gt;让我们开始写作！&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;首先，在项目根目录执行：&lt;code&gt;pnpm new-post &amp;lt;这里填写你的文章标题&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;然后，在根目录下的 &lt;code&gt;src/content/posts&lt;/code&gt; 文件夹中会多出一个 &lt;code&gt;xxx.md&lt;/code&gt;文件&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;我们使用MarkText打开这个文件，你可以看到一些基本信息，我们只需要关注几个重要的信息&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;pre&gt;&lt;code&gt;title: xxx
+published: 2024-10-14
+description: &apos;&apos;
+image: &apos;&apos;
+tags: []
+category: &apos;&apos;
+draft: false 
+lang: &apos;&apos;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;title：文章标题&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;published：文章创建时间&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;description：文章描述，正常会显示在文章标题下面&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;image：文章封面图（同目录需要写 &lt;code&gt;./&lt;/code&gt; 如：&lt;code&gt;./assets/images/2024-10-14-11-33-28-image.webp&lt;/code&gt;）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;tag：文章标签&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;category：文章分类&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;我们还需要更改根目录下的 &lt;code&gt;astro.config.mjs&lt;/code&gt; 。在第34行更改 &lt;code&gt;stie:&lt;/code&gt; 为你的站点URL，如： &lt;code&gt;site: &quot;https://onani.cn&quot;,&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;欸？有的人就会问了，MarkDown固然好，但是我要如何处理图片的置入呢&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;这也很简单，多亏了MarkText这款软件，我们也可以像编辑Typecho一样直接使用Ctrl+CV来在MarkDown语法中置入图片，但是我们需要一些小设置：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;依次点击：MarkText软件的左上角的三条杠 -&amp;gt; File -&amp;gt; Perferences -&amp;gt; 左侧的Image分类 -&amp;gt; 如图设置 -&amp;gt; 注意更改第一个选项为Copy开头的选项，将Perfer开关打开，然后上下两个文本框一个填写绝对路径一个填写相对路径&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;img src=&quot;assets/images/2024-10-14-12-54-21-image.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;这样，当置入图片时，会往 &lt;code&gt;assets/images&lt;/code&gt; 文件夹复制一份，然后通过&lt;code&gt;![1](assets/images/1.webp)&lt;/code&gt;写入MarkDown文件。这样网站就能成功读取到图片啦。而你只需要Ctrl+CV，其他操作MarkText都会自动处理&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;至此，你已经会用MarkText编写MarkDown语法的博文了&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4&gt;本地预览，然后发布到Github&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;当你认为你的文章已经写得差不多时，想要看看效果？请到项目根目录执行：&lt;code&gt;pnpm dev&lt;/code&gt;，稍等片刻，你就可以本地预览你的博客啦&lt;img src=&quot;assets/images/2024-10-14-13-03-44-image.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;好！接下来我们需要使用Git将我们所做的更改发布到Github&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;首先，你需要让Git知道你是谁：&lt;code&gt;git config --global user.name &quot;你的Github用户名&quot;&lt;/code&gt;和&lt;code&gt;git config --global user.email &quot;你的Github邮箱@example.com&quot;&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;然后，设置远程仓库：&lt;code&gt;git remote add origin &amp;lt;远程仓库的URL&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;随后，让我们提交所有文件：&lt;code&gt;git add .&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;之后，让我们发布一个本地提交：&lt;code&gt;git commit -m &quot;项目初始化&quot;&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;最后，让我们将本地更改提交到远程仓库：&lt;code&gt;git push&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;此时，你的Github仓库应该已经有了新的提交&lt;img src=&quot;assets/images/2024-10-14-13-10-12-image.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4&gt;让Cloudflare连接上Github，使用Pages服务展示你的博客（FREE！）&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;前往Cloudflare的 Workers 和 Pages 页面，创建一个新Pages&lt;img src=&quot;assets/images/2024-10-14-13-14-28-image.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;然后选择连接Git存储库，连接你的Github，随后设置构建命令：&lt;code&gt;pnpm build&lt;/code&gt;  ，然后设置构建输出目录：&lt;code&gt;dist&lt;/code&gt; ，如图&lt;img src=&quot;assets/images/2024-10-14-13-16-15-image.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;绑定自定义域，访问自定义域即可访问你的博客！&lt;img src=&quot;assets/images/2024-10-14-13-17-00-image.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;随后，你只需要在本地编写文章，然后&lt;a href=&quot;#%E6%9C%AC%E5%9C%B0%E9%A2%84%E8%A7%88%E7%84%B6%E5%90%8E%E5%8F%91%E5%B8%83%E5%88%B0github&quot;&gt;使用Git将更改推送到远程仓库&lt;/a&gt;，Cloudflare就会自动部署，更新你的博客！&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+</content:encoded></item><item><title>试试Cloudflare IP优选！让Cloudflare在国内再也不是减速器！</title><link>https://acofork.us.kg/posts/cf-fastip/</link><guid isPermaLink="true">https://acofork.us.kg/posts/cf-fastip/</guid><description>使用SaaS双域名来让你的网站解析的IP进行分流优选，提高网站可用性和速度</description><pubDate>Mon, 14 Oct 2024 00:00:00 GMT</pubDate><content:encoded>&lt;h4&gt;未优选&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;assets/images/098f9ee71ae62603022e542878673e19bdcaf196.webp&quot; alt=&quot;QmZoinxZgAzu7Skh7BqsxmDQGU1sXtLLskJcyQuRAQNKww.webp&quot; /&gt;&lt;/p&gt;
+&lt;h4&gt;已优选&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;assets/images/e98ce10d846475aaec5cf73546d9b5caffefc4c0.webp&quot; alt=&quot;QmaNVwAwSRvqdL5SrvWVCGCQqmacP3d62yoLxofGscNoKq.webp&quot; /&gt;&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;结论：可见，优选过的网站响应速度有很大提升，并且出口IP也变多了。这能让你的网站可用性大大提高，并且加载速度显著变快。
+&lt;strong&gt;优选节点使用：&lt;a href=&quot;https://cloudflare.182682.xyz&quot;&gt;cloudflare.182682.xyz&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;h1&gt;针对于A、AAAA、CNAME&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;我们需要&lt;strong&gt;两个域名&lt;/strong&gt;（比如：onani.cn和acofork.cn）&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;这里我们让onani.cn成为主力域名，让acofork.cn成为辅助域名&lt;/p&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;首先新建一个DNS解析，指向你的&lt;strong&gt;源站&lt;/strong&gt;，&lt;strong&gt;开启cf代理&lt;/strong&gt;
+&lt;img src=&quot;assets/images/c94c34ee262fb51fb5697226ae0df2d804bf76fe.webp&quot; alt=&quot;QmfBKgDe77SpkUpjGdmsxqwU2UabvrDAw4c3bgFiWkZCna.webp&quot; /&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;前往 SSL/TLS -&amp;gt; 自定义主机名。设置回退源为你刚才的DNS解析的域名（xlog.acofork.cn），添加自定义主机名为你最终想让用户访问的域名（onani.cn）并且按照指示在主力域名（onani.cn）添加TXT所有权验证和TXT证书验证，直到证书状态和主机名状态都变为有效
+&lt;img src=&quot;assets/images/f6170f009c43f7c6bee4c2d29e2db7498fa1d0dc.webp&quot; alt=&quot;QmRYrwjeDMDQCj8G9RYkpjC3X4vpwE77wpNpbqKURwBber.webp&quot; /&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;继续在你的辅助域名添加一条解析。CNAME到优选节点：cloudflare.182682.xyz，&lt;strong&gt;不开启cf代理&lt;/strong&gt;
+&lt;img src=&quot;assets/images/4f9f727b0490e0b33d360a2363c1026003060b29.webp&quot; alt=&quot;QmNwkMqDEkCGMu5jsgE6fj6qpupiqMrqqQtWeAmAJNJbC4.webp&quot; /&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;最后在你的主力域名添加解析。域名为之前在辅助域名的自定义主机名（onani.cn），目标为刚才的cdn.acofork.cn，&lt;strong&gt;不开启cf代理&lt;/strong&gt;
+&lt;img src=&quot;assets/images/6f51cb2a42140a9bf364f88a5715291be616a254.webp&quot; alt=&quot;QmeK3AZghae4J4LcJdbPMxBcmoNEeF3hXNBmtJaDki8HYt.webp&quot; /&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;优选完毕，尝试访问&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;（可选）你也可以将cdn子域的NS服务器更改为阿里云\华为云\腾讯云云解析做线路分流解析&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;优选工作流：用户访问 -&amp;gt; 由于最终访问的域名设置了CNAME解析，所以实际上访问了cdn.acofork.cn，并且携带 &lt;strong&gt;源主机名：onani.cn&lt;/strong&gt; -&amp;gt; 到达cloudflare.182682.xyz进行优选 -&amp;gt; 优选结束，cf边缘节点识别到了携带的 &lt;strong&gt;源主机名：onani.cn&lt;/strong&gt; 查询发现了回退源 -&amp;gt; 回退到回退源内容（xlog.acofork.cn） -&amp;gt; 访问成功&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1&gt;针对于Cloudflare Page&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;你可以直接将你绑定到Page的子域名直接更改NS服务器到阿里云\华为云\腾讯云云解析做线路分流解析&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1&gt;针对于Cloudflare Workers&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;在Workers中添加路由，然后直接将你的路由域名从指向&lt;code&gt;xxx.worker.dev&lt;/code&gt;改为&lt;code&gt;cloudflare.182682.xyz&lt;/code&gt;等优选域名即可&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr /&gt;
+&lt;h3&gt;疑难解答&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Q：如果我的源站使用Cloudflare Tunnels
+A：需要在Tunnels添加两个规则，一个指向你的辅助域名，一个指向最终访问的域名。然后删除最终访问域名的DNS解析（&lt;strong&gt;但是不要直接在Tunnels删，会掉白名单，导致用户访问404&lt;/strong&gt;）。然后跳过第一步&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;原理：假设你已经配置完毕，但是Cloudflare Tunnels只设置了一个规则。
+分类讨论，假如你设置的规则仅指向辅助域名，那么在优选的工作流中：用户访问 -&amp;gt; 由于最终访问的域名设置了CNAME解析，所以实际上访问了cdn.acofork.cn，并且携带 &lt;strong&gt;源主机名：onani.cn&lt;/strong&gt; -&amp;gt; 到达cloudflare.182682.xyz进行优选 -&amp;gt; 优选结束，cf边缘节点识别到了携带的 &lt;strong&gt;源主机名：onani.cn&lt;/strong&gt; 查询发现了回退源 -&amp;gt; 回退源检测 &lt;strong&gt;源主机名：onani.cn&lt;/strong&gt;不在白名单 -&amp;gt; 报错 404 Not Found。访问失败
+分类讨论，假如你设置的规则仅指向最终访问的域名，那么在优选的工作流中：用户访问 -&amp;gt; 由于最终访问的域名设置了CNAME解析，所以实际上访问了cdn.acofork.cn -&amp;gt; 由于cdn.acofork.cn不在Tunnels白名单，则访问失败&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Q：如果我的源站使用了Cloudflare Origin Rule（端口回源）
+A：需要将规则的生效主机名改为最终访问的域名，否则不触发回源策略（会导致辅助域名无法访问，建议使用Cloudflare Tunnels）&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;原理：假设你已经配置完毕，但是Cloudflare Origin Rule（端口回源）规则的生效主机名为辅助域名
+那么在优选的工作流中：用户访问 -&amp;gt; 由于最终访问的域名设置了CNAME解析，所以实际上访问了cdn.acofork.cn，并且携带 &lt;strong&gt;源主机名：onani.cn&lt;/strong&gt; -&amp;gt; 到达cloudflare.182682.xyz进行优选 -&amp;gt; 优选结束，cf边缘节点识别到了携带的 &lt;strong&gt;源主机名：onani.cn&lt;/strong&gt; 查询发现了回退源 -&amp;gt; 回退到回退源内容（xlog.acofork.cn）-&amp;gt; 但是由于&lt;strong&gt;源主机名：onani.cn&lt;/strong&gt;不在Cloudflare Origin Rule（端口回源）的规则中 -&amp;gt; 无法触发回源策略，访问失败&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Q：如果我的源站使用serv00
+A：需要在WWW Web Site界面添加两个规则，一个指向你的辅助域名，一个指向最终访问的域名。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;原理：假设你已经配置完毕，但是serv00仅配置其中一个域名
+那么在优选的工作流中：会导致访问错误，serv00将会拦截不在白名单的域名请求&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+</content:encoded></item><item><title>Cloudflare R2+Workers！马上搭建自己的云上图床！</title><link>https://acofork.us.kg/posts/cf-r2-wk-p/</link><guid isPermaLink="true">https://acofork.us.kg/posts/cf-r2-wk-p/</guid><description>使用R2存储图片，通过Workers连接，最后使用a标签或img标签在网页中嵌入展示，全链路上云</description><pubDate>Mon, 14 Oct 2024 00:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;&lt;strong&gt;结果图&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;assets/images/408795f3ec1a5a9baf91b6cd7564d6f1d7dbc5bd.webp&quot; alt=&quot;QmVgqgoC7G8NLS21WvR8j9gf5amu33XvuV68ZrgM5B9iFf.webp&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;&lt;strong&gt;原理&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;图源由 Cloudflare R2 托管，通过两个 Workers 连接 R2 以展示随机横屏/竖屏图片，静态页面引用 Workers 的 URL 以实现以上界面&lt;/p&gt;
+&lt;h3&gt;&lt;strong&gt;创建 Cloudflare R2 存储桶&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;R2 实际上是一个对象存储。Cloudflare 提供 10G 的免费存储和每月 1000 万次的免费访问&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;进入&lt;a href=&quot;https://dash.cloudflare.com/&quot;&gt;Cloudflare 仪表盘&lt;/a&gt;，进入 R2 页面，如图&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;assets/images/0ffb86d36ab0f3fcc24ef7b3d64c4bc72b6b53e7.webp&quot; alt=&quot;QmU7u2JHUcevyHnwsCdAZfs7X7Fcdh3KJhn6eoy24Q5dGC.webp&quot; /&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;选择创建存储桶&lt;img src=&quot;assets/images/26d3b3e26b9e2f641a2eea98c2ddb8891a0b7f6a.webp&quot; alt=&quot;QmX3eCaCVEgE8AN29D9t2VpQ5t5SrZGKb8EcZv9oKpCqf2.webp&quot; /&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;为你的存储桶起一个名字，然后单击创建&lt;img src=&quot;assets/images/7fa96a023d7969ab168d467ab6d05646e5241884.webp&quot; alt=&quot;QmVad5eoJCLpSNZ4HCvTPJfD8rpg4aePMzZ7j2DZATn1XD.webp&quot; /&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;进入如下页面就已经创建完毕了&lt;img src=&quot;assets/images/719f2dfe59c73fa820ffc6cc2d9749ca14b9bece.webp&quot; alt=&quot;QmSdzwBJpw2L4a8LJ3eM3VMJs3d5oV5iFCxCMtv69VZmYH.webp&quot; /&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;返回 R2 首页。因为在下文我们需要使用 API 来进行文件传输，所以需要创建你的 R2 API 令牌，单击管理 R2 API 令牌&lt;img src=&quot;assets/images/9b1a338acae642ce7ce71dd41454903b1cfeafd0.webp&quot; alt=&quot;QmbS8zjJTESwsmycKBSC9kmabAA9dtSCUX8nbUDWg4BWRX.webp&quot; /&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;单击创建 API 令牌，如图&lt;img src=&quot;assets/images/9512f23e08a60948e721848118f5eb096449909b.webp&quot; alt=&quot;QmPzJEHVAm4z3S1SHY4k99TugrPyTB9DXpyRR8Loj22bz3.webp&quot; /&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;因为我们需要该 API 来管理单个 R2 存储桶，所以选择&lt;strong&gt;对象读和写&lt;/strong&gt;，详细配置如图&lt;img src=&quot;assets/images/0361e2b00351559eaebb18f3e6bb15a94b8578e9.webp&quot; alt=&quot;QmNY9p8hksi18B9R8TVfdGgu336oQ3cPmghyfYXE9CDGD4.webp&quot; /&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;创建 API 令牌后，新页面会展示令牌的详细信息，&lt;strong&gt;仅会展示一次！！！&lt;/strong&gt; 保持这个页面，直到你将该页面的所有信息都已经妥善保存，不要关闭界面，否则，你需要轮转 API 令牌以禁用之前的旧密钥，如图&lt;img src=&quot;assets/images/f4214f6fdf67fa7bf694d0a1501ecc21aef45a90.webp&quot; alt=&quot;QmZTUwbycqbJhVP6PatD3psYy7ej9PDDoiXbmDWoakPhwx.webp&quot; /&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;确保你已经妥善保存你的 R2 API 令牌，然后进行下一步&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;&lt;strong&gt;为你的存储桶添加文件&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;因为 Web 界面传输文件较慢且不支持传输大于 300MB 的文件。这里使用本地部署 AList 然后连接你的 R2 存储桶实现高速上传&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;笔者使用 Windows。前往&lt;a href=&quot;https://github.com/alist-org/alist/releases&quot;&gt;AList - Github Release&lt;/a&gt;下载适用于 Windows 的最新可执行文件，如图&lt;img src=&quot;assets/images/a2d1f289e464a9fb6367e2b7ff0b695916742698.webp&quot; alt=&quot;QmPDRDJGeGStreyZMXVYofbE9FCs1T1MyDek3KUbB3Kk5b.webp&quot; /&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;将下载的压缩包解压，并将其中的&lt;code&gt;alist.exe&lt;/code&gt;放入一个空文件夹&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;单击搜索框，输入 cmd 并回车，如图&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;img src=&quot;assets/images/3abdda195c58812866d49879c683a044e8acf7f8.webp&quot; alt=&quot;QmSt8aFtaeEprJHASEiNPB67UHcHoSxsbhhHUPxW6QkWSo.webp&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;assets/images/f90fccfe1db62aff7a0a722cd3c5c319da563ae2.webp&quot; alt=&quot;QmNkMhDhpPLkYCpVhE1ov7Q6A34uWDvraCqNvuTqaCkujT.webp&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;在 cmd 中输入&lt;code&gt;alist.exe server&lt;/code&gt;并且不要关闭窗口，运行成功后如图&lt;img src=&quot;assets/images/2c0ec8fb4de7f2a9a1b8107e3506cb5a8d7d7eff.webp&quot; alt=&quot;QmdzyY8xbic8jdnZEXegefoZPeizqHa4ZkdMnRKoguBMkf.webp&quot; /&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;打开浏览器，输入&lt;code&gt;localhost:5244&lt;/code&gt;即可进入 AList 控制台，如图&lt;img src=&quot;assets/images/867fe02a124c886777d4ba64f6d1e4498c686709.webp&quot; alt=&quot;QmUBFKu7mCiRneCrsTNPxTH6S4gxwtXf9cwLzf4dKW9LLR.webp&quot; /&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;用户名：&lt;code&gt;admin&lt;/code&gt;密码：&lt;code&gt;在cmd窗口中，如图&lt;/code&gt;。你可以使用鼠标左键在终端中框选内容然后单击鼠标右键进行复制操作&lt;img src=&quot;assets/images/8cedc3475cd8358507587de8a6b2a91980fe9af4.webp&quot; alt=&quot;QmVH3qZYo3QE6anNHymwkikq5MSeJphrZNR7RCH5jpP3wn.webp&quot; /&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;注意，在 cmd 中，鼠标左键点击或拖动 cmd 的终端界面会导致进入选择状态，程序将会被系统阻塞，&lt;strong&gt;需要在终端界面点按鼠标右键解除&lt;/strong&gt;。若进程被阻塞，cmd 的进程名会多一个&lt;strong&gt;选择&lt;/strong&gt;，请注意。如图是程序被阻塞的例子，&lt;strong&gt;在终端界面点按鼠标右键即可解除&lt;/strong&gt;
+&lt;img src=&quot;assets/images/afb945ff610c0463ee0db97f52bc42a865b00603.webp&quot; alt=&quot;QmapESiqSEvbYq3AJs15yYvhemRxSHrJaccjTFr99muX6Z.webp&quot; /&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;现在，你已经成功以管理员身份登入了 AList单击最下面的&lt;strong&gt;管理&lt;/strong&gt;&lt;img src=&quot;assets/images/eb0c3753205f42133445dfcee5f1291debd6c649.webp&quot; alt=&quot;QmfNE53GThdjVrh4q64MJcZqwcGPD7UtcYTNw9bVBaSEaF.webp&quot; /&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;你会进入到如图界面。尽管 AList 运行在本地，也建议更改你的用户名和密码&lt;img src=&quot;assets/images/3bde577194580e4d17aa457231360733175e2b0d.webp&quot; alt=&quot;QmNdD8UU8fkVDBz5dXdJhCF2fZg8P1FwrcMaaTsG6a7ENy.webp&quot; /&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;更改账密，重新以新账密登录&lt;img src=&quot;assets/images/a5ba3b6cc73002f3e96b6aab8c4e252f697802da.webp&quot; alt=&quot;Qmas7pMiPR2FNTXheBT1xGNUpzDiSzv7J7yd6oCuT17yad.webp&quot; /&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;进入控制台，然后单击存储，如图&lt;img src=&quot;assets/images/bb8fc961e43dffa99994c0d0e703ba98fc01b85a.webp&quot; alt=&quot;QmS4gGyCM1j3RXgHEPuZ1zTbLAvGtVBEiPXJe9QMF3dD2D.webp&quot; /&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;选择添加，如图&lt;img src=&quot;assets/images/2807d1dbc07fed008c8177cd3b2b89bfd03cc8be.webp&quot; alt=&quot;QmRDVxt8WbrVkHavgFNXj3qC86ysw6sSZhPy3Uf2ixKp2E.webp&quot; /&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;详细配置如图。挂载路径即 AList 展示路径，推荐使用&lt;code&gt;/R2/你的存储桶名字&lt;/code&gt;，地区为&lt;code&gt;auto&lt;/code&gt;&lt;img src=&quot;assets/images/2024-10-16-11-37-53-image.webp&quot; alt=&quot;&quot; /&gt;回到主页，如图&lt;img src=&quot;assets/images/65265d29e91f146ecbe3d92218eb9af49eac1c8b.webp&quot; alt=&quot;QmSnR9Ptrssx4nqk9qCvhFUNKQyQqJiN7GRscwoj4Dczgj.webp&quot; /&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;尝试上传文件，如图&lt;img src=&quot;assets/images/061c995a66c34ebc341f692d4eb82d5657d791d6.webp&quot; alt=&quot;QmPqFsmZNNnh4jNyLS7X3h8Zr6ZCVqTqGVwTxmPDdbmrGW.webp&quot; /&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;可以看到，速度非常快&lt;img src=&quot;assets/images/51d0a617cbda108ce6c12fb25f71fb5223a0cddb.webp&quot; alt=&quot;QmXfGK6aZjz741GrY8RfFfKMkUzDMB3xhx93PGZ9S1QycT.webp&quot; /&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;为你的图床创建目录以分类横屏和竖屏图等，以便下文使用 Workers 连接 R2 来调用。后文我将使用R2的&lt;code&gt;/ri/h&lt;/code&gt; 路径作为横屏随机图目录、&lt;code&gt;/ri/v&lt;/code&gt; 路径作为竖屏随机图目录&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&quot;assets/images/3bde577194580e4d17aa457231360733175e2b0d.webp&quot; alt=&quot;QmNdD8UU8fkVDBz5dXdJhCF2fZg8P1FwrcMaaTsG6a7ENy.webp&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;&lt;strong&gt;创建 Workers，连接 R2&lt;/strong&gt;&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;进入&lt;a href=&quot;https://dash.cloudflare.com/&quot;&gt;Cloudflare 仪表盘&lt;/a&gt;，进入 Workers 和 Pages 页面，如图&lt;img src=&quot;assets/images/49ccd51771082fdc94eecb270caf987d257cd987.webp&quot; alt=&quot;QmW5UaUap8T2R37u5dzmKGLmUgk4qKnSMFwHBVHqvVbkVA.webp&quot; /&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;单击创建，选择创建 Workers，名称自取，单击部署&lt;img src=&quot;assets/images/95102dd09752a103d8022b1f281538e729b7a448.webp&quot; alt=&quot;QmVvLv5n41QQfDfYiVWYRpsfw7TVNGy1BYuv5e8vBRhKLA.webp&quot; /&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;选择编辑代码&lt;img src=&quot;assets/images/fa78af856b3ff3798c77a55be15b2644dec944c1.webp&quot; alt=&quot;QmTbRifzXQ593DGyjFQMbA9exyNp2iAeAg4zbVrfFimQc4.webp&quot; /&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;粘贴代码（创建随机横屏图）：&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;export default {
+  async fetch(request, env, ctx) {
+    // R2 bucket 配置
+    const bucket = env.MY_BUCKET;
+
+    try {
+      // 列出 /ri/h 目录下的所有对象
+      const objects = await bucket.list({ prefix: &apos;ri/h/&apos; });
+
+      // 从列表中随机选择一个对象
+      const items = objects.objects;
+      if (items.length === 0) {
+        return new Response(&apos;No images found&apos;, { status: 404 });
+      }
+      const randomItem = items[Math.floor(Math.random() * items.length)];
+
+      // 获取选中对象
+      const object = await bucket.get(randomItem.key);
+
+      if (!object) {
+        return new Response(&apos;Image not found&apos;, { status: 404 });
+      }
+
+      // 设置适当的 Content-Type
+      const headers = new Headers();
+      headers.set(&apos;Content-Type&apos;, object.httpMetadata.contentType || &apos;image/jpeg&apos;);
+
+      // 返回图片内容
+      return new Response(object.body, { headers });
+    } catch (error) {
+      console.error(&apos;Error:&apos;, error);
+      return new Response(&apos;Internal Server Error&apos;, { status: 500 });
+    }
+  },
+};
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;点击左侧的文件图标&lt;img src=&quot;assets/images/b02f29fbafb44ad36a0fa770d013069a374394a8.webp&quot; alt=&quot;QmQGQTiTXSESU2TSJ6tc3KrzWU4KABKqn6QZ1GdWqKnWmc.webp&quot; /&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;在&lt;code&gt;wrangler.toml&lt;/code&gt;中填入：&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;[[r2_buckets]]
+binding = &quot;MY_BUCKET&quot;
+bucket_name = &quot;114514&quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;保存修改，点击右上角的部署&lt;img src=&quot;assets/images/6751c7b5122b938e01087d1bed629fcad1182a10.webp&quot; alt=&quot;QmP7hXdtenrJrzJRRePHQATGtyAsZEr5MkMsboXvmNUxTx.webp&quot; /&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;在设置 - 变量找到 R2 存储桶绑定，添加你的存储桶，变量名即上文的&lt;code&gt;MY_BUCKET&lt;/code&gt;&lt;img src=&quot;assets/images/572f1c9946b5b6de5350c708e579d9887949b6e9.webp&quot; alt=&quot;QmStitSyATnA8sY9tTgZaXXqmqkGPUtZmMxn9KjbFQzgTc.webp&quot; /&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;在设置 - 触发器添加你的自定义域名以便访问&lt;img src=&quot;assets/images/706b3acbb372307713e38c96fc867f4e96234fd7.webp&quot; alt=&quot;QmUMxtkCiKsgFw8afRUGREFztXE9D5W6FmCbAUB7DaVH5o.webp&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;assets/images/1a6fa505881591a294f0b4ef4a1940e40fe57ab9.webp&quot; alt=&quot;QmPF9iCoq6n8Jj2Z6kPkdJSCm45VJystZoYcir55yceCQo.webp&quot; /&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;访问效果，每次刷新都不一样&lt;img src=&quot;assets/images/0ba1efee8174e0d3db761bbd613a7b94b9738cee.webp&quot; alt=&quot;QmQgEdjXxF9oph2jYKzFMJToX9WfG11jUmPiNJnjhYVN4N.webp&quot; /&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;&lt;strong&gt;通过使用 HTML 的 &lt;code&gt;&amp;lt;img&amp;gt;&lt;/code&gt; 标签引用即可达到开头的效果&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;如：&lt;code&gt;&amp;lt;img src=&quot;你的域名&quot; alt=&quot;&quot;&amp;gt;&lt;/code&gt;
+&amp;lt;img title=&quot;&quot; src=&quot;https://hrandom.onani.cn&quot; alt=&quot;loading-ag-4760&quot;&amp;gt;&lt;/p&gt;
+</content:encoded></item><item><title>飞牛NAS玩机体验</title><link>https://acofork.us.kg/posts/fnos/</link><guid isPermaLink="true">https://acofork.us.kg/posts/fnos/</guid><description>飞牛NAS系统是一个现代的开源的NAS系统。影视刮削在国内属于TOP1，并且刚需的Docker软件也功能全面易用，博主本人也在使用</description><pubDate>Mon, 14 Oct 2024 00:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;吸引我的东西&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;影视刮削：飞快，薄纱Plex几条街。通过&lt;a href=&quot;/autobangumi&quot;&gt;AutoBangumi&lt;/a&gt;可以完美自动追番+刮削一条龙服务。偶尔会有不准，但可以手动匹配，数据源来自&lt;a href=&quot;https://www.themoviedb.org/&quot;&gt;TMDB&lt;/a&gt;和&lt;a href=&quot;https://www.imdb.com/&quot;&gt;IMDB&lt;/a&gt;
+&lt;img src=&quot;assets/images/f1bd7089efdf00097d5474ef967a62dcfca42e98.webp&quot; alt=&quot;QmbNXd4FJ8FM8mwkKxJNdBoNbvhawJ2HdSvW5tFUt3o4ub.webp&quot; /&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;相册：可以通过手机APP自动备份，支持仅备份图片，可以多用户使用，存储互不干扰，也可以设置要共享的图片
+&lt;img src=&quot;assets/images/2f9981f8397cc1278807ed28f8a2e15954868fec.webp&quot; alt=&quot;QmeLJ7in4xcokPWUgkkSobDLUTrFrXep2o38qUXQ1njQR9.webp&quot; /&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;注意事项&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;飞牛NAS在安装的时候会叫你选择安装盘，然后会将安装盘的一部分空间（默认为64GB）作为系统分区，其余空间可用于创建存储空间（但是系统盘不能和别的盘组存储池，只能单独建存储池）
+&lt;img src=&quot;assets/images/6403ef19d941abdc93d8c7da01364a8983c98109.webp&quot; alt=&quot;QmNfRbvHu1fuYoincACcP2MG4yV4pgRni3rb4Y9J7uw4FW.webp&quot; /&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;应用商店安装的软件需要先授予目录访问权限应用才能读取目录（无论是原生还是Docker应用）
+&lt;img src=&quot;assets/images/79af3b25d8b677b2718c953c0d431ead2f137e1d.webp&quot; alt=&quot;QmP4unAVra1zy7gkjEzSCYEDAJMMe1BVWPKoVyjYv8b9Ho.webp&quot; /&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;发行版为Debian 12。根目录为系统分区的空间，/vol1 为存储空间1的空间 /vol2 为存储空间2的空间。推荐使用&lt;a href=&quot;https://onani.cn/RaiDrive&quot;&gt;RaiDrive&lt;/a&gt;或&lt;a href=&quot;/SSHFS&quot;&gt;SSHFS&lt;/a&gt;挂载Linux目录到Windows
+&lt;img src=&quot;assets/images/d4ec6f87893f4af5d7eedb2e2a19a784fd6c6f92.webp&quot; alt=&quot;QmWMQHNpJUUPg9B1Hdw2zmwLx9q6bcS52nUFiB3P9iYvU9.webp&quot; /&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;SSH需要自己开，账密为NAS管理员账密，建议登上之后改为仅密钥登录，参见：&lt;a href=&quot;https://www.runoob.com/w3cnote/set-ssh-login-key.html&quot;&gt;设置 SSH 通过密钥登录&lt;/a&gt;
+&lt;img src=&quot;assets/images/9f92130465ab62e912b7404266febc7212e2125b.webp&quot; alt=&quot;QmTk3va2NCbYTcVewVjuqjGx6MwMwiUnManrNwxvEq4SBR.webp&quot; /&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;各网卡测试&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;名称&lt;/th&gt;
+&lt;th&gt;类型&lt;/th&gt;
+&lt;th&gt;品牌&lt;/th&gt;
+&lt;th&gt;是否免驱&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Realtek GBE Family （r8168）&lt;/td&gt;
+&lt;td&gt;有线&lt;/td&gt;
+&lt;td&gt;Realtek（瑞昱）&lt;/td&gt;
+&lt;td&gt;否，需要自行安装驱动&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Realtek 8852BE&lt;/td&gt;
+&lt;td&gt;无线&lt;/td&gt;
+&lt;td&gt;Realtek（瑞昱）&lt;/td&gt;
+&lt;td&gt;否，需要自行安装驱动&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Intel AC3160&lt;/td&gt;
+&lt;td&gt;无线&lt;/td&gt;
+&lt;td&gt;Intel（英特尔）&lt;/td&gt;
+&lt;td&gt;是&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;USB有线网卡&lt;/td&gt;
+&lt;td&gt;有线&lt;/td&gt;
+&lt;td&gt;Realtek（瑞昱）&lt;/td&gt;
+&lt;td&gt;是&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;各存储模式区别&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;模式&lt;/th&gt;
+&lt;th&gt;作用&lt;/th&gt;
+&lt;th&gt;是否能扩容&lt;/th&gt;
+&lt;th&gt;是否能换盘&lt;/th&gt;
+&lt;th&gt;容灾&lt;/th&gt;
+&lt;th&gt;是否能热备&lt;/th&gt;
+&lt;th&gt;是否能修改存储模式&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Basic&lt;/td&gt;
+&lt;td&gt;将物理硬盘的一部分或者全部作为一个存储池，不可扩容，仅能单盘创建这个模式&lt;/td&gt;
+&lt;td&gt;否&lt;/td&gt;
+&lt;td&gt;否&lt;/td&gt;
+&lt;td&gt;无&lt;/td&gt;
+&lt;td&gt;否&lt;/td&gt;
+&lt;td&gt;是，可转为RAID&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Linear&lt;/td&gt;
+&lt;td&gt;将一个或多个物理硬盘的一部分或者全部作为一个存储池，可扩容&lt;/td&gt;
+&lt;td&gt;是&lt;/td&gt;
+&lt;td&gt;否&lt;/td&gt;
+&lt;td&gt;无&lt;/td&gt;
+&lt;td&gt;否&lt;/td&gt;
+&lt;td&gt;否&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;RAID类&lt;/td&gt;
+&lt;td&gt;自行使用搜索引擎搜索，更详细&lt;/td&gt;
+&lt;td&gt;未测试&lt;/td&gt;
+&lt;td&gt;未测试&lt;/td&gt;
+&lt;td&gt;未测试&lt;/td&gt;
+&lt;td&gt;未测试&lt;/td&gt;
+&lt;td&gt;未测试&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;ol&gt;
+&lt;li&gt;NAS迅雷内测码：迅雷牛通&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+</content:encoded></item><item><title>影视飓风2024/10/9 补档：清晰度不如4年前！视频变糊是你的错觉吗？</title><link>https://acofork.us.kg/posts/ysjf-2024-10-9/</link><guid isPermaLink="true">https://acofork.us.kg/posts/ysjf-2024-10-9/</guid><description>影视飓风在2024/10/9发布了一个视频：“清晰度不如4年前！视频变糊是你的错觉吗？”但仅发布几小时后就被全网下架，背后的原因令人忍俊不禁</description><pubDate>Thu, 10 Oct 2024 00:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;种子分发由一个G口服务器进行&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;assets/images/d0cf471816594985dfc73a8e1fa73344e4da7b34.webp&quot; alt=&quot;QmVSdY3zCyGRoH9CiWijtrdShENtnjrr6jf1EBsjsFFZ1h.webp&quot; /&gt;&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;磁力链接：&lt;code&gt;magnet:?xt=urn:btih:ffb877b0e3e964cb307048542faa22571f515245&lt;/code&gt;
+Torrent：&lt;a href=&quot;https://r2-dl.afo.im/guest/%E6%B8%85%E6%99%B0%E5%BA%A6%E4%B8%8D%E5%A6%824%E5%B9%B4%E5%89%8D%EF%BC%81%E8%A7%86%E9%A2%91%E5%8F%98%E7%B3%8A%E6%98%AF%E4%BD%A0%E7%9A%84%E9%94%99%E8%A7%89%E5%90%97%EF%BC%9F.torrent&quot;&gt;下载种子&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;assets/images/6dcc020b4806ca3aa9523a380cdada5a0ced1dc8.webp&quot; alt=&quot;QmePwzbKiJxX6pbrGu5MvUyMjqxzwdqGivayojzG8FsweC.webp&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;assets/images/9b93ef5577e4941f0a47488fcce7ec2e796a11c4.webp&quot; alt=&quot;QmS6YpbApGvXmgoL5u93QVNb5LnQmwN5jdzY2fyjNoHUHB.webp&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;assets/images/978f2b7e67672ffecb26a7e51205b21c90c30a20.webp&quot; alt=&quot;QmTzY1LfXoPWy7EzzBANZZxVJ2fP2HF8jvr4DYWcYLT5W6.webp&quot; /&gt;&lt;/p&gt;
+</content:encoded></item><item><title>教你搭建自己的番剧库，实现自动追番！</title><link>https://acofork.us.kg/posts/autobangumi/</link><guid isPermaLink="true">https://acofork.us.kg/posts/autobangumi/</guid><description>使用AutuBangumi连接qBittorrent下载番剧，然后使用刮削软件刮削，设置一遍，享受终身</description><pubDate>Tue, 08 Oct 2024 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;实现流程：&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;每当新番更新时AutoBangumi自动向qb推送种子下载并且重命名&lt;/li&gt;
+&lt;li&gt;刮削软件（如Plex，飞牛影视设置定时搜索媒体库）&lt;/li&gt;
+&lt;li&gt;你只需要选番，然后等待下载和看就行了 &lt;s&gt;实际并非&lt;/s&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;安装qbittorrent&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;用于下载番剧&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;各系统安装方法各有不同。如果你安装的是非nox版本，记得在设置打开WebUI，并监听0.0.0.0:8080&lt;/p&gt;
+&lt;p&gt;Windows：&lt;a href=&quot;https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32&quot;&gt;SourceForge&lt;/a&gt;
+Linux：&lt;code&gt;apt/yum install qbittorrent-nox&lt;/code&gt;
+Docker：https://github.com/linuxserver/docker-qbittorrent&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;assets/images/29e0e4c26c15463ff692aabcee747950e2d029d3.webp&quot; alt=&quot;8938ee430e5f74109c34c8c6d48e0e4f619cbeff.webp&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;安装AutoBangumi&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;用于获取你订阅的番剧并在更新时自动发起下载任务&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;安装Docker，各系统安装方式各有不同&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;找一个你喜欢的文件夹创建&lt;code&gt;docker-compose.yaml&lt;/code&gt; ，并写入内容：&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;services:
+AutoBangumi:
+  image: &quot;ghcr.io/estrellaxd/auto_bangumi:latest&quot;
+  container_name: AutoBangumi
+  volumes:
+    - ./config:/app/config
+    - ./data:/app/data
+  ports:
+    - &quot;7892:7892&quot;
+  network_mode: bridge
+  restart: unless-stopped
+  dns:
+    - 223.5.5.5
+  environment:
+    - TZ=Asia/Shanghai
+    - PGID=$(id -g)
+    - PUID=$(id -u)
+    - UMASK=022
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;运行命令：docker compose up -d&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;进入localhost:7892 ，默认账号：admin，默认密码：adminadmin&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;点左边的设置图标 -&amp;gt; 下载设置，填入下载器信息，然后点击右下角的应用，直到右上角亮绿灯&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&quot;assets/images/94f407121de7816ee2dff78f948dcc2ded27b28f.webp&quot; alt=&quot;QmbVcrgZ2C2FTt6QdfKsUkVQz9SCiQiyq1WCbphDiGW2mM.webp&quot; /&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;前往蜜柑计划，注册账号，并订阅你想要的番剧（复制）
+&lt;img src=&quot;assets/images/0e22eab8db6ed2441f3d3be0b10d51944867df0a.webp&quot; alt=&quot;QmXq7DcBkA4EecJikQE4snvPkNU2NQLy1EXUpAructteah.webp&quot; /&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;回到 AutoBangumi，点击右上角的 +，添加 RSS（粘贴）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;静静等待，不出意外 AutoBangumi 会自动下载你订阅的番剧了（如果没有可以查看AutoBangumi的日志，或者尝试重启容器）&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;下载旧集或已完结番剧&lt;/h3&gt;
+&lt;p&gt;首先推荐几个资源网（梯子自备）：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&quot;https://acg.rip&quot;&gt;ACG.RIP&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://share.acgnx.se&quot;&gt;末日动漫资源网&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;蜜柑计划 国内直连：1. https://mikanime.tv 2. https://hadestian.cn 3. https://mk.misakaae.com 4. https://mikan.yujiangqaq.com 5. RSS镜像站：https://mikanani.longc.top&lt;/li&gt;
+&lt;li&gt;蜜柑计划 需翻墙：https://mikanani.me
+然后找你想要的番剧下载&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4&gt;规范重命名&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;为了让软件能正确刮削元数据和剧集，我们需要规范重命名。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;注意！你只需要确保番剧名正确就可以了！子目录可以通过后面的脚本自动重命名！如果你不确定番剧名请前往TMDB搜索：&lt;a href=&quot;themoviedb.org&quot;&gt;The Movie Database (TMDB) &lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;一级目录（qb 设置的下载目录）：不需要重命名&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;二级目录（番剧名，必须正确）：总之就是非常可爱&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;三级目录：（番剧的哪一季）：Season 1&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;四级目录：（番剧的哪一季的哪一集）：S01E01.MP4&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;s&gt;前往Episode-ReName，克隆仓库&lt;/s&gt;（已被删库，可尝试&lt;a href=&quot;https://alist.onani.cn/Episode-ReName.zip&quot;&gt;Episode-ReName.zip | Onani-AList&lt;/a&gt; )&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Win 可以通过右键菜单自动获取路径版.bat 通过右键一级目录选择自动剧集命名 。若使用.py 脚本则只能通过&lt;code&gt;python3 EpisodeReName.py &quot;D:/qbdownloads/bangumi&quot;&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;小贴士：&lt;/strong&gt; 可以使用&lt;a href=&quot;https://onani.cn/RaiDrive&quot;&gt;RaiDrive&lt;/a&gt;或&lt;a href=&quot;/SSHFS&quot;&gt;SSHFS&lt;/a&gt;将远程的Linux文件映射到Windows上，管理番剧更方便
+&lt;img src=&quot;assets/images/5cf6dfe73164f6a869a59817df53f939e936ab00.webp&quot; alt=&quot;QmY7KM2MjudNksqvSkkFmwFgjjdD7ZQKLDaVPXR3jnXoxw.webp&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;安装 Plex（或者安装飞牛云NAS）&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;用于观看番剧&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;下载Plex Media Server&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;启动。默认端口 32400（如果进去是一堆乱码，添加/web后缀。例如：192.168.124.25:32400/web）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;选择你的媒体库文件夹&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;开启远程访问，右上角设置 -&amp;gt; 远程访问&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;图为飞牛影视&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;assets/images/acbde8bfd7395a8b5c744b9f1c550f3caac6c342.webp&quot; alt=&quot;Qmf8Q1D9fUoFbu9MQsQHvaz13p3YV2XguR3RqUAse2KBEa.webp&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;爽看&lt;/p&gt;
+</content:encoded></item></channel></rss>
