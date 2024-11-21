@@ -22,7 +22,7 @@ lang: ''
 结论：可见，优选过的网站响应速度有很大提升，并且出口IP也变多了。这能让你的网站可用性大大提高，并且加载速度显著变快。
 **优选节点使用：[cloudflare.182682.xyz](https://cloudflare.182682.xyz)**
 
-### 正式开搞！
+# 针对于A、AAAA、CNAME
 
 > 我们需要**两个域名**（比如：onani.cn和acofork.cn）
 
@@ -43,8 +43,18 @@ lang: ''
    ![QmeK3AZghae4J4LcJdbPMxBcmoNEeF3hXNBmtJaDki8HYt.webp](assets/images/6f51cb2a42140a9bf364f88a5715291be616a254.webp)
 
 5. 优选完毕，尝试访问
+
+6. （可选）你也可以将cdn子域的NS服务器更改为阿里云\华为云\腾讯云云解析做线路分流解析
    
    > 优选工作流：用户访问 -> 由于最终访问的域名设置了CNAME解析，所以实际上访问了cdn.acofork.cn，并且携带 **源主机名：onani.cn** -> 到达cloudflare.182682.xyz进行优选 -> 优选结束，cf边缘节点识别到了携带的 **源主机名：onani.cn** 查询发现了回退源 -> 回退到回退源内容（xlog.acofork.cn） -> 访问成功
+
+# 针对于Cloudflare Page
+
+1. 你可以直接将你绑定到Page的子域名直接更改NS服务器到阿里云\华为云\腾讯云云解析做线路分流解析
+
+# 针对于Cloudflare Workers
+
+1. 在Workers中添加路由，然后直接将你的路由域名从指向`xxx.worker.dev`改为`cloudflare.182682.xyz`等优选域名即可
 
 ---
 
