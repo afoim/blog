@@ -31,6 +31,10 @@ jobs:
           pnpm install
           pnpm build
 
+      # 确保 CNAME 文件存在
+      - name: Add CNAME file
+        run: echo "github-blog.acofork.us.kg" > dist/CNAME
+
       # 部署到 gh-pages 分支
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v3
