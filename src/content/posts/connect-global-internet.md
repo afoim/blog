@@ -18,8 +18,7 @@ lang: ''
 3. 添加一个名称为`UUID`的变量绑定，值为第二步随机获取的（请不要泄露给他人！）
 4. 重新上传第一步的`main.zip`。让Cloudflare重新部署page以适配新变量
 5. 绑定自定义域名。通过 https://你的自定义域名/uuid 查看仪表盘
-
-500Mbps的移动宽带，通过代理测速速度如下![](assets/images/2024-11-22-09-08-38-image.png)
+6. 复制`vless`开头的连接，打开V2Ray，导入。V2Ray客户端下载地址在文章最后![](assets/images/2024-11-22-13-35-19-9758fad119d8701dac1ee93a017dd644.png)500Mbps的移动宽带，通过edgetunnel测速速度如下![](assets/images/2024-11-22-09-08-38-image.png)
 
 # 将你自己的国外VPS作为代理使用
 
