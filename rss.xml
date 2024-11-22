@@ -1,10 +1,13 @@
-<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>二叉树树的博客</title><description>爱你所爱！</description><link>https://acofork.us.kg/</link><language>zh_CN</language><item><title>自建正向代理服务器</title><link>https://acofork.us.kg/posts/connect-global-internet/</link><guid isPermaLink="true">https://acofork.us.kg/posts/connect-global-internet/</guid><description>不要再买机场了！自建它不香吗？!</description><pubDate>Thu, 21 Nov 2024 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;将Cloudflare作为代理使用（Vless）&lt;/h1&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>二叉树树的博客</title><description>爱你所爱！</description><link>https://acofork.us.kg/</link><language>zh_CN</language><item><title>自建正向代理服务器</title><link>https://acofork.us.kg/posts/connect-global-internet/</link><guid isPermaLink="true">https://acofork.us.kg/posts/connect-global-internet/</guid><description>不要再买机场了！自建它不香吗？!</description><pubDate>Fri, 22 Nov 2024 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;将Cloudflare作为代理使用（Vless - EdgeTunnel）&lt;/h1&gt;
+&lt;p&gt;下面内容参考自：&lt;a href=&quot;https://vercel.blog.cmliussss.com/p/CM24/&quot;&gt;CF VLESS 从入门到精通 cmliu/edgetunnel 必看内容 免费节点 优选订阅 Workers &amp;amp; Pages CM喂饭干货满满24 | CMLiussss Blog&lt;/a&gt; 请支持原创作者！&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;进入 https://github.com/yonggekkk/Cloudflare_vless_trojan/blob/main/Vless_workers_pages/_worker.js 这是Workers代码&lt;/li&gt;
+&lt;li&gt;进入 https://github.com/cmliu/edgetunnel/archive/refs/heads/main.zip 将它上传到你的Cloudflare Pages项目&lt;/li&gt;
 &lt;li&gt;进入 https://it-tools.tech/uuid-generator 随机获取一个uuid&lt;/li&gt;
-&lt;li&gt;在代码第七行写入你的uuid&lt;/li&gt;
+&lt;li&gt;添加一个名称为&lt;code&gt;UUID&lt;/code&gt;的变量绑定，值为第二步随机获取的（请不要泄露给他人！）&lt;/li&gt;
+&lt;li&gt;重新上传第一步的&lt;code&gt;main.zip&lt;/code&gt;。让Cloudflare重新部署page以适配新变量&lt;/li&gt;
 &lt;li&gt;绑定自定义域名。通过https://你的自定义域名/uuid查看仪表盘&lt;/li&gt;
 &lt;/ol&gt;
+&lt;p&gt;500Mbps的移动宽带，通过代理测速速度如下&lt;img src=&quot;assets/images/2024-11-22-09-08-38-image.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;h1&gt;将你自己的国外VPS作为代理使用&lt;/h1&gt;
 &lt;h2&gt;新协议：Hysteria2&lt;/h2&gt;
 &lt;p&gt;::github{repo=&quot;seagullz4/hysteria2&quot;}&lt;/p&gt;
