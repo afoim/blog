@@ -25,17 +25,19 @@ lang: ''
 
 ## 新协议：Hysteria2
 
+可以前往这两个仓库进行一键安装~
+
+::github{repo="0x0129/hysteria2"}
+
 ::github{repo="seagullz4/hysteria2"}
 
-VPS安装脚本：`curl -sSL https://github.com/seagullz4/hysteria2/raw/main/install.sh -o install.sh && chmod +x install.sh && bash install.sh`
-
-详细安装：自签名，不使用acme，不使用端口跳跃
+大致安装过程：自签名，不使用acme，不使用端口跳跃
 
 客户端（Hiddify）：
 
 ::github{repo="hiddify/hiddify-app"}
 
-其他客户端在第一个Github Repo获取
+其他客户端在第二个Github Repo获取
 
 ## 旧协议：V2Ray
 
