@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://acofork.us.kg/sitemap-index.xml
+Sitemap: https://smart.acofork.us.kg/sitemap-index.xml
