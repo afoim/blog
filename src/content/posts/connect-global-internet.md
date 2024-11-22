@@ -1,6 +1,6 @@
 ---
 title: 自建正向代理服务器
-published: 2024-11-21
+published: 2024-11-22
 description: '不要再买机场了！自建它不香吗？!'
 image: 'assets/images/2024-11-21-08-24-54-image.png'
 tags: []
@@ -9,12 +9,17 @@ draft: false
 lang: ''
 ---
 
-# 将Cloudflare作为代理使用（Vless）
+# 将Cloudflare作为代理使用（Vless - EdgeTunnel）
 
-1. 进入 https://github.com/yonggekkk/Cloudflare_vless_trojan/blob/main/Vless_workers_pages/_worker.js 这是Workers代码
+下面内容参考自：[CF VLESS 从入门到精通 cmliu/edgetunnel 必看内容 免费节点 优选订阅 Workers & Pages CM喂饭干货满满24 | CMLiussss Blog](https://vercel.blog.cmliussss.com/p/CM24/) 请支持原创作者！
+
+1. 进入 https://github.com/cmliu/edgetunnel/archive/refs/heads/main.zip 将它上传到你的Cloudflare Pages项目
 2. 进入 https://it-tools.tech/uuid-generator 随机获取一个uuid
-3. 在代码第七行写入你的uuid
-4. 绑定自定义域名。通过https://你的自定义域名/uuid查看仪表盘
+3. 添加一个名称为`UUID`的变量绑定，值为第二步随机获取的（请不要泄露给他人！）
+4. 重新上传第一步的`main.zip`。让Cloudflare重新部署page以适配新变量
+5. 绑定自定义域名。通过https://你的自定义域名/uuid查看仪表盘
+
+500Mbps的移动宽带，通过代理测速速度如下![](assets/images/2024-11-22-09-08-38-image.png)
 
 # 将你自己的国外VPS作为代理使用
 
