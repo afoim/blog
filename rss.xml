@@ -10,12 +10,13 @@
 &lt;p&gt;500Mbps的移动宽带，通过代理测速速度如下&lt;img src=&quot;assets/images/2024-11-22-09-08-38-image.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;h1&gt;将你自己的国外VPS作为代理使用&lt;/h1&gt;
 &lt;h2&gt;新协议：Hysteria2&lt;/h2&gt;
+&lt;p&gt;可以前往这两个仓库进行一键安装~&lt;/p&gt;
+&lt;p&gt;::github{repo=&quot;0x0129/hysteria2&quot;}&lt;/p&gt;
 &lt;p&gt;::github{repo=&quot;seagullz4/hysteria2&quot;}&lt;/p&gt;
-&lt;p&gt;VPS安装脚本：&lt;code&gt;curl -sSL https://github.com/seagullz4/hysteria2/raw/main/install.sh -o install.sh &amp;amp;&amp;amp; chmod +x install.sh &amp;amp;&amp;amp; bash install.sh&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;详细安装：自签名，不使用acme，不使用端口跳跃&lt;/p&gt;
+&lt;p&gt;大致安装过程：自签名，不使用acme，不使用端口跳跃&lt;/p&gt;
 &lt;p&gt;客户端（Hiddify）：&lt;/p&gt;
 &lt;p&gt;::github{repo=&quot;hiddify/hiddify-app&quot;}&lt;/p&gt;
-&lt;p&gt;其他客户端在第一个Github Repo获取&lt;/p&gt;
+&lt;p&gt;其他客户端在第二个Github Repo获取&lt;/p&gt;
 &lt;h2&gt;旧协议：V2Ray&lt;/h2&gt;
 &lt;p&gt;::github{repo=&quot;233boy/v2ray&quot;}&lt;/p&gt;
 &lt;p&gt;VPS安装脚本：&lt;code&gt;bash &amp;lt;(curl -s -L https://git.io/v2ray.sh)&lt;/code&gt;&lt;/p&gt;
