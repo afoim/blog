@@ -18,7 +18,13 @@ lang: ''
 3. 添加一个名称为`UUID`的变量绑定，值为第二步随机获取的（请不要泄露给他人！）
 4. 重新上传第一步的`main.zip`。让Cloudflare重新部署page以适配新变量
 5. 绑定自定义域名。通过 https://你的自定义域名/uuid 查看仪表盘
-6. 复制`vless`开头的连接，打开V2Ray，导入。V2Ray客户端下载地址在文章最后![](assets/images/2024-11-22-13-35-19-9758fad119d8701dac1ee93a017dd644.png)500Mbps的移动宽带，通过edgetunnel测速速度如下![](assets/images/2024-11-22-09-08-38-image.png)
+6. 如图复制链接，打开V2Ray，导入。V2Ray客户端下载地址在文章最后
+7. 懒人订阅器：`?sub=VLESS.fxxk.dedyn.io`。更多订阅器可以前往CM的Tg群获取，在顶上的CM博客中有
+8. ![](assets/images/2024-11-24-00-17-22-image.png)
+9. 500Mbps的移动宽带，通过edgetunnel测速速度如下
+10. ![](assets/images/2024-11-22-09-08-38-image.png)
+11. 如果你就是想要最低延迟，可以去用cfnat，这里放一个Windows的链接： https://www.youtube.com/watch?v=N2Y9TsiBgls 其他平台可以自行前往CM的YouTube查找
+12. **注意！edgetunnel近期在Cloudflare新号上可能会报错1101，这可能并不是你的配置问题，而是被cf风控了。解决方案是删除原项目重新部署一遍，不要用一样的项目名！你也可以多弄几个其他的正常pages或workers项目做伪装**
 
 # 将你自己的国外VPS作为代理使用
 
