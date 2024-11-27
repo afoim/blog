@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - gh-pages  # 替换为你需要的分支名称
+  workflow_dispatch: # 添加手动触发支持
 
 jobs:
   deploy:
