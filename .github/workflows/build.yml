@@ -35,10 +35,18 @@ jobs:
       - name: Add CNAME file
         run: echo "github-blog.acofork.us.kg" > dist/CNAME
 
-      # 部署到 gh-pages 分支
+      # 获取 main 分支的提交信息
+      - name: Get latest commit message from main branch
+        run: |
+          COMMIT_MESSAGE=$(git log -1 --pretty=%B)
+          echo "Commit message: $COMMIT_MESSAGE"
+          echo "COMMIT_MESSAGE=$COMMIT_MESSAGE" >> $GITHUB_ENV
+
+      # 部署到 gh-pages
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
           destination_branch: gh-pages
+          commit_message: ${{ env.COMMIT_MESSAGE }} # 使用 main 分支的提交信息
