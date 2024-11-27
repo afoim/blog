@@ -269,7 +269,7 @@ remote_port = 6000
 
 #### **3. 启用身份验证**
 
-为了确保安全，强烈建议启用身份验证，以防止未经授权的访问。FRP 提供了简单的 **Token 身份认证**，只需在 `frps.ini` 和 `frpc.ini` 中配置相同的 **token** 即可。
+为了确保安全，强烈建议启用身份验证，以防止未经授权的访问。FRP 提供了简单的 **Token 身份认证**，只需在 `frps.ini` 和 `frpc.ini` 中配置相同的 **token** 即可。[FRP 身份认证](https://gofrp.org/zh-cn/docs/features/common/authentication/)
 
 **配置示例：**
 
@@ -301,31 +301,6 @@ auth.token = "abc"  # 使用与服务端相同的令牌
 - **定期更新软件**：保持 FRP 和服务器操作系统的更新，修补可能的安全漏洞。
 - **使用 SSH 密钥登录**：如果通过 SSH 登录服务器，禁用密码登录并启用 SSH 密钥认证。
 - **IP 白名单**：如果条件允许，设置 FRP 仅接受特定 IP 或 IP 范围的连接。
-
-#### **5. 身份认证**
-
-关于 **Token 身份认证**，您可以参考 FRP 官方文档进行进一步配置：[FRP 身份认证](https://gofrp.org/zh-cn/docs/features/common/authentication/)。以下是 Token 身份认证的简要介绍：
-
-- **Token 身份认证**：这种认证方式需要在 `frpc` 和 `frps` 配置文件中设置相同的 token，确保客户端和服务端之间的通信是安全的。
-
-- **配置示例**：
-  
-  - **frps.toml（服务端）**
-  
-  ```ini
-  bindPort = 7000
-  auth.token = "abc"
-  ```
-  
-  - **frpc.toml（客户端）**
-  
-  ```ini
-  auth.token = "abc"
-  ```
-
-通过使用 Token 身份认证，您可以有效避免未经授权的连接，提高安全性。
-
----
 
 ### **总结**
 
