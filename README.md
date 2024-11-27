@@ -1,7 +1,3 @@
-# `blog.py` 是工作流文件，可以用来优化fuwari
-
----
-
 # 🍥Fuwari
 
 A static blog template built with [Astro](https://astro.build).
