@@ -1,7 +1,7 @@
 ---
-title: 如何让你的服务器Always Online？
+title: 如何让你的家里云Always Online？
 published: 2024-11-27
-description: '让自己维护的服务器始终可以访问是一件比较难的事，如果遇到突发灾难：比如断网断电。但是除去这些我们可以使用多种技术手段来保障服务器的高可访问性'
+description: '让自己维护的家庭服务器始终可以访问是一件比较难的事，如果遇到突发灾难：比如断网断电。但是除去这些我们可以使用多种技术手段来保障服务器的高可访问性'
 image: 'assets/images/2024-11-27-23-55-13-image.png'
 tags: [STUN, Zerotier, Cloudflared, FRP, IPv6]
 category: '运维'
