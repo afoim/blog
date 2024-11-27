@@ -1,0 +1,21 @@
+name: Deploy to Surge
+
+on:
+  repository_dispatch:
+    types: [deploy_surge]  # 监听来自 build.yml 的自定义事件
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          ref: gh-pages  # 检出 gh-pages 分支
+
+      - name: Deploy to Surge
+        run: |
+          npm install -g surge
+          surge ./ https://acofork-blog.surge.sh --token ${{ secrets.SURGE_TOKEN }}
+        env:
+          SURGE_TOKEN: ${{ secrets.SURGE_TOKEN }}
