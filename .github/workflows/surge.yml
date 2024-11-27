@@ -16,6 +16,6 @@ jobs:
       - name: Deploy to Surge
         run: |
           npm install -g surge
-          surge ./dist https://acofork-blog.surge.sh --token ${{ secrets.SURGE_TOKEN }}
+          surge ./ https://acofork-blog.surge.sh --token ${{ secrets.SURGE_TOKEN }}
         env:
           SURGE_TOKEN: ${{ secrets.SURGE_TOKEN }}
