@@ -1,12 +1,3 @@
-# 使用的静态网站服务
-Vercel
-Cloudflare Page
-Github Page
-Fleek
-EdgeOne
-
----
-
 # 🍥Fuwari
 
 A static blog template built with [Astro](https://astro.build).
