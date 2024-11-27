@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>二叉树树的博客</title><description>爱你所爱！</description><link>https://smart.acofork.us.kg/</link><language>zh_CN</language><item><title>如何让你的服务器Always Online？</title><link>https://smart.acofork.us.kg/posts/connect-homecloud/</link><guid isPermaLink="true">https://smart.acofork.us.kg/posts/connect-homecloud/</guid><description>让自己维护的服务器始终可以访问是一件比较难的事，如果遇到突发灾难：比如断网断电。但是除去这些我们可以使用多种技术手段来保障服务器的高可访问性</description><pubDate>Wed, 27 Nov 2024 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>二叉树树的博客</title><description>爱你所爱！</description><link>https://smart.acofork.us.kg/</link><language>zh_CN</language><item><title>如何让你的家里云Always Online？</title><link>https://smart.acofork.us.kg/posts/connect-homecloud/</link><guid isPermaLink="true">https://smart.acofork.us.kg/posts/connect-homecloud/</guid><description>让自己维护的家庭服务器始终可以访问是一件比较难的事，如果遇到突发灾难：比如断网断电。但是除去这些我们可以使用多种技术手段来保障服务器的高可访问性</description><pubDate>Wed, 27 Nov 2024 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
 &lt;p&gt;感谢Chat GPT支持本文&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h1&gt;家庭服务器内网穿透的几种方法&lt;/h1&gt;
@@ -256,7 +256,7 @@ remote_port = 6000
 &lt;pre&gt;&lt;code&gt;./frpc -c ./frpc.ini
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h4&gt;&lt;strong&gt;3. 启用身份验证&lt;/strong&gt;&lt;/h4&gt;
-&lt;p&gt;为了确保安全，强烈建议启用身份验证，以防止未经授权的访问。FRP 提供了简单的 &lt;strong&gt;Token 身份认证&lt;/strong&gt;，只需在 &lt;code&gt;frps.ini&lt;/code&gt; 和 &lt;code&gt;frpc.ini&lt;/code&gt; 中配置相同的 &lt;strong&gt;token&lt;/strong&gt; 即可。&lt;/p&gt;
+&lt;p&gt;为了确保安全，强烈建议启用身份验证，以防止未经授权的访问。FRP 提供了简单的 &lt;strong&gt;Token 身份认证&lt;/strong&gt;，只需在 &lt;code&gt;frps.ini&lt;/code&gt; 和 &lt;code&gt;frpc.ini&lt;/code&gt; 中配置相同的 &lt;strong&gt;token&lt;/strong&gt; 即可。&lt;a href=&quot;https://gofrp.org/zh-cn/docs/features/common/authentication/&quot;&gt;FRP 身份认证&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;配置示例：&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;frps.ini（服务端配置）&lt;/strong&gt;&lt;/li&gt;
@@ -283,29 +283,6 @@ auth.token = &quot;abc&quot;  # 使用与服务端相同的令牌
 &lt;li&gt;&lt;strong&gt;使用 SSH 密钥登录&lt;/strong&gt;：如果通过 SSH 登录服务器，禁用密码登录并启用 SSH 密钥认证。&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;IP 白名单&lt;/strong&gt;：如果条件允许，设置 FRP 仅接受特定 IP 或 IP 范围的连接。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4&gt;&lt;strong&gt;5. 身份认证&lt;/strong&gt;&lt;/h4&gt;
-&lt;p&gt;关于 &lt;strong&gt;Token 身份认证&lt;/strong&gt;，您可以参考 FRP 官方文档进行进一步配置：&lt;a href=&quot;https://gofrp.org/zh-cn/docs/features/common/authentication/&quot;&gt;FRP 身份认证&lt;/a&gt;。以下是 Token 身份认证的简要介绍：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Token 身份认证&lt;/strong&gt;：这种认证方式需要在 &lt;code&gt;frpc&lt;/code&gt; 和 &lt;code&gt;frps&lt;/code&gt; 配置文件中设置相同的 token，确保客户端和服务端之间的通信是安全的。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;配置示例&lt;/strong&gt;：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;frps.toml（服务端）&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;pre&gt;&lt;code&gt;bindPort = 7000
-auth.token = &quot;abc&quot;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;frpc.toml（客户端）&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;pre&gt;&lt;code&gt;auth.token = &quot;abc&quot;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;通过使用 Token 身份认证，您可以有效避免未经授权的连接，提高安全性。&lt;/p&gt;
-&lt;hr /&gt;
 &lt;h3&gt;&lt;strong&gt;总结&lt;/strong&gt;&lt;/h3&gt;
 &lt;p&gt;通过使用商业服务或自建 FRP 服务端，您可以实现强大的内网穿透功能。无论是使用简单的 Token 身份认证，还是加强安全防护，确保只有授权的用户才能访问内网服务，都是提高系统安全性的关键。自建服务端虽然需要额外配置和维护，但能够提供更高的自由度和安全性。如果您选择自建，务必注重安全措施，确保服务器不会受到外部攻击。&lt;/p&gt;
 &lt;hr /&gt;
