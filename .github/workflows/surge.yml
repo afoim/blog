@@ -1,10 +1,8 @@
 name: Deploy to Surge
 
 on:
-  push:
-    branches:
-      - gh-pages  # 替换为你需要的分支名称
-  workflow_dispatch: # 添加手动触发支持
+  repository_dispatch:
+    types: [deploy_surge]  # 监听来自 build.yml 的自定义事件
 
 jobs:
   deploy:
@@ -12,10 +10,12 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
+        with:
+          ref: gh-pages  # 检出 gh-pages 分支
 
       - name: Deploy to Surge
         run: |
           npm install -g surge
-          surge ./ https://acofork-blog.surge.sh --token ${{ secrets.SURGE_TOKEN }}
+          surge ./dist https://acofork-blog.surge.sh --token ${{ secrets.SURGE_TOKEN }}
         env:
           SURGE_TOKEN: ${{ secrets.SURGE_TOKEN }}
