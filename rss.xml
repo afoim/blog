@@ -210,6 +210,23 @@ jobs:
 &lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;总结&lt;/strong&gt;：
 Surge 提供了一个简单的静态网站部署解决方案，虽然它不支持 Git 集成，但可以通过 GitHub Actions 实现 CI/CD 自动化部署。对于简单的静态网站，Surge 是一个快速且方便的选择，尤其适合开发者使用。&lt;/p&gt;
+&lt;h4&gt;8. &lt;a href=&quot;https://netlify.com/&quot;&gt;Netlify&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;优点&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;注册门槛较高，但速度非常快&lt;/li&gt;
+&lt;li&gt;支持自部署，便于自动化流程&lt;/li&gt;
+&lt;li&gt;支持自定义域名绑定&lt;/li&gt;
+&lt;li&gt;提供全球加速，性能非常好&lt;/li&gt;
+&lt;li&gt;支持与 Git 集成，自动化部署&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;缺点&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;注册时需要使用纯净IP和谷歌邮箱&lt;/li&gt;
+&lt;li&gt;对某些区域的访问可能存在限制&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;总结&lt;/strong&gt;：
+Netlify 是一个高性能的静态网站托管平台，特别适合那些对访问速度有较高要求的用户。尽管注册门槛较高，但它支持自部署和自动化部署，操作非常方便。对于希望拥有自定义域名且对加速有较高需求的站点，Netlify 是一个非常不错的选择。&lt;/p&gt;
+&lt;hr /&gt;
 &lt;hr /&gt;
 &lt;h3&gt;总结&lt;/h3&gt;
 &lt;p&gt;选择一个合适的静态网站托管平台，需要根据你的需求来决定。以下是一些简要的推荐：&lt;/p&gt;
@@ -1190,7 +1207,7 @@ ghcr.onani.cn/estrellaxd/auto_bangumi:latest
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h1&gt;成果展示&lt;/h1&gt;
+&lt;h1&gt;成果展示（域名已弃用）&lt;/h1&gt;
 &lt;p&gt;&lt;img src=&quot;assets/images/4b4680cc548e0c59ec18cef537c9b1f5412fbbcd.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://blog.onani.cn&quot;&gt;https://blog.onani.cn&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://alist.onani.cn&quot;&gt;https://alist.onani.cn&lt;/a&gt;&lt;/p&gt;
@@ -1479,6 +1496,8 @@ dpkg -i cloudflared-linux-amd64.deb
 &lt;p&gt;[!WARNING]
 注意，任何使用HTTP协议的类ipfs技术都需要一个中心化服务器代理访问IPFS网络。只有当访问者连接上IPFS网络后才会使用去中心化的连接方式）&lt;/p&gt;
 &lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;img src=&quot;assets/images/2024-10-17-11-07-40-image.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
@@ -1493,8 +1512,6 @@ dpkg -i cloudflared-linux-amd64.deb
 &lt;p&gt;当你的设备已经连上IPFS网络后，所有流量将使用P2P（去中心化），所以你看到的访问地址实际上是本机地址&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
 &lt;h3&gt;梳理一下思路，我们可以用Fleek做到什么&lt;/h3&gt;
 &lt;p&gt;让Fleek连接你的Git存储库，通过构建命令构建静态网站，并发布到IPFS，同时兼容HTTP访问&lt;/p&gt;
 &lt;h4&gt;正式开始&lt;/h4&gt;
@@ -1517,7 +1534,7 @@ dpkg -i cloudflared-linux-amd64.deb
 &lt;/ol&gt;
 &lt;p&gt;效果图：&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;assets/images/2024-10-17-11-31-33-image.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;h4&gt;拓展一下，我们还可以通过IPFS技术做什么？&lt;/h4&gt;
+&lt;h4&gt;拓展一下，我们还可以通过IPFS技术做什么？（域名已弃用）&lt;/h4&gt;
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;创建一个巨大的图床，已经投入使用，参见： https://pic.onani.cn （原理：请求 https://ipfs-pic.onani.cn ，获取图片列表，随机选择使用JS展示）&lt;img src=&quot;assets/images/2024-10-17-11-34-44-image.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
