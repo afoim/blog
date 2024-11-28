@@ -1,4 +1,239 @@
-<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>二叉树树的博客</title><description>爱你所爱！</description><link>https://smart.acofork.us.kg/</link><language>zh_CN</language><item><title>如何让你的家里云Always Online？</title><link>https://smart.acofork.us.kg/posts/connect-homecloud/</link><guid isPermaLink="true">https://smart.acofork.us.kg/posts/connect-homecloud/</guid><description>让自己维护的家庭服务器始终可以访问是一件比较难的事，如果遇到突发灾难：比如断网断电。但是除去这些我们可以使用多种技术手段来保障服务器的高可访问性</description><pubDate>Wed, 27 Nov 2024 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>二叉树树的博客</title><description>爱你所爱！</description><link>https://smart.acofork.us.kg/</link><language>zh_CN</language><item><title>静态页面服务商比较+智能网关测速脚本</title><link>https://smart.acofork.us.kg/posts/static-web/</link><guid isPermaLink="true">https://smart.acofork.us.kg/posts/static-web/</guid><description>将你的静态网站发布到不同的服务商，并且自动在客户端测速并且选择最快那一个进入</description><pubDate>Thu, 28 Nov 2024 00:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;一文了解：7款静态网站服务商的优缺点比较&lt;/h3&gt;
+&lt;p&gt;在构建个人博客、项目展示或者静态网站时，选择合适的托管服务商非常重要。不同的服务商提供不同的功能和特性，有的支持自定义域名，有的提供更快的访问速度，有的适合自动化部署。今天我们将介绍7款流行的静态网站服务商，帮助你选择最适合的方案。&lt;/p&gt;
+&lt;h4&gt;1. &lt;a href=&quot;https://vercel.app/&quot;&gt;Vercel&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;优点&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;支持与 Git 集成，自动部署&lt;/li&gt;
+&lt;li&gt;提供自构建功能，支持动态内容生成&lt;/li&gt;
+&lt;li&gt;部署和访问速度都非常快&lt;/li&gt;
+&lt;li&gt;注册过程简便，易于上手&lt;/li&gt;
+&lt;li&gt;可绑定自定义域名，支持 HTTPS&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;缺点&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;免费版有一定限制，如带宽和构建时间&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;总结&lt;/strong&gt;：
+Vercel 是一个非常受欢迎的静态网站托管平台，尤其适用于前端开发者。通过与 Git 集成，Vercel 可以自动部署和更新项目，构建速度非常快，支持大多数现代前端框架。&lt;/p&gt;
+&lt;h4&gt;2. &lt;a href=&quot;https://render.com/&quot;&gt;Render&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;优点&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;支持与 Git 集成，自动部署&lt;/li&gt;
+&lt;li&gt;提供自构建功能&lt;/li&gt;
+&lt;li&gt;注册简单，快速上手&lt;/li&gt;
+&lt;li&gt;支持自定义域名绑定&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;缺点&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;免费套餐功能相对有限&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;总结&lt;/strong&gt;：
+Render 是一个新兴的静态网站托管服务，提供了自动化部署和自构建的功能，适合想要快速搭建静态站点的用户。它的操作简单，易于上手。&lt;/p&gt;
+&lt;h4&gt;3. &lt;a href=&quot;https://dash.cloudflare.com/&quot;&gt;Cloudflare Pages&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;优点&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;支持与 Git 集成，自动化部署&lt;/li&gt;
+&lt;li&gt;注册简单，快速上手&lt;/li&gt;
+&lt;li&gt;提供自构建功能，适合静态网站&lt;/li&gt;
+&lt;li&gt;支持自定义域名绑定&lt;/li&gt;
+&lt;li&gt;强大的抗 DDoS 防护&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;缺点&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;适用于静态网站，动态功能受限&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;总结&lt;/strong&gt;：
+Cloudflare Pages 是一个由 Cloudflare 提供的静态网站托管平台，它的抗 DDoS 防护非常强大，适合对安全性要求较高的网站。借助 Cloudflare 的全球 CDN，站点访问速度也很快。&lt;/p&gt;
+&lt;h4&gt;4. &lt;a href=&quot;https://edgeone.ai/&quot;&gt;TencentCloud EdgeOne&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;优点&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;支持与 Git 集成，自动部署&lt;/li&gt;
+&lt;li&gt;提供自构建功能&lt;/li&gt;
+&lt;li&gt;支持自定义域名绑定&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;缺点&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;网站访问速度较慢&lt;/li&gt;
+&lt;li&gt;服务相对复杂，适用范围较窄&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;总结&lt;/strong&gt;：
+腾讯云 EdgeOne 适合企业级用户，提供高效的边缘计算服务，虽然功能完备，但在国内访问时速度较慢，因此不适合对速度有较高要求的个人站点。&lt;/p&gt;
+&lt;h4&gt;5. &lt;a href=&quot;https://github.com/&quot;&gt;Github Pages&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;优点&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;与 Git 集成，直接通过 GitHub 仓库进行部署&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;速度非常快，不需要从零构建&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;可以通过 GitHub Actions 实现 CI/CD 自动化&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;支持自定义域名绑定&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;完全免费&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;示例Github Action创建静态分支workflow（gh-pages）：&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;pre&gt;&lt;code&gt;name: Build and Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main # 监听 main 分支的推送事件
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 检出代码仓库
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # 安装 pnpm
+      - name: Install pnpm
+        run: corepack enable &amp;amp;&amp;amp; corepack prepare pnpm@latest --activate
+
+      # 验证 pnpm 安装
+      - name: Verify pnpm version
+        run: pnpm --version
+
+      # 安装依赖并构建项目
+      - name: Install dependencies and build
+        run: |
+          pnpm install
+          pnpm build
+
+      # 确保 CNAME 文件存在
+      - name: Add CNAME file
+        run: echo &quot;github-blog.acofork.us.kg&quot; &amp;gt; dist/CNAME
+
+      # 获取 main 分支的提交信息
+      - name: Get latest commit message from main branch
+        run: |
+          COMMIT_MESSAGE=$(git log -1 --pretty=%B)
+          echo &quot;Commit message: $COMMIT_MESSAGE&quot;
+          echo &quot;COMMIT_MESSAGE=$COMMIT_MESSAGE&quot; &amp;gt;&amp;gt; $GITHUB_ENV
+
+      # 部署到 gh-pages
+      - name: Deploy to gh-pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
+          destination_branch: gh-pages
+          commit_message: ${{ env.COMMIT_MESSAGE }} # 使用 main 分支的提交信息
+
+      # 触发 surge 部署
+      - name: Trigger Deploy to Surge
+        run: |
+          curl -X POST \
+          -H &quot;Authorization: token ${{ secrets.GITHUB_TOKEN }}&quot; \
+          -H &quot;Accept: application/vnd.github.v3+json&quot; \
+          https://api.github.com/repos/${{ github.repository }}/dispatches \
+          -d &apos;{&quot;event_type&quot;:&quot;deploy_surge&quot;}&apos;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;缺点&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;国内访问可能会遇到 GitHub 阻断问题&lt;/li&gt;
+&lt;li&gt;对于复杂的动态功能支持较差&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;总结&lt;/strong&gt;：
+Github Pages 是一个免费的静态网站托管平台，特别适合与 GitHub 仓库紧密结合的项目。对于个人博客和小型项目，它非常实用，尤其是通过 GitHub Actions 自动化部署，操作便捷，且无需配置复杂。&lt;/p&gt;
+&lt;h4&gt;6. &lt;a href=&quot;https://fleek.xyz/&quot;&gt;Fleek&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;优点&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;支持与 Git 集成，自动化部署&lt;/li&gt;
+&lt;li&gt;提供自构建功能&lt;/li&gt;
+&lt;li&gt;支持自定义域名绑定&lt;/li&gt;
+&lt;li&gt;基于 IPFS，支持去中心化存储&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;缺点&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;访问速度相对适中&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;总结&lt;/strong&gt;：
+Fleek 是一个基于 IPFS 的去中心化托管平台，适合希望利用区块链技术的开发者。虽然其访问速度适中，但对于一些追求去中心化存储解决方案的项目，Fleek 是一个不错的选择。&lt;/p&gt;
+&lt;h4&gt;7. &lt;a href=&quot;https://surge.sh/&quot;&gt;Surge&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;优点&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;快速部署，支持 CLI 命令行操作&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;简单易用，部署无需太多配置&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;示例Github Action进行CI/CD自动化（将gh-pages发布到Surge）：&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;pre&gt;&lt;code&gt;name: Deploy to Surge
+
+on:
+  repository_dispatch:
+    types: [deploy_surge]  # 监听来自 build.yml 的自定义事件
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          ref: gh-pages  # 检出 gh-pages 分支
+
+      - name: Deploy to Surge
+        run: |
+          npm install -g surge
+          surge ./ https://acofork-blog.surge.sh --token ${{ secrets.SURGE_TOKEN }}
+        env:
+          SURGE_TOKEN: ${{ secrets.SURGE_TOKEN }}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;缺点&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;无法直接与 Git 集成&lt;/li&gt;
+&lt;li&gt;无法绑定自定义域名&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;总结&lt;/strong&gt;：
+Surge 提供了一个简单的静态网站部署解决方案，虽然它不支持 Git 集成，但可以通过 GitHub Actions 实现 CI/CD 自动化部署。对于简单的静态网站，Surge 是一个快速且方便的选择，尤其适合开发者使用。&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h3&gt;总结&lt;/h3&gt;
+&lt;p&gt;选择一个合适的静态网站托管平台，需要根据你的需求来决定。以下是一些简要的推荐：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Vercel&lt;/strong&gt;：如果你需要快速部署和全球加速，Vercel 是一个理想的选择。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Render&lt;/strong&gt;：如果你喜欢简单易用的界面和部署，Render 非常适合。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Cloudflare Pages&lt;/strong&gt;：如果你的站点对安全性有较高需求，Cloudflare Pages 提供了强大的 DDoS 防护。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Github Pages&lt;/strong&gt;：对于 GitHub 用户，Github Pages 是一个免费的静态网站托管平台。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Fleek&lt;/strong&gt;：如果你想尝试去中心化技术，Fleek 提供基于 IPFS 的托管服务。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Surge&lt;/strong&gt;：对于简单项目，Surge 提供了非常快速的部署方案，尽管没有 Git 集成。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;~~根据你的实际需求选择最适合的服务商，为你的项目提供更好的托管和加速支持。~~我的建议是有多少用多少！&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h1&gt;智能网关测速HTML代码：&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;使用了这么多的节点，肯定想要选择最快的或者在用户那边装逼，所以这边给一个智能网关测速HTML代码，它去请求了&lt;code&gt;https://acofork.us.kg/data.json&lt;/code&gt;并且挨个给里面的&lt;code&gt;博客&lt;/code&gt;节点测速，然后自动选择最快的那个。如果你只是小项目使用，可以使用硬编码，这里就给出Git仓库&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;::github{repo=&quot;afoim/Smart_Gateway&quot;}&lt;/p&gt;
+&lt;h1&gt;简易导航页HTML代码：&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;刚才说了“它去请求了&lt;code&gt;https://acofork.us.kg/data.json&lt;/code&gt;并且挨个给里面的&lt;code&gt;博客&lt;/code&gt;节点测速，然后自动选择最快的那个。”这就是&lt;code&gt;data.json&lt;/code&gt;所在的地方&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;::github{repo=&quot;afoim/Web_test&quot;}&lt;/p&gt;
+</content:encoded></item><item><title>如何让你的家里云Always Online？</title><link>https://smart.acofork.us.kg/posts/connect-homecloud/</link><guid isPermaLink="true">https://smart.acofork.us.kg/posts/connect-homecloud/</guid><description>让自己维护的家庭服务器始终可以访问是一件比较难的事，如果遇到突发灾难：比如断网断电。但是除去这些我们可以使用多种技术手段来保障服务器的高可访问性</description><pubDate>Wed, 27 Nov 2024 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
 &lt;p&gt;感谢Chat GPT支持本文&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h1&gt;家庭服务器内网穿透的几种方法&lt;/h1&gt;
