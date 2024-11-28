@@ -377,7 +377,7 @@ lang: ''
   项目配置完毕，开始使用吧！
   ```
 
-# 成果展示
+# 成果展示（域名已弃用）
 
 ![](assets/images/4b4680cc548e0c59ec18cef537c9b1f5412fbbcd.webp)
 
