@@ -3,7 +3,7 @@ title: 静态页面服务商比较+智能网关测速脚本
 published: 2024-11-28
 description: '将你的静态网站发布到不同的服务商，并且自动在客户端测速并且选择最快那一个进入'
 image: 'assets/images/2024-11-28-08-37-49-image.png'
-tags: []
+tags: [Vercel, Render, Cloudflare Pages, EdgeOne, Github Pages, Fleek, Surge]
 category: '运维'
 draft: false 
 lang: ''
