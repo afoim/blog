@@ -64,7 +64,7 @@ Render 是一个新兴的静态网站托管服务，提供了自动化部署和�
 Cloudflare Pages 是一个由 Cloudflare 提供的静态网站托管平台，它的抗 DDoS 防护非常强大，适合对安全性要求较高的网站。借助 Cloudflare 的全球 CDN，站点访问速度也很快。
 
 #### 4. [TencentCloud EdgeOne](https://edgeone.ai/)
-
+### 别用，会吞Github提交，导致你的网站卡在旧版，我已经跑路了
 **优点**：
 
 - 支持与 Git 集成，自动部署
